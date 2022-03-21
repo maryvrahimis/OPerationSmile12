@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_Home_to_Lessons"
+            app:destination="@id/LessonsFragment" />
+        <action
+            android:id="@+id/to_Third_fragment"
+            app:destination="@id/StoreFragment" />
+        <action
+            android:id="@+id/go_to_reports"
+            app:destination="@id/reportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LessonsFragment"
+        android:name="com.example.myapplication.LessonsFragment"
+        android:label="Lessons"
+        tools:layout="@layout/fragment_lessons">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/lessons_to_store"
+            app:destination="@id/StoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StoreFragment"
+        android:name="com.example.myapplication.StoreFragment"
+        android:label="Store">
+        <action
+            android:id="@+id/third_to_second_Back"
+            app:destination="@id/LessonsFragment" />
+        <action
+            android:id="@+id/store_to_home"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.myapplication.ReportsFragment"
+        android:label="Reports">
+        <action
+            android:id="@+id/reports_to_home_Action"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>
