@@ -6,7 +6,26 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+<!--  -->
+    <string name="title_activity_paitentscreen">PaitentscreenActivity</string>
+    <string name="patient_screen">Patient Screen</string>
+    <string name="test_name">Test Name</string>
+    <string name="here_are_you_list_of_clients">Here are you list of clients</string>
+    <string name="random_name">Random Name</string>
+    <string name="spinner_name">Spinner Name</string>
+    <string name="lessons">Lessons</string>
+    <string-array name="names_array">
+        <item>Mike</item>
+        <item>Vinny</item>
+        <item>Emily</item>
+        <item>Mia</item>
+        <item>John</item>
+    </string-array>
+    <string name="to_settings_page">Lessons</string>
+    <string name="to_awards_page">Lessons</string>
+    <string name="to_p_sounds_page">Lessons</string>
+    <string name="to_k_sounds_page">Lessons</string>
+    <string name="to_t_sounds_page">Lessons</string>
+    <string name="to_l_sounds_page">Lessons</string>
+    <string name="please_select_a_sound_you_want_to_start_with">Please select a sound to practice:</string>
 </resources>

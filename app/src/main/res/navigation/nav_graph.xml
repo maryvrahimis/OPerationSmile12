@@ -20,6 +20,9 @@
         <action
             android:id="@+id/go_to_reports"
             app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_home_to_patientscreen"
+            app:destination="@id/patientFragment" />
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -51,6 +54,15 @@
         android:label="Reports">
         <action
             android:id="@+id/reports_to_home_Action"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientFragment"
+        android:name="com.example.myapplication.PatientFragment"
+        android:label="fragment_patients_screen"
+        tools:layout="@layout/fragment_patients_screen" >
+        <action
+            android:id="@+id/action_patientscreen_to_home"
             app:destination="@id/HomeFragment" />
     </fragment>
 </navigation>
