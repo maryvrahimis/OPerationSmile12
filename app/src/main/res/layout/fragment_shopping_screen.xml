@@ -6,6 +6,52 @@
     android:layout_height="match_parent"
     android:background="#0072D7">
 
+    <LinearLayout
+        android:layout_width="121dp"
+        android:layout_height="619dp"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="#0072D7"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            tools:srcCompat="@drawable/santhat"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="#0072D7"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/bball" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="#0072D7"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/easter" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="#0072D7"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/sunglasses" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
         android:layout_width="wrap_content"
@@ -37,15 +83,16 @@
     <LinearLayout
         android:layout_width="121dp"
         android:layout_height="619dp"
-        android:layout_marginTop="101dp"
+        android:layout_marginTop="160dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="113dp"
+            android:id="@+id/imageButton5"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:background="#0072D7"
             android:scaleType="centerCrop"
@@ -54,42 +101,36 @@
             tools:visibility="visible" />
 
         <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="113dp"
+            android:id="@+id/imageButton4"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:background="#0072D7"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/flag" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="113dp"
+            android:id="@+id/imageButton3"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:background="#0072D7"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/pinkboots" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="113dp"
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:background="#0072D7"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/sneakers" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="113dp"
+            android:id="@+id/imageButton1"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:background="#0072D7"
             android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/sunglasses" />
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="113dp"
-            android:layout_height="104dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/halloween" />
     </LinearLayout>
 
 
