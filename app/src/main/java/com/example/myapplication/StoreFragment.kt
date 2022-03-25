@@ -42,7 +42,12 @@ class StoreFragment : Fragment() {
         binding.toHomeButton.setOnClickListener {
             findNavController().navigate(R.id.store_to_home)
         }
-
+        binding.toShoppingScreen.setOnClickListener {
+            findNavController().navigate(R.id.actoinStoreToShopping)
+        }
+        binding.storeToCloset.setOnClickListener {
+            findNavController().navigate(R.id.actoinStoreToCloset)
+        }
     }
 
     override fun onDestroyView() {
