@@ -4,71 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0072D7">
-
-    <LinearLayout
-        android:layout_width="121dp"
-        android:layout_height="619dp"
-        android:layout_marginTop="160dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="match_parent"
-            android:layout_height="97dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            android:visibility="visible"
-            tools:srcCompat="@drawable/santhat"
-            tools:visibility="visible" />
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/bball" />
-
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/easter" />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/sunglasses" />
-
-    </LinearLayout>
+    android:background="#0072DE"
+    android:elevation="30.dp">
 
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:layout_marginTop="41dp"
         android:text="Home"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="41dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="70dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
@@ -80,58 +38,346 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="121dp"
-        android:layout_height="619dp"
-        android:layout_marginTop="160dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/shopScroll"
+        android:layout_width="358dp"
+        android:layout_height="531dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="53dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/shoppingScreenToHomeButton"
+        tools:visibility="visible">
 
-        <ImageButton
-            android:id="@+id/imageButton5"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            android:visibility="visible"
-            tools:srcCompat="@drawable/hat"
-            tools:visibility="visible" />
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:columnCount="2"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/flag" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/pinkboots" />
+                <ImageButton
+                    android:id="@+id/sneakersButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0072DE"
+                    android:cropToPadding="true"
+                    android:onClick="@+id"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/sneakers" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/sneakers" />
+                <ImageButton
+                    android:id="@+id/santahatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="197dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0072DE"
+                    android:cropToPadding="true"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/santhat" />
 
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:background="#0072D7"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/halloween" />
-    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/bballButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="221dp"
+                    android:layout_weight="1"
+                    android:background="#0072E6"
+                    android:cropToPadding="true"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/bball" />
+
+                <ImageButton
+                    android:id="@+id/easterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="221dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#0072DE"
+                    android:cropToPadding="true"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/easter" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/flagButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="213dp"
+                    android:layout_weight="1"
+                    android:background="#0072E6"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/flag" />
+
+                <ImageButton
+                    android:id="@+id/halloweenButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="213dp"
+                    android:layout_weight="1"
+                    android:background="#0072DE"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/halloween" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/pinkbootsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="178dp"
+                    android:layout_weight="1"
+                    android:background="#0072DE"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/pinkboots" />
+
+                <ImageButton
+                    android:id="@+id/hatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="178dp"
+                    android:layout_weight="1"
+                    android:background="#0072DE"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/hat" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailSneaker"
+        android:layout_width="300dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="27dp"
+        android:elevation="50dp"
+        android:focusable="auto"
+        android:visibility="gone"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <Button
+            android:id="@+id/exitSneakerDetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#000072E6"
+            android:text="X"
+            android:textColor="#FF0303"
+            android:textStyle="bold"
+            app:strokeColor="#03A9F4"
+            app:strokeWidth="3dp"
+            tools:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: "
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:translationX="110dp"
+            android:translationY="10dp" />
+
+        <Button
+            android:id="@+id/buySneakers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="110dp"
+            android:translationY="150dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="180dp"
+            android:layout_height="190dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerInside"
+            android:textAlignment="center"
+            android:translationX="65dp"
+            app:srcCompat="@drawable/sneakers" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailSanta"
+        android:layout_width="300dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="43dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:translationX="110dp"
+            android:translationY="10dp" />
+
+        <Button
+            android:id="@+id/exitSantahatButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="16dp"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:translationX="0dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="180dp"
+            android:layout_height="190dp"
+            android:translationX="70dp"
+            app:srcCompat="@drawable/santhat" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="110dp"
+            android:translationY="150dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bballdetail"
+        android:layout_width="300dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:translationX="110dp"
+            android:translationY="10dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:translationX="72dp"
+            android:translationY="30dp"
+            app:srcCompat="@drawable/bball" />
+
+        <Button
+            android:id="@+id/exitbballdetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="16dp"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="110dp"
+            android:translationY="160dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/easterDetail"
+        android:layout_width="300dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:translationX="120dp"
+            android:translationY="10dp" />
+
+        <Button
+            android:id="@+id/exitEasterDetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:scaleType="fitStart"
+            android:translationX="70dp"
+            android:translationY="30dp"
+            app:srcCompat="@drawable/easter" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="102dp"
+            android:translationY="165dp" />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

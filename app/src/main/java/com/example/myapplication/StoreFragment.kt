@@ -19,6 +19,7 @@ class StoreFragment : Fragment() {
 
     private var _binding: FragmentStoreBinding? = null
 
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
