@@ -1,5 +1,6 @@
-package com.example.myapplication
 
+package com.example.myapplication
+/*
 import android.net.Credentials
 import io.realm.Realm
 import io.realm.internal.platform.runBlocking
@@ -23,3 +24,5 @@ class RealmApp {
 
 
 }
+
+ */

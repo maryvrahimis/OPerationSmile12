@@ -49,7 +49,9 @@ class ShoppingFragment : Fragment() {
             binding.shoppingScreenToHomeButton.setOnClickListener {
                 findNavController().navigate(R.id.actoinShoppingToHome)
             }
-
+            binding.shoppingtoClosetButton.setOnClickListener {
+                findNavController().navigate(R.id.shoppintToCloset)
+            }
 
             binding.sneakersButton.setOnClickListener {
                 binding.detailSneaker.visibility = CardView.VISIBLE
@@ -79,7 +81,42 @@ class ShoppingFragment : Fragment() {
             binding.exitEasterDetail.setOnClickListener{
                 binding.easterDetail.visibility = CardView.GONE
             }
-
+            binding.flagButton.setOnClickListener{
+                binding.flagDetail.visibility = CardView.VISIBLE
+            }
+            binding.exitFlagDetail.setOnClickListener{
+                binding.flagDetail.visibility = CardView.GONE
+            }
+            binding.tshirtButton.setOnClickListener{
+                binding.detailTshirt.visibility = CardView.VISIBLE
+            }
+            binding.tishirtExitButton.setOnClickListener{
+                binding.detailTshirt.visibility = CardView.GONE
+            }
+            binding.halloweenButton.setOnClickListener{
+                binding.halloweenDetail.visibility = CardView.VISIBLE
+            }
+            binding.halloweenExitButton.setOnClickListener{
+                binding.halloweenDetail.visibility = CardView.GONE
+            }
+            binding.sunglassesButton.setOnClickListener{
+                binding.detailSunglasses.visibility = CardView.VISIBLE
+            }
+            binding.exitSunglassesDetail.setOnClickListener {
+                binding.detailSunglasses.visibility = CardView.GONE
+            }
+            binding.pinkbootsButton.setOnClickListener {
+                binding.detailPinkBoots.visibility = CardView.VISIBLE
+            }
+            binding.pinkbootsExit.setOnClickListener {
+                binding.detailPinkBoots.visibility = CardView.GONE
+            }
+            binding.hatButton.setOnClickListener {
+                binding.hatDetail.visibility = CardView.VISIBLE
+            }
+            binding.exitHatButton.setOnClickListener {
+                binding.hatDetail.visibility = CardView.GONE
+            }
 
         }
 

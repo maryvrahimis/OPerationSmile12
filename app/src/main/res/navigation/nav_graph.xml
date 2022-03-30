@@ -79,6 +79,9 @@
         <action
             android:id="@+id/actoinShoppingToHome"
             app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/shoppintToCloset"
+            app:destination="@id/closetFragment2" />
 
     </fragment>
     <fragment

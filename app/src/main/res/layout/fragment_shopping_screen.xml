@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0072DE"
-    android:elevation="30.dp">
+    android:elevation="30dp">
 
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFCC00"
         android:text="Home"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,38 +25,61 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
+        android:layout_marginTop="50dp"
+        android:text="Sticker Store"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:text="Button"
+        android:text="Points:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/shoppingtoClosetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Closet"
+        android:backgroundTint="#FFCC00"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/shopScroll"
-        android:layout_width="358dp"
-        android:layout_height="531dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginEnd="53dp"
+        android:layout_width="333dp"
+        android:layout_height="409dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="231dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="100dp"
+        android:background="#FFCC00"
+        android:paddingBottom="0dp"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shoppingScreenToHomeButton"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:clickable="false"
             android:columnCount="2"
             android:orientation="vertical">
@@ -61,125 +87,579 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/sneakersButton"
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="#0072DE"
-                    android:cropToPadding="true"
-                    android:onClick="@+id"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/sneakers" />
+                    app:cardBackgroundColor="#FFCC00">
 
-                <ImageButton
-                    android:id="@+id/santahatButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="197dp"
+                    <ImageButton
+                        android:id="@+id/bballButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="1"
+                        android:background="#0072E6"
+                        android:cropToPadding="false"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/bball" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:backgroundTint="#0072DE"
-                    android:cropToPadding="true"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/santhat" />
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/halloweenButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="2"
+                        android:adjustViewBounds="false"
+                        android:background="#0072DE"
+                        android:scaleType="fitCenter"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/halloween" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/santahatButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0072DE"
+                        android:cropToPadding="true"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/santhat" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:translationX="60dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/sneakersButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0072DE"
+                        android:cropToPadding="true"
+                        android:onClick="@+id"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/sneakers" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:translationX="60dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/bballButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="221dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="321dp"
+                    android:layout_height="215dp"
                     android:layout_weight="1"
-                    android:background="#0072E6"
-                    android:cropToPadding="true"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/bball" />
+                    app:cardBackgroundColor="#FFCC00">
 
-                <ImageButton
-                    android:id="@+id/easterButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="221dp"
+                    <ImageButton
+                        android:id="@+id/sunglassesButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0072E6"
+                        android:scaleType="fitCenter"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/sunglasses" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="321dp"
+                    android:layout_height="215dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#0072DE"
-                    android:cropToPadding="true"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/easter" />
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/hatButton"
+                        android:layout_width="148dp"
+                        android:layout_height="191dp"
+                        android:layout_weight="1"
+                        android:background="#0072DE"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/hat" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/flagButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="213dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="321dp"
+                    android:layout_height="215dp"
                     android:layout_weight="1"
-                    android:background="#0072E6"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/flag" />
+                    app:cardBackgroundColor="#FFCC00">
 
-                <ImageButton
-                    android:id="@+id/halloweenButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="213dp"
-                    android:layout_weight="1"
-                    android:background="#0072DE"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/halloween" />
+                    <ImageButton
+                        android:id="@+id/easterButton"
+                        android:layout_width="148dp"
+                        android:layout_height="205dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0072DE"
+                        android:cropToPadding="true"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/easter" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/flagButton"
+                        android:layout_width="146dp"
+                        android:layout_height="187dp"
+                        android:layout_weight="1"
+                        android:background="#0072E6"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/flag" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/pinkbootsButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="178dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="155dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#0072DE"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/pinkboots" />
+                    app:cardBackgroundColor="#FFCC00">
 
-                <ImageButton
-                    android:id="@+id/hatButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="178dp"
+                    <ImageView
+                        android:id="@+id/tshirtButton"
+                        android:layout_width="148dp"
+                        android:layout_height="190dp"
+                        android:background="#0072E6"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/tshirt" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="171dp"
+                    android:layout_height="237dp"
                     android:layout_weight="1"
-                    android:background="#0072DE"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/hat" />
+                    app:cardBackgroundColor="#FFCC00">
+
+                    <ImageButton
+                        android:id="@+id/pinkbootsButton"
+                        android:layout_width="148dp"
+                        android:layout_height="190dp"
+                        android:layout_weight="1"
+                        android:background="#0072DE"
+                        android:scaleType="fitStart"
+                        android:translationX="10dp"
+                        android:translationY="10dp"
+                        app:srcCompat="@drawable/pinkboots" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:translationX="50dp"
+                        android:translationY="170dp" />
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/detailSneaker"
-        android:layout_width="300dp"
-        android:layout_height="214dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="27dp"
-        android:elevation="50dp"
-        android:focusable="auto"
-        android:visibility="gone"
-        app:cardBackgroundColor="#6BB7FC"
-        app:cardCornerRadius="10dp"
+        android:id="@+id/detailTshirt"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#B4052039"
+        app:cardCornerRadius="20dp"
         app:cardElevation="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/tishirtExitButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <Button
+            android:id="@+id/buyTshirtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
+            app:srcCompat="@drawable/tshirt" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="160dp"
+            android:translationY="95dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hatDetail"
+        android:layout_width="408dp"
+        android:layout_height="722dp"
+        android:layout_marginTop="2dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#B0062440"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
+            app:srcCompat="@drawable/hat" />
+
+        <Button
+            android:id="@+id/exitHatButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#02FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <Button
+            android:id="@+id/buyHat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D7010727"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationX="130dp"
+            android:translationY="60dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailSunglasses"
+        android:layout_width="408dp"
+        android:layout_height="731dp"
+        android:layout_marginEnd="3dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#90082540"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationX="150dp"
+            android:translationY="150dp" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="140dp"
+            android:translationY="210dp"
+            app:srcCompat="@drawable/sunglasses" />
+
+        <Button
+            android:id="@+id/exitSunglassesDetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#02FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <Button
+            android:id="@+id/buySunglassesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailPinkBoots"
+        android:layout_width="408dp"
+        android:layout_height="731dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#99041F37"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
+            app:srcCompat="@drawable/pinkboots" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:translationX="180dp"
+            android:translationY="120dp" />
+
+        <Button
+            android:id="@+id/pinkbootsExit"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <Button
+            android:id="@+id/buyPinkBootsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/halloweenDetail"
+        android:layout_width="396dp"
+        android:layout_height="728dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#9F072E51"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="80dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:translationX="180dp"
+            android:translationY="120dp" />
+
+        <Button
+            android:id="@+id/buyHalloweenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
+
+        <Button
+            android:id="@+id/halloweenExitButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
+            app:srcCompat="@drawable/halloween" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailSneaker"
+        android:layout_width="415dp"
+        android:layout_height="724dp"
+        android:elevation="50dp"
+        android:focusable="auto"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#9E0B2943"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="80dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/exitSneakerDetail"
@@ -189,9 +669,10 @@
             android:text="X"
             android:textColor="#FF0303"
             android:textStyle="bold"
+            android:translationX="70dp"
+            android:translationY="140dp"
             app:strokeColor="#03A9F4"
-            app:strokeWidth="3dp"
-            tools:visibility="invisible" />
+            app:strokeWidth="3dp" />
 
         <TextView
             android:id="@+id/price"
@@ -200,53 +681,50 @@
             android:text="Price: "
             android:textAlignment="textStart"
             android:textSize="24sp"
-            android:translationX="110dp"
-            android:translationY="10dp" />
+            android:translationX="180dp"
+            android:translationY="120dp" />
 
         <Button
             android:id="@+id/buySneakers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buy"
-            android:translationX="110dp"
-            android:translationY="150dp" />
+            android:translationX="160dp"
+            android:translationY="370dp" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="180dp"
-            android:layout_height="190dp"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
             android:adjustViewBounds="false"
+            android:background="#FFCC00"
             android:cropToPadding="false"
             android:scaleType="centerInside"
             android:textAlignment="center"
-            android:translationX="65dp"
+            android:translationX="130dp"
+            android:translationY="130dp"
             app:srcCompat="@drawable/sneakers" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/detailSanta"
-        android:layout_width="300dp"
-        android:layout_height="214dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="43dp"
-        android:visibility="gone"
-        app:cardBackgroundColor="#6BB7FC"
+        android:layout_width="392dp"
+        android:layout_height="727dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#A10E3355"
         app:cardCornerRadius="10dp"
         app:cardElevation="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Price:"
-            android:translationX="110dp"
-            android:translationY="10dp" />
+            android:translationX="180dp"
+            android:translationY="120dp" />
 
         <Button
             android:id="@+id/exitSantahatButton"
@@ -257,14 +735,17 @@
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="0dp"
+            android:translationX="70dp"
+            android:translationY="140dp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="180dp"
-            android:layout_height="190dp"
-            android:translationX="70dp"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
             app:srcCompat="@drawable/santhat" />
 
         <Button
@@ -272,40 +753,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buy"
-            android:translationX="110dp"
-            android:translationY="150dp" />
+            android:translationX="160dp"
+            android:translationY="370dp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bballdetail"
-        android:layout_width="300dp"
-        android:layout_height="214dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="404dp"
+        android:layout_height="731dp"
         android:visibility="invisible"
-        app:cardBackgroundColor="#6BB7FC"
+        app:cardBackgroundColor="#A1082540"
         app:cardCornerRadius="10dp"
         app:cardElevation="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Price:"
-            android:translationX="110dp"
-            android:translationY="10dp" />
+            android:translationX="180dp"
+            android:translationY="120dp" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:translationX="72dp"
-            android:translationY="30dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
             app:srcCompat="@drawable/bball" />
 
         <Button
@@ -317,6 +794,8 @@
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -324,34 +803,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buy"
-            android:translationX="110dp"
-            android:translationY="160dp" />
+            android:translationX="160dp"
+            android:translationY="370dp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/easterDetail"
-        android:layout_width="300dp"
-        android:layout_height="214dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="404dp"
+        android:layout_height="735dp"
         android:visibility="invisible"
-        app:cardBackgroundColor="#6BB7FC"
+        app:cardBackgroundColor="#AB0D3457"
         app:cardCornerRadius="10dp"
         app:cardElevation="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Price:"
-            android:translationX="120dp"
-            android:translationY="10dp" />
+            android:translationX="180dp"
+            android:translationY="120dp" />
 
         <Button
             android:id="@+id/exitEasterDetail"
@@ -359,15 +833,18 @@
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
             android:text="X"
-            android:textColor="#FF0000" />
+            android:textColor="#FF0000"
+            android:translationX="70dp"
+            android:translationY="140dp" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="140dp"
             android:layout_height="150dp"
+            android:background="#FFCC00"
             android:scaleType="fitStart"
-            android:translationX="70dp"
-            android:translationY="30dp"
+            android:translationX="130dp"
+            android:translationY="130dp"
             app:srcCompat="@drawable/easter" />
 
         <Button
@@ -375,8 +852,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buy"
-            android:translationX="102dp"
-            android:translationY="165dp" />
+            android:translationX="160dp"
+            android:translationY="370dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flagDetail"
+        android:layout_width="415dp"
+        android:layout_height="724dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#B0082947"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="80dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:background="#FFCC00"
+            android:translationX="130dp"
+            android:translationY="130dp"
+            app:srcCompat="@drawable/flag" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price:"
+            android:translationX="180dp"
+            android:translationY="120dp" />
+
+        <Button
+            android:id="@+id/exitFlagDetail"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:translationX="70dp"
+            android:translationY="140dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:translationX="160dp"
+            android:translationY="370dp" />
     </androidx.cardview.widget.CardView>
 
 
