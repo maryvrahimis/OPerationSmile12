@@ -7,62 +7,97 @@
     android:background="#0072D7">
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/storeToCloset"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0072D7"
-        android:text="back"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="#FFCC00"
+        android:text="closet"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="23dp" />
-
-    <Button
-        android:id="@+id/toHomeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="home"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="23dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Store Home Screen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="71dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="139dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
         android:id="@+id/toShoppingScreen"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="340dp"
-        android:text="Store"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="#FFCC00"
+        android:text="SHOP"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/storeToCloset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
-        android:id="@+id/storeToCloset"
+        android:id="@+id/toHomeButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Closet"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFCB00"
+        android:text="home"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="137dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="134dp"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/hatbird" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="55dp"
+        app:cardBackgroundColor="#6BB7FC"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="______"
+            android:textColor="#FFF300"
+            android:textSize="34sp"
+            android:translationX="100dp"
+            android:translationY="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="53dp"
+            android:layout_height="43dp"
+            android:translationX="40dp"
+            android:translationY="15dp"
+            app:srcCompat="@drawable/star" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
