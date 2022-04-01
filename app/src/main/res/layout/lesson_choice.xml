@@ -1,0 +1,164 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0072D7"
+    tools:context=".LessonsFragment">
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="111dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#FFC107"
+        android:fontFamily="@font/chango"
+        android:text="K Sound"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#FFC107"
+        android:fontFamily="@font/chango"
+        android:text="P Sound"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="115dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="92dp"
+        android:backgroundTint="#FFC107"
+        android:fontFamily="@font/chango"
+        android:text="T Sound"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="228dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/chango"
+        android:text="Lecciones "
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="206dp"
+        android:fontFamily="@font/chango"
+        android:text="Please chose a sound you "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="588dp"
+        android:fontFamily="@font/chango"
+        android:text="would like to start practicing"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="111dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#FFC107"
+        android:fontFamily="@font/chango"
+        android:text="L Sound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="139dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/k_lips"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="133dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="43dp"
+        android:src="@drawable/p_lips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="93dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="65dp"
+        android:src="@drawable/l_lips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="119dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/t_lips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
