@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/email_addr"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_email"
+        app:met_primaryColor="@color/gray"
+        app:met_baseColor="@color/gray"
+        app:met_textColorHint="@color/gray"
+        app:met_iconPadding="0dp"
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/f_name"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_name"
+        app:met_primaryColor="@color/gray"
+        app:met_baseColor="@color/gray"
+        app:met_textColorHint="@color/gray"
+        app:met_iconPadding="0dp"
+        />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/password_box"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_password"
+        app:met_primaryColor="@color/gray"
+        app:met_baseColor="@color/gray"
+        app:met_textColorHint="@color/gray"
+        app:met_iconPadding="0dp"
+        />
+
+</LinearLayout>
