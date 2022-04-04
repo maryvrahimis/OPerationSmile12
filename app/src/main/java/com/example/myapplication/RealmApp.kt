@@ -1,12 +1,19 @@
 package com.example.myapplication
 
+import android.util.Log
 import io.realm.Realm
 import io.realm.RealmObject
+import io.realm.RealmResults
 import io.realm.internal.platform.runBlocking
 import io.realm.mongodb.App
 import io.realm.mongodb.Credentials
 import io.realm.mongodb.SyncConfiguration
-
+import io.realm.notifications.InitialResults
+import io.realm.notifications.ResultsChange
+import io.realm.query
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.async
+import kotlinx.coroutines.flow.Flow
 
 
 class Lessons : RealmObject {
@@ -21,7 +28,6 @@ class Lessons : RealmObject {
 
 class RealmApp {
     val app: App = App.create("opsmiletracker-fbjym")
-
     val realm: Realm
 
     init {
@@ -34,23 +40,10 @@ class RealmApp {
             ).build()
 
             Realm.open(config)
+
+
         }
     }
-    /*
-        val config = SyncConfiguration.Builder(
-            user = user,
-            partitionValue = PARTITION,
-            schema = setOf(Lessons::class)
-        ).build()
-        val realm = Realm.open(config)
-
-     */
-    /*
-        val user = app.login(Credentials.anonymous())
-        val config = SyncConfiguration.Builder(user, "partition-value", setOf(Lessons::class)).build()
-        val realm = Realm.open(config)*/
-
-
 
 
 }
