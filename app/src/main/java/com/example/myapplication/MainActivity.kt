@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
                 addChangeListenerToRealm(uiThreadRealm)
 
-                val task : FutureTask<String> = FutureTask(MainActivity2.BackgroundQuickStart(app.currentUser()!!), "test")
+                val task : FutureTask<String> = FutureTask(MainActivity.BackgroundQuickStart(app.currentUser()!!), "test")
                 val executorService: ExecutorService = Executors.newFixedThreadPool(2)
                 executorService.execute(task)
 
@@ -86,9 +86,9 @@ class MainActivity : AppCompatActivity() {
     // second part of realm
     fun addChangeListenerToRealm(realm : Realm) {
         // all tasks in the realm
-        val tasks : RealmResults<Task> = realm.where<Task>().findAllAsync()
+        val tasks : RealmResults<Lessons> = realm.where<Lessons>().findAllAsync()
 
-        tasks.addChangeListener(OrderedRealmCollectionChangeListener<RealmResults<Task>> { collection, changeSet ->
+        tasks.addChangeListener(OrderedRealmCollectionChangeListener<RealmResults<Lessons>> { collection, changeSet ->
             // process deletions in reverse order if maintaining parallel data structures so indices don't change as you iterate
             val deletions = changeSet.deletionRanges
             for (i in deletions.indices.reversed()) {
@@ -138,24 +138,24 @@ class MainActivity : AppCompatActivity() {
 
             // all tasks in the realm
             val tasks : RealmResults<Lessons> = backgroundThreadRealm.where<Lessons>().findAll()
-
+/*
             // you can also filter a collection
             val tasksThatBeginWithN : List<Lessons> = tasks.where().beginsWith("name", "N").findAll()
             val openTasks : List<Lessons> = tasks.where().equalTo("status", TaskStatus.Open.name).findAll()
-
+*/
             val otherTask: Lessons = tasks[0]!!
-
+/*
             // all modifications to a realm must happen inside of a write block
             backgroundThreadRealm.executeTransaction { transactionRealm ->
-                val innerOtherTask : Task = transactionRealm.where<Task>().equalTo("_id", otherTask._id).findFirst()!!
+                val innerOtherTask : Lessons = transactionRealm.where<Lessons>().equalTo("_id", otherTask._id).findFirst()!!
                 innerOtherTask.status = TaskStatus.Complete.name
-            }
+            }*/
 
             val yetAnotherTask: Lessons = tasks.get(0)!!
             val yetAnotherTaskId: ObjectId = yetAnotherTask._id
             // all modifications to a realm must happen inside of a write block
             backgroundThreadRealm.executeTransaction { transactionRealm ->
-                val innerYetAnotherTask : Task = transactionRealm.where<Task>().equalTo("_id", yetAnotherTaskId).findFirst()!!
+                val innerYetAnotherTask : Lessons = transactionRealm.where<Lessons>().equalTo("_id", yetAnotherTaskId).findFirst()!!
                 innerYetAnotherTask.deleteFromRealm()
             }
 
