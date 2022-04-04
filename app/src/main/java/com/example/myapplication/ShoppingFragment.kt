@@ -16,6 +16,7 @@ import com.example.myapplication.databinding.FragmentStoreBinding
 class ShoppingFragment : Fragment() {
 
         private var _binding: FragmentShoppingScreenBinding? = null
+
         val stickies = arrayOf(
             StickerBundle(_id = R.drawable.hat, price = 20 , birdWeaaringSticker = R.drawable.hat),
             StickerBundle(R.drawable.flag, 10, R.drawable.flagbird),
