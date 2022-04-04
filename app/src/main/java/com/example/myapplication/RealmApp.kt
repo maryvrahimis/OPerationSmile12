@@ -1,5 +1,5 @@
 package com.example.myapplication
-
+/*
 import android.util.Log
 import io.realm.Realm
 import io.realm.RealmObject
@@ -14,8 +14,8 @@ import io.realm.query
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.Flow
-
-
+*/
+/*
 class Lessons : RealmObject {
     var image: String = ""
     var sound: String = ""
@@ -27,9 +27,9 @@ class Lessons : RealmObject {
 }
 
 class RealmApp {
+
     val app: App = App.create("opsmiletracker-fbjym")
     val realm: Realm
-
     init {
         realm = runBlocking {
             val user = app.login(Credentials.emailPassword("davion226@gmail.com","oogabooga"))
@@ -41,9 +41,8 @@ class RealmApp {
 
             Realm.open(config)
 
-
         }
     }
 
 
-}
+}*/

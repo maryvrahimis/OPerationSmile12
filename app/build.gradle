@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'io.realm.kotlin'
+
+    id 'kotlin-kapt'
+    id 'realm-android'
 }
 
 android {
@@ -30,6 +32,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    realm {
+        syncEnabled = true
+    }
+
     buildFeatures {
         viewBinding true
     }
@@ -37,7 +44,6 @@ android {
 
 dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt'
-    implementation 'io.realm.kotlin:library-sync:0.10.2'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
