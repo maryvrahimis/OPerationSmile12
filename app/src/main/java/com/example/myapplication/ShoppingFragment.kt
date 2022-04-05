@@ -56,6 +56,9 @@ class ShoppingFragment : Fragment() {
 
             binding.sneakersButton.setOnClickListener {
                 binding.detailSneaker.visibility = CardView.VISIBLE
+                binding.buySneakers.setOnClickListener {
+
+                }
 
             }
             binding.exitSneakerDetail.setOnClickListener {
@@ -84,9 +87,11 @@ class ShoppingFragment : Fragment() {
             }
             binding.flagButton.setOnClickListener{
                 binding.flagDetail.visibility = CardView.VISIBLE
+
             }
             binding.exitFlagDetail.setOnClickListener{
                 binding.flagDetail.visibility = CardView.GONE
+
             }
             binding.tshirtButton.setOnClickListener{
                 binding.detailTshirt.visibility = CardView.VISIBLE

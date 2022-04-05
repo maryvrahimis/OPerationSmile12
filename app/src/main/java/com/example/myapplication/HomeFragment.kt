@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
 
@@ -30,11 +33,20 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        var isDailyLessonDone: Boolean = false
+        var points: Int = 0
+        var days: Int = 0
 
+        super.onViewCreated(view, savedInstanceState)
+        binding.streakText.setText((days.toString() + " dias"))
         binding.lessonsButton.setOnClickListener {
-            findNavController().navigate(R.id.action_Home_to_Lessons)
+            binding.completedLesson.isVisible = true
+            binding.notCompletedLesson.isVisible = false
+            pointsFunc(true, points)
+            //findNavController().navigate(R.id.action_Home_to_Lessons)
+
         }
+
         binding.storeButton.setOnClickListener {
             findNavController().navigate(R.id.to_Third_fragment)
         }
@@ -44,10 +56,32 @@ class HomeFragment : Fragment() {
         binding.reportsButton.setOnClickListener {
             findNavController().navigate(R.id.go_to_reports)
         }
+
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+
         _binding = null
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+
+        super.onSaveInstanceState(outState)
+    }
+    fun pointsFunc (isdone: Boolean, points: Int){
+        val po: TextView = binding.totalPointsText
+        if(isdone){
+            po.text = (points + 1).toString() + " points"
+            // binding.totalPointsText.setText(points)
+        }
+        else{
+            po.text = points.toString() + "points"
+        }
+    }
+
+
+
+
 }
