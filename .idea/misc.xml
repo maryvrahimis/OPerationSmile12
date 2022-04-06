@@ -11,7 +11,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/activity_patientscreen.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.31768035888671875" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3133555094401042" />
         <entry key="app/src/main/res/layout/fragment_lessons.xml" value="0.1022883097330729" />
@@ -19,9 +19,10 @@
         <entry key="app/src/main/res/layout/fragment_reports.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_shop_detail.xml" value="0.453125" />
-        <entry key="app/src/main/res/layout/fragment_shopping_screen.xml" value="0.3160377358490566" />
-        <entry key="app/src/main/res/layout/fragment_store.xml" value="0.2937515258789062" />
+        <entry key="app/src/main/res/layout/fragment_shopping_screen.xml" value="0.21213836669921876" />
+        <entry key="app/src/main/res/layout/fragment_store.xml" value="0.10219879150390623" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/indie_lessons.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
