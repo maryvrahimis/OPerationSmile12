@@ -15,6 +15,7 @@ import io.realm.OrderedRealmCollectionChangeListener
 import io.realm.Realm
 import io.realm.RealmObject
 import io.realm.RealmResults
+import io.realm.annotations.PrimaryKey
 import io.realm.kotlin.where
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
@@ -36,23 +37,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Init Realm
         Realm.init(this) // context, usually an Activity or Application
-
+        // App Init
         val appID : String = "opsmiletracker-fbjym";
-
         app = App(
             AppConfiguration.Builder(appID)
             .build())
 
-        val credentials: Credentials = Credentials.anonymous()
+        // User Auth
+        val credentials: Credentials = Credentials.emailPassword("davion226@gmail.com","Password")
+        var user: User? = null
 
         app.loginAsync(credentials) {
             if (it.isSuccess) {
                 Log.v("QUICKSTART", "Successfully authenticated anonymously.")
-                val user: User? = app.currentUser()
-
-                val partitionValue: String = "My Project"
-                val config = SyncConfiguration.Builder(user, partitionValue)
+                //val partitionValue: String = "_partition"
+                user = app.currentUser()
+                val config = SyncConfiguration.Builder(user)
                     .build()
 
                 uiThreadRealm = Realm.getInstance(config)
@@ -194,7 +196,9 @@ class MainActivity : AppCompatActivity() {
 }//main act end
 
 open class Lessons(_name: String = "Lessons", project: String = "OpSmileTracker") : RealmObject() {
+    @PrimaryKey
     var _id: ObjectId = ObjectId()
+
     var image: String = ""
     var sound: String = ""
     var syllables: String = ""
