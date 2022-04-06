@@ -11,20 +11,9 @@
         android:id="@+id/textview_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
 
     <Button
         android:id="@+id/next"
@@ -32,6 +21,67 @@
         android:layout_height="wrap_content"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="540dp" />
+        tools:layout_editor_absoluteY="574dp" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="105dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/papaya"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="114dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="160dp"
+        android:src="@drawable/parque"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="109dp"
+        android:layout_height="113dp"
+        android:src="@drawable/dog"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="117dp"
+        android:layout_height="103dp"
+        android:src="@drawable/pato"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="127dp"
+        android:layout_height="121dp"
+        android:src="@drawable/pan"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="115dp"
+        android:layout_height="107dp"
+        android:src="@drawable/pera"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="115dp"
+        android:layout_height="130dp"
+        android:src="@drawable/pepino"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="361dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

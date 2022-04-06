@@ -40,10 +40,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.streakText.setText((days.toString() + " dias"))
         binding.lessonsButton.setOnClickListener {
-            binding.completedLesson.isVisible = true
-            binding.notCompletedLesson.isVisible = false
-            pointsFunc(true, points)
-            //findNavController().navigate(R.id.action_Home_to_Lessons)
+
+            findNavController().navigate(R.id.action_Home_to_Lessons)
 
         }
 

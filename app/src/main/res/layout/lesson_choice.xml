@@ -22,11 +22,11 @@
         android:fontFamily="@font/chango"
         android:text="K Sound"
         android:textColor="@android:color/white"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/PsoundsButton"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/PsoundsButton"
         android:layout_width="112dp"
         android:layout_height="96dp"
         android:layout_marginStart="53dp"
@@ -52,7 +52,7 @@
         android:fontFamily="@font/chango"
         android:text="T Sound"
         app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/PsoundsButton" />
 
     <TextView
         android:id="@+id/textview_second"
@@ -159,6 +159,6 @@
         android:layout_marginTop="32dp"
         android:src="@drawable/t_lips"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/PsoundsButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
