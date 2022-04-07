@@ -12,8 +12,9 @@
         android:layout_height="50dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="70dp"
-        android:backgroundTint="#FFCC00"
+        android:backgroundTint="@color/WarmYellow"
         android:text="closet"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,8 +27,9 @@
         android:layout_marginStart="79dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="52dp"
-        android:backgroundTint="#FFCC00"
+        android:backgroundTint="@color/WarmYellow"
         android:text="SHOP"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/storeToCloset"
@@ -38,10 +40,11 @@
         android:id="@+id/toHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#FFCB00"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/WarmYellow"
         android:text="home"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,47 +52,37 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="137dp"
+        android:layout_width="210dp"
         android:layout_height="166dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="134dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="101dp"
         app:cardBackgroundColor="#6BB7FC"
         app:cardCornerRadius="20dp"
-        app:cardElevation="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
+            android:padding="10dp"
             app:srcCompat="@drawable/hatbird" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="300dp"
-        android:layout_height="68dp"
+        android:layout_width="266dp"
+        android:layout_height="100dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="55dp"
         app:cardBackgroundColor="#6BB7FC"
         app:cardCornerRadius="20dp"
-        app:cardElevation="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="______"
-            android:textColor="#FFF300"
-            android:textSize="34sp"
-            android:translationX="100dp"
-            android:translationY="15dp" />
 
         <ImageView
             android:id="@+id/imageView10"

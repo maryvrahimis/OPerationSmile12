@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#FFCC00"
+        android:backgroundTint="@color/WarmYellow"
         android:text="Home"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
@@ -25,6 +26,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:text="Sticker Store"
         android:textColor="#FFFFFF"
@@ -53,8 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/WarmYellow"
         android:text="Closet"
-        android:backgroundTint="#FFCC00"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +71,8 @@
         android:layout_marginTop="231dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="100dp"
-        android:background="#FFCC00"
+        android:background="@color/white"
+        android:padding="10dp"
         android:paddingBottom="0dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,16 +98,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
-
+                    app:cardBackgroundColor="@color/WarmYellow">
 
 
                     <ImageButton
                         android:id="@+id/bballButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:background="#0072E6"
+                        android:background="@color/SpecialBlue"
                         android:cropToPadding="false"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
@@ -123,15 +126,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/halloweenButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
-                        android:layout_weight="2"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:adjustViewBounds="false"
-                        android:background="#0072DE"
+                        android:background="@color/SpecialBlue"
                         android:scaleType="fitCenter"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -157,15 +159,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/santahatButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#0072DE"
-                        android:cropToPadding="true"
+                        android:backgroundTint="@color/SpecialBlue"
+                        android:cropToPadding="false"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -185,14 +187,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/sneakersButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="#0072DE"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
+                        android:backgroundTint="@color/SpecialBlue"
                         android:cropToPadding="true"
                         android:onClick="@+id"
                         android:scaleType="fitStart"
@@ -222,14 +223,14 @@
                     android:layout_width="321dp"
                     android:layout_height="215dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/sunglassesButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#0072E6"
+                        android:backgroundTint="@color/SpecialBlue"
                         android:scaleType="fitCenter"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -249,14 +250,14 @@
                     android:layout_width="321dp"
                     android:layout_height="215dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/hatButton"
-                        android:layout_width="148dp"
-                        android:layout_height="191dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:background="#0072DE"
+                        android:background="@color/SpecialBlue"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -283,14 +284,14 @@
                     android:layout_width="321dp"
                     android:layout_height="215dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/easterButton"
-                        android:layout_width="148dp"
-                        android:layout_height="205dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#0072DE"
+                        android:backgroundTint="@color/SpecialBlue"
                         android:cropToPadding="true"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
@@ -309,14 +310,14 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="165dp"
                     android:layout_height="match_parent"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/flagButton"
-                        android:layout_width="146dp"
-                        android:layout_height="187dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:background="#0072E6"
+                        android:background="@color/SpecialBlue"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -344,13 +345,13 @@
                     android:layout_width="155dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageView
                         android:id="@+id/tshirtButton"
-                        android:layout_width="148dp"
-                        android:layout_height="190dp"
-                        android:background="#0072E6"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
+                        android:background="@color/SpecialBlue"
                         android:translationX="10dp"
                         android:translationY="10dp"
                         app:srcCompat="@drawable/tshirt" />
@@ -368,14 +369,14 @@
                     android:layout_width="171dp"
                     android:layout_height="237dp"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#FFCC00">
+                    app:cardBackgroundColor="@color/WarmYellow">
 
                     <ImageButton
                         android:id="@+id/pinkbootsButton"
-                        android:layout_width="148dp"
-                        android:layout_height="190dp"
+                        android:layout_width="140dp"
+                        android:layout_height="198dp"
                         android:layout_weight="1"
-                        android:background="#0072DE"
+                        android:background="@color/SpecialBlue"
                         android:scaleType="fitStart"
                         android:translationX="10dp"
                         android:translationY="10dp"
@@ -403,505 +404,821 @@
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
         app:cardCornerRadius="20dp"
-        app:cardElevation="80dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/tishirtExitButton"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
             android:textStyle="bold"
-            android:translationX="70dp"
+            android:translationX="-110dp"
             android:translationY="140dp" />
 
         <Button
             android:id="@+id/buyTshirtButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
 
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/tshirt" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/tshirtbird" />
+
+        <ImageView
+            android:id="@+id/imageView299"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/tshirtPriceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:text="20"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:translationX="160dp"
+            android:translationX="15dp"
             android:translationY="95dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/hatDetail"
-        android:layout_width="408dp"
-        android:layout_height="722dp"
-        android:layout_marginTop="2dp"
-        android:visibility="invisible"
-        app:cardBackgroundColor="#B0062440"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/hat" />
-
-        <Button
-            android:id="@+id/exitHatButton"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="#02FFFFFF"
-            android:text="X"
-            android:textColor="#FF0000"
-            android:translationX="70dp"
-            android:translationY="140dp" />
-
-        <Button
-            android:id="@+id/buyHat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buy"
-            android:translationX="160dp"
-            android:translationY="370dp" />
 
         <TextView
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#D7010727"
-            android:text="TextView"
+            android:text="Camisa"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:translationX="130dp"
             android:translationY="60dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hatDetail"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#B4052039"
+        app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/exitHatButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#00FFFFFF"
+            android:text="X"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:translationX="-110dp"
+            android:translationY="140dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Sombrero"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="25"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/hatbird" />
+
+
+        <Button
+            android:id="@+id/buyHat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
+            android:text="Buy"
+            android:translationY="370dp" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/detailSunglasses"
-        android:layout_width="408dp"
-        android:layout_height="731dp"
-        android:layout_marginEnd="3dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#90082540"
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:translationX="150dp"
-            android:translationY="150dp" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="140dp"
-            android:translationY="210dp"
-            app:srcCompat="@drawable/sunglasses" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitSunglassesDetail"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#02FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
+            android:textStyle="bold"
+            android:translationX="-110dp"
             android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Gafas de sol"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="25"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/sunglassesbird" />
+
 
         <Button
             android:id="@+id/buySunglassesButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/detailPinkBoots"
-        android:layout_width="408dp"
-        android:layout_height="731dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#99041F37"
+        app:contentPaddingTop="100dp"
+        app:cardBackgroundColor="#B4052039"
         app:cardCornerRadius="20dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="4dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/pinkboots" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:translationX="180dp"
-            android:translationY="120dp" />
 
         <Button
             android:id="@+id/pinkbootsExit"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
+            android:textStyle="bold"
+            android:translationX="-110dp"
             android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/pinkbootsbird" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="30"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Gafas de sol"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
 
         <Button
             android:id="@+id/buyPinkBootsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/halloweenDetail"
-        android:layout_width="396dp"
-        android:layout_height="728dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#9F072E51"
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="-4dp">
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:translationX="180dp"
-            android:translationY="120dp" />
-
-        <Button
-            android:id="@+id/buyHalloweenButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buy"
-            android:translationX="160dp"
-            android:translationY="370dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/halloweenExitButton"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
+            android:textStyle="bold"
+            android:translationX="-110dp"
             android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Bruja/Mago"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="50"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+        <Button
+            android:id="@+id/buyHalloweenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
+            android:text="Buy"
+            android:translationY="370dp" />
+
 
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/halloween" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/halloweenbird" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/detailSneaker"
-        android:layout_width="415dp"
-        android:layout_height="724dp"
-        android:elevation="50dp"
-        android:focusable="auto"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#9E0B2943"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
 
         <Button
             android:id="@+id/exitSneakerDetail"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="#000072E6"
+            android:layout_gravity="center_horizontal"
+            android:background="#00FFFFFF"
             android:text="X"
-            android:textColor="#FF0303"
+            android:textColor="#FF0000"
             android:textStyle="bold"
-            android:translationX="70dp"
-            android:translationY="140dp"
-            app:strokeColor="#03A9F4"
-            app:strokeWidth="3dp" />
+            android:translationX="-110dp"
+            android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
 
         <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price: "
-            android:textAlignment="textStart"
+            android:layout_gravity="center_horizontal"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Zapatillas deportivas"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:translationX="180dp"
-            android:translationY="120dp" />
+            android:textStyle="bold"
+            android:translationY="60dp" />
 
         <Button
             android:id="@+id/buySneakers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:adjustViewBounds="false"
-            android:background="#FFCC00"
-            android:cropToPadding="false"
-            android:scaleType="centerInside"
-            android:textAlignment="center"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/sneakers" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/sneakersbird" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/detailSanta"
-        android:layout_width="392dp"
-        android:layout_height="727dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#A10E3355"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price:"
-            android:translationX="180dp"
-            android:translationY="120dp" />
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitSantahatButton"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
-            android:translationY="140dp"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textStyle="bold"
+            android:translationX="-110dp"
+            android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="sombrero de Santa"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/santhat" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/santahatbird" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bballdetail"
-        android:layout_width="404dp"
-        android:layout_height="731dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#A1082540"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price:"
-            android:translationX="180dp"
-            android:translationY="120dp" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/bball" />
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitbballdetail"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
-            android:translationY="140dp"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textStyle="bold"
+            android:translationX="-110dp"
+            android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Baloncesto"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="50"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/bballbird" />
+
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/easterDetail"
-        android:layout_width="404dp"
-        android:layout_height="735dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#AB0D3457"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price:"
-            android:translationX="180dp"
-            android:translationY="120dp" />
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitEasterDetail"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
-            android:translationX="70dp"
+            android:textStyle="bold"
+            android:translationX="-110dp"
             android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="50"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
+
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Pascua de Resurrección"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="140dp"
             android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:scaleType="fitStart"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/easter" />
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/easterbird" />
 
         <Button
             android:id="@+id/PsoundsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/flagDetail"
-        android:layout_width="415dp"
-        android:layout_height="724dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="#F1E9E9"
         android:visibility="invisible"
-        app:cardBackgroundColor="#B0082947"
+        app:cardBackgroundColor="#B4052039"
+        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="80dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
-            android:background="#FFCC00"
-            android:translationX="130dp"
-            android:translationY="130dp"
-            app:srcCompat="@drawable/flag" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="price:"
-            android:translationX="180dp"
-            android:translationY="120dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitFlagDetail"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="#00FFFFFF"
             android:text="X"
             android:textColor="#FF0000"
             android:textStyle="bold"
-            android:translationX="70dp"
+            android:translationX="-110dp"
             android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:translationX="-15dp"
+            android:translationY="90dp"
+            app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/SpecialBlue"
+            android:translationY="190dp"
+            app:srcCompat="@drawable/flagbird" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#D7010727"
+            android:text="Bandera"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="60dp" />
+
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="10"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="15dp"
+            android:translationY="95dp" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/WarmYellow"
+            android:backgroundTint="@color/WarmYellow"
             android:text="Buy"
-            android:translationX="160dp"
             android:translationY="370dp" />
     </androidx.cardview.widget.CardView>
 

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
@@ -56,72 +57,131 @@ class ShoppingFragment : Fragment() {
 
             binding.sneakersButton.setOnClickListener {
                 binding.detailSneaker.visibility = CardView.VISIBLE
+                if(binding.detailSneaker.isVisible){
+                    binding.shopScroll.isGone = true
+                }
                 binding.buySneakers.setOnClickListener {
 
                 }
 
+
             }
             binding.exitSneakerDetail.setOnClickListener {
                 binding.detailSneaker.visibility = CardView.GONE
+                if(!binding.detailSneaker.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
 
             binding.santahatButton.setOnClickListener {
                 binding.detailSanta.visibility = CardView.VISIBLE
+                if(binding.detailSanta.isVisible){
+                    binding.shopScroll.isGone = true
+                }
 
             }
             binding.exitSantahatButton.setOnClickListener {
                 binding.detailSanta.visibility = CardView.GONE
+                if(!binding.detailSanta.isVisible){
+                    binding.shopScroll.isGone = false
+                }
 
             }
             binding.bballButton.setOnClickListener{
                 binding.bballdetail.visibility = CardView.VISIBLE
+                if(binding.bballdetail.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.exitbballdetail.setOnClickListener{
                 binding.bballdetail.visibility = CardView.GONE
+                if(!binding.bballdetail.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.easterButton.setOnClickListener{
                 binding.easterDetail.visibility = CardView.VISIBLE
+                if(binding.easterDetail.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.exitEasterDetail.setOnClickListener{
                 binding.easterDetail.visibility = CardView.GONE
+                if(!binding.easterDetail.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.flagButton.setOnClickListener{
                 binding.flagDetail.visibility = CardView.VISIBLE
-
+                if(binding.flagDetail.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.exitFlagDetail.setOnClickListener{
                 binding.flagDetail.visibility = CardView.GONE
-
+                if(!binding.flagDetail.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.tshirtButton.setOnClickListener{
                 binding.detailTshirt.visibility = CardView.VISIBLE
+                if(binding.detailTshirt.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.tishirtExitButton.setOnClickListener{
                 binding.detailTshirt.visibility = CardView.GONE
+                if(!binding.detailTshirt.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.halloweenButton.setOnClickListener{
                 binding.halloweenDetail.visibility = CardView.VISIBLE
+                if(binding.halloweenDetail.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.halloweenExitButton.setOnClickListener{
                 binding.halloweenDetail.visibility = CardView.GONE
+                if(!binding.halloweenDetail.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.sunglassesButton.setOnClickListener{
                 binding.detailSunglasses.visibility = CardView.VISIBLE
+                if(binding.detailSunglasses.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.exitSunglassesDetail.setOnClickListener {
                 binding.detailSunglasses.visibility = CardView.GONE
+                if(!binding.detailSunglasses.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.pinkbootsButton.setOnClickListener {
                 binding.detailPinkBoots.visibility = CardView.VISIBLE
+                if(binding.detailPinkBoots.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.pinkbootsExit.setOnClickListener {
                 binding.detailPinkBoots.visibility = CardView.GONE
+                if(!binding.detailPinkBoots.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
             binding.hatButton.setOnClickListener {
                 binding.hatDetail.visibility = CardView.VISIBLE
+                if(binding.hatDetail.isVisible){
+                    binding.shopScroll.isGone = true
+                }
             }
             binding.exitHatButton.setOnClickListener {
                 binding.hatDetail.visibility = CardView.GONE
+                if(!binding.hatDetail.isVisible){
+                    binding.shopScroll.isGone = false
+                }
             }
 
         }
