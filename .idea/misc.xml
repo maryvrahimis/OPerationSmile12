@@ -3,26 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/activity_login.xml" value="0.3125" />
-        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_home.xml" value="0.1580547112462006" />
-        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_lessons.xml" value="0.325" />
-        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/indie_lessons.xml" value="0.325" />
-        <entry key="app/src/main/res/font/fonts.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/drawable/ic_launcher_background.xml" value="0.169" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/content_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_closet.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_lessons.xml" value="0.22" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_patients_screen.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_reports.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_shopping_screen.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_store.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/indie_lessons.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/las_frases.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/las_silabas.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/antho/AndroidStudioProjects/OPerationSmile12/app/src/main/res/layout/lesson_choice.xml" value="0.14666666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/activity_patientscreen.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.31768035888671875" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3133555094401042" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19023996988932293" />
         <entry key="app/src/main/res/layout/fragment_lessons.xml" value="0.1022883097330729" />
-        <entry key="app/src/main/res/layout/fragment_patients_screen.xml" value="0.34" />
         <entry key="app/src/main/res/layout/fragment_reports.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_shop_detail.xml" value="0.453125" />
-        <entry key="app/src/main/res/layout/fragment_shopping_screen.xml" value="0.21213836669921876" />
-        <entry key="app/src/main/res/layout/fragment_store.xml" value="0.10219879150390623" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/indie_lessons.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
@@ -31,12 +33,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.34427083333333336" />
-      </ProjectState>
-    </option>
   </component>
 </project>

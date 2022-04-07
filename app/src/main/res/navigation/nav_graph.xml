@@ -36,6 +36,9 @@
         <action
             android:id="@+id/lessons_to_store"
             app:destination="@id/StoreFragment" />
+        <action
+            android:id="@+id/action_LessonsFragment_to_lasFrasesFragment"
+            app:destination="@id/lasFrasesFragment" />
     </fragment>
     <fragment
         android:id="@+id/StoreFragment"
@@ -95,7 +98,11 @@
     <fragment
         android:id="@+id/lasFrasesFragment"
         android:name="com.example.myapplication.LasFrasesFragment"
-        android:label="LasFrasesFragment" />
+        android:label="LasFrasesFragment" >
+        <action
+            android:id="@+id/action_lasFrasesFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/lessonChoiceFragment"
         android:name="com.example.myapplication.LessonChoiceFragment"
@@ -109,8 +116,8 @@
         android:name="com.example.myapplication.LasSilabasFragment"
         android:label="LasSilabasFragment" >
         <action
-            android:id="@+id/action_lasSilabasFragment_to_lasFrasesFragment"
-            app:destination="@id/lasFrasesFragment" />
+            android:id="@+id/action_lasSilabasFragment_to_LessonsFragment"
+            app:destination="@id/LessonsFragment" />
     </fragment>
 
 </navigation>

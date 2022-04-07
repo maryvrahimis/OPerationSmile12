@@ -28,7 +28,7 @@ class LasSilabasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+    binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabasFragment_to_LessonsFragment) }
 
     }
 

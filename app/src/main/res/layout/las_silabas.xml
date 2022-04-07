@@ -20,7 +20,7 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#FFC107"
         android:fontFamily="@font/chango"
         android:text="Siguente"
@@ -107,9 +107,9 @@
         android:id="@+id/imageView3"
         android:layout_width="241dp"
         android:layout_height="204dp"
-        android:layout_marginStart="85dp"
+        android:layout_marginStart="95dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="85dp"
+        android:layout_marginEnd="95dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
@@ -119,20 +119,28 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="197dp"
         android:fontFamily="@font/chango"
         android:text="P"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="468dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="362dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/lips"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="233dp" />
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/lips" />
 
     <TextView
         android:id="@+id/textView13"

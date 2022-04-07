@@ -28,7 +28,7 @@ class LasFrasesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.next.setOnClickListener {findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment) }
 
     }
 

@@ -19,69 +19,249 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="@font/chango"
+        android:text="Siguente"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="574dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="105dp"
         android:layout_height="111dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="28dp"
         android:src="@drawable/papaya"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView24"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView24"
         android:layout_width="114dp"
         android:layout_height="103dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/parque"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView25"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="109dp"
         android:layout_height="113dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="48dp"
         android:src="@drawable/dog"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView26"
         android:layout_width="117dp"
         android:layout_height="103dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/pato"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="250dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <ImageView
         android:id="@+id/imageView27"
-        android:layout_width="127dp"
-        android:layout_height="121dp"
+        android:layout_width="119dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/pan"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <ImageView
         android:id="@+id/imageView28"
         android:layout_width="115dp"
         android:layout_height="107dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
         android:src="@drawable/pera"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
     <ImageView
         android:id="@+id/imageView29"
-        android:layout_width="115dp"
-        android:layout_height="130dp"
+        android:layout_width="107dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="28dp"
         android:src="@drawable/pepino"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="361dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="111dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/pez"
+        app:layout_constraintEnd_toStartOf="@+id/imageView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="110dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/pina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="85dp"
+        android:fontFamily="@font/chango"
+        android:text="Papaya"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="@font/chango"
+        android:text="Parque"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="49dp"
+        android:fontFamily="@font/chango"
+        android:text="Perro"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView24"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="116dp"
+        android:fontFamily="@font/chango"
+        android:text="Pato"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/chango"
+        android:text="Pan"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/imageView31"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/chango"
+        android:text="Pera"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="105dp"
+        android:fontFamily="@font/chango"
+        android:text="Las Palabras "
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/chango"
+        android:text="Pepino"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView29" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/chango"
+        android:text="Pez"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/textView35"
+        app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/chango"
+        android:text="Pina"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:fontFamily="@font/chango"
+        android:text="Repite cada palabra cinco veces"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/chango"
+        android:text="Para practicar el sonido"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

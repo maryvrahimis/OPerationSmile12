@@ -36,7 +36,7 @@ class LessonsFragment : Fragment() {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
         binding.next.setOnClickListener {
-            findNavController().navigate(R.id.lessons_to_store)
+            findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
         }
     }
 
