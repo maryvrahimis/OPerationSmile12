@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.View.FIND_VIEWS_WITH_TEXT
+import android.widget.ImageView
 import android.widget.TextView
 
 import androidx.core.view.isVisible
@@ -26,6 +28,10 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        lateinit var imageView: ImageView
+
+
+
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -36,7 +42,6 @@ class HomeFragment : Fragment() {
         var isDailyLessonDone: Boolean = false
         var points: Int = 0
         var days: Int = 0
-
         super.onViewCreated(view, savedInstanceState)
         binding.streakText.setText((days.toString() + " dias"))
         binding.lessonsButton.setOnClickListener {

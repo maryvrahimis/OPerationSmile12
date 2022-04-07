@@ -7,13 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentLessonsBinding
+import com.example.myapplication.databinding.IndieLessonsBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class LessonsFragment : Fragment() {
+class IndieLessonsFragment : Fragment() {
 
-    private var _binding: FragmentLessonsBinding? = null
+    private var _binding: IndieLessonsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +22,7 @@ class LessonsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentLessonsBinding.inflate(inflater, container, false)
+        _binding = IndieLessonsBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,11 +33,8 @@ class LessonsFragment : Fragment() {
 //        binding.buttonSecond.setOnClickListener {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
-        binding.next.setOnClickListener {
-            findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
-        }
-        binding.panButton.setOnClickListener {
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+        binding.backButton.setOnClickListener {
+            findNavController().navigate(R.id.action_indieLessonsFragment_to_LessonsFragment)
         }
     }
 
