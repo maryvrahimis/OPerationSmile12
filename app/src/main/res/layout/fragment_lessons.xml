@@ -60,10 +60,11 @@
         android:id="@+id/imageView26"
         android:layout_width="117dp"
         android:layout_height="103dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/pato"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        tools:layout_editor_absoluteX="4dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <ImageView
         android:id="@+id/imageView28"
@@ -193,6 +194,7 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -236,7 +238,7 @@
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="56dp"
         android:fontFamily="@font/chango"
         android:text="Repite cada palabra cinco veces"
         android:textColor="@color/white"
@@ -251,6 +253,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/chango"
         android:text="Para practicar el sonido"
+        android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />

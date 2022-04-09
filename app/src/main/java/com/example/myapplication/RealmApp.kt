@@ -1,19 +1,196 @@
 package com.example.myapplication
-/*
+
+import android.os.Bundle
 import android.util.Log
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import android.view.Menu
+import android.view.MenuItem
+import com.example.myapplication.databinding.ActivityMainBinding
+import io.realm.OrderedRealmCollectionChangeListener
 import io.realm.Realm
 import io.realm.RealmObject
 import io.realm.RealmResults
-import io.realm.internal.platform.runBlocking
+import io.realm.annotations.PrimaryKey
+import io.realm.annotations.RealmClass
+import io.realm.annotations.Required
+import io.realm.kotlin.where
 import io.realm.mongodb.App
+import io.realm.mongodb.AppConfiguration
 import io.realm.mongodb.Credentials
-import io.realm.mongodb.SyncConfiguration
-import io.realm.notifications.InitialResults
-import io.realm.notifications.ResultsChange
-import io.realm.query
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.async
-import kotlinx.coroutines.flow.Flow
+import io.realm.mongodb.User
+import io.realm.mongodb.sync.SyncConfiguration
+import org.bson.types.ObjectId
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
+import java.util.concurrent.FutureTask
+import io.realm.RealmList;
+import java.util.Date;
+
+
+
+
+
+/*
+open class Lesson(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var image: String? = null,
+
+    var instructions: String? = null,
+
+    var phrase: String? = null,
+
+    var sound: String? = null,
+
+    var syllables: String? = null,
+
+    var videoInstructions: String? = null,
+
+    var word: String? = null
+): RealmObject() {}
+
+ */
+/*
+open class Mascot(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    @Required
+    var currentAccessories: RealmList<String> = RealmList(),
+
+    var patientId: ObjectId? = null,
+
+    var stickerList: String? = null
+): RealmObject() {}
+
+open class Parent_Guardian(
+@PrimaryKey var _id: ObjectId? = null,
+
+var _partition: String = "",
+
+var parent_guardianID: ObjectId? = null,
+
+var password: String? = null,
+
+var patientID: ObjectId? = null,
+
+var therapistID: ObjectId? = null,
+
+var username: String? = null
+): RealmObject() {}
+
+open class Patient(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var Recordings: Patient_Recordings? = null,
+
+    var _partition: String = "",
+
+    var accountType: String? = null,
+
+    var age: Long = 0,
+
+    var lessons: Patient_lessons? = null,
+
+    var mascot: Patient_mascot? = null,
+
+    var name: String = "",
+
+    var numOfPoints: Long? = null,
+
+    var parent_guardianID: ObjectId? = null,
+
+    var password: String = "",
+
+    var patientID: ObjectId? = null,
+
+    var username: String = ""
+): RealmObject() {}
+
+
+
+open class Recording(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var audioRecordings: String? = null,
+
+    var date: Date? = null,
+
+    var soundType: String? = null
+): RealmObject() {}
+
+open class Therapist(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var accountType: String? = null,
+
+    var age: Long? = null,
+
+    var email: String? = null,
+
+    var name: String? = null,
+
+    var password: String? = null,
+
+    @Required
+    var patientList: RealmList<String> = RealmList(),
+
+    var phone: String? = null,
+
+    var tID: ObjectId? = null,
+
+    var username: String? = null
+): RealmObject() {}
+
+open class Purchase(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var patientID: ObjectId? = null,
+
+    var sticker: String? = null,
+
+    var stickerPrice: Long? = null
+): RealmObject() {}
+
+open class stickerList(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var numOfPoints: Long? = null,
+
+    var sticker: String? = null,
+
+    var stickerPrice: Long? = null
+): RealmObject() {}
+
+open class Login(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var email: String? = null,
+
+    var name: String? = null,
+
+    var password: String? = null,
+
+    var salt: String? = null
+): RealmObject() {}
 */
 /*
 class Lessons : RealmObject {

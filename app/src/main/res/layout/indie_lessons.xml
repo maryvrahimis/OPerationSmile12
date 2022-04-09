@@ -8,11 +8,11 @@
     >
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="261dp"
-        android:layout_height="61dp"
+        android:id="@+id/Lessonid"
+        android:layout_width="408dp"
+        android:layout_height="64dp"
         android:fontFamily="@font/chango"
-        android:text="TextView"
+        android:text="Lessons"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +26,13 @@
         android:layout_marginStart="141dp"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="142dp"
+        android:layout_marginBottom="38dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/Lessonid"
+        app:srcCompat="@drawable/pan"
         tools:srcCompat="@drawable/pan" />
 
     <TextView
@@ -37,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chango"
-        android:text="TextView"
+        android:text="Slowly and as best that you can, say the given word."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -51,34 +54,29 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:fontFamily="@font/chango"
-        android:text="TextView"
+        android:text="Pan"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="419dp"
         tools:text="Pan" />
 
     <ImageButton
         android:id="@+id/recordButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="155dp"
         android:background="#00FFFFFF"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/ic_record_fill"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="588dp" />
-
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="105dp"
-        android:layout_height="72dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        app:srcCompat="@drawable/ic_arrow_fat_left_fill"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/ic_record_fill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

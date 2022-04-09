@@ -14,22 +14,24 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="111dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="3dp"
         android:backgroundTint="#FFC107"
         android:fontFamily="@font/chango"
         android:text="K Sound"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageView19"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintStart_toEndOf="@+id/PsoundsButton" />
 
     <Button
         android:id="@+id/PsoundsButton"
         android:layout_width="112dp"
         android:layout_height="96dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#FFC107"
         android:fontFamily="@font/chango"
@@ -40,8 +42,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="115dp"
-        android:layout_height="103dp"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
         android:layout_marginStart="48dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#FFC107"
@@ -61,7 +63,7 @@
 
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Lessonid"
         android:layout_width="228dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -87,14 +89,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.311"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/Lessonid" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="111dp"
-        android:layout_height="106dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="143dp"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#FFC107"
         android:fontFamily="@font/chango"
         android:text="L Sound"
@@ -104,29 +106,29 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="139dp"
-        android:layout_height="125dp"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/k_lips"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="133dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="72dp"
         android:src="@drawable/p_lips"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="93dp"
-        android:layout_height="93dp"
-        android:layout_marginEnd="64dp"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginBottom="1dp"
         android:src="@drawable/l_lips"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -134,9 +136,9 @@
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="119dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="52dp"
         android:layout_marginBottom="4dp"
         android:src="@drawable/t_lips"
         app:layout_constraintBottom_toTopOf="@+id/button3"
