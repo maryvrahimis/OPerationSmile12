@@ -77,7 +77,8 @@
         app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422" />
+        app:layout_constraintVertical_bias="0.422"
+        tools:text="Henry Jones"/>
 
     <TextView
         android:id="@+id/test_name2"
@@ -186,8 +187,8 @@
 
     <TextView
         android:id="@+id/dateAndTime"
-        android:layout_width="202dp"
-        android:layout_height="41dp"
+        android:layout_width="201dp"
+        android:layout_height="64dp"
         android:fontFamily="@font/chango"
         android:text="test"
         android:textAlignment="center"
@@ -198,6 +199,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.772" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
