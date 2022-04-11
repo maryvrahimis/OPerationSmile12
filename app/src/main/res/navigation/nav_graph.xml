@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_home_to_patientscreen"
             app:destination="@id/patientFragment" />
+        <action
+            android:id="@+id/action_home_to_updated_patients_screen"
+            app:destination="@id/patientscreen" />
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -130,5 +133,10 @@
             android:id="@+id/action_indieLessonsFragment_to_LessonsFragment"
             app:destination="@id/LessonsFragment" />
     </fragment>
+    <activity
+        android:id="@+id/patientscreen"
+        android:name="com.example.myapplication.patientscreen"
+        android:label="activity_patientscreen"
+        tools:layout="@layout/activity_patientscreen" />
 
 </navigation>

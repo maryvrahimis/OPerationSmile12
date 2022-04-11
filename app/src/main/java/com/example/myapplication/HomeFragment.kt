@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.to_Third_fragment)
         }
         binding.homeToPatients.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_patientscreen)
+            findNavController().navigate(R.id.action_home_to_updated_patients_screen)
         }
         binding.reportsButton.setOnClickListener {
             findNavController().navigate(R.id.go_to_reports)

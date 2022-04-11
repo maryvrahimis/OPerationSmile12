@@ -1,25 +1,18 @@
 package com.example.myapplication
 
 import android.content.ContentValues
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.IndieLessonsBinding
 import io.realm.Realm
-import io.realm.RealmQuery
-import io.realm.RealmResults
-import io.realm.Sort
-import io.realm.annotations.PrimaryKey
-import io.realm.kotlin.where
-import io.realm.mongodb.sync.SyncConfiguration
-import io.realm.RealmObject;
-import io.realm.exceptions.RealmFileException
-import io.realm.kotlin.createObject
-import org.bson.types.ObjectId;
+import org.bson.types.ObjectId
 
 class IndieLessonsFragment : Fragment() {
 
@@ -55,8 +48,12 @@ class IndieLessonsFragment : Fragment() {
                 println("THIS IS A TEST ${task2.word}")
                // binding.textView6.text = "${task2.word}"
             }
+        val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/drawable/bballbird.png")
+        //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
+        //binding.imageView3.
             val opa = "${task2!!.word}"
             Log.v("EXAMPLE", "Fetched Max: $task2")
+
             realm.close()
         //} catch(ex: RealmFileException) {
           //  Log.v("EXAMPLE", "Error opening the realm.")
@@ -65,7 +62,7 @@ class IndieLessonsFragment : Fragment() {
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
         //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
         binding.textView6.text = opa
-        //binding.imageView3.
+        binding.imageView3.setImageURI(imgUri)
         return binding.root
 
     }
