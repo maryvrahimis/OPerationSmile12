@@ -30,15 +30,17 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-
         val realm = Realm.getDefaultInstance()
-        val lesson : RealmQuery<Lesson>? = realm.where<Lesson>().equalTo("word","pollo")
+        val query = realm.where(Lesson::class.java)
+        val lesson = query.rawPredicate("word = 'pollo'").findAll()
+        //val lesson : RealmQuery<Lesson>? = realm.where<Lesson>().beginsWith("image","pollo")
+        Log.v("QUICKSTART", lesson.toString())
         //val results = lesson.equalTo("word","pollo")
-        var hello : String = lesson.toString()
+        //var hello : RealmQuery<Lesson>? = lesson
+        Log.v("QUICKSTART", lesson.toString())
+        realm.close()
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
-        binding.Lessonid.text = hello
+        binding.textView6.text = "Hi"
         return binding.root
 
     }
@@ -62,22 +64,4 @@ class IndieLessonsFragment : Fragment() {
 
 
 
-open class Lesson(
-    @PrimaryKey var _id: ObjectId? = null,
 
-    var _partition: String = "",
-
-    var image: String? = null,
-
-    var instructions: String? = null,
-
-    var phrase: String? = null,
-
-    var sound: String? = null,
-
-    var syllables: String? = null,
-
-    var videoInstructions: String? = null,
-
-    var word: String? = null
-): RealmObject() {}

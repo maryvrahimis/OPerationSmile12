@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.snackbar.Snackbar
@@ -11,10 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.ActivityMainBinding
-import io.realm.OrderedRealmCollectionChangeListener
-import io.realm.Realm
-import io.realm.RealmObject
-import io.realm.RealmResults
+import io.realm.*
 import io.realm.annotations.PrimaryKey
 import io.realm.kotlin.where
 import io.realm.mongodb.App
@@ -27,6 +25,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.FutureTask
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -38,33 +37,51 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Init Realm
-        Realm.init(this) // context, usually an Activity or Application
-        // App Init
+        Realm.init(this)
+
         val appID : String = "opsmiletracker-fbjym";
-        app = App(
-            AppConfiguration.Builder(appID)
+        app = App(AppConfiguration.Builder(appID)
             .build())
 
-        // User Auth
-        val credentials: Credentials = Credentials.emailPassword("davion226@gmail.com","Password")
-        var user: User? = null
+        val credentials: Credentials = Credentials.emailPassword(
+            "davion226@gmail.com",
+            "Password"
+        )
 
+        var user: User? = null
+        app.loginAsync(credentials) {
+            if (it.isSuccess) {
+                Log.v(TAG, "Successfully authenticated anonymously.")
+                user = app.currentUser()
+            } else {
+                Log.e(TAG, it.error.toString())
+            }
+        }
+
+        val config = RealmConfiguration.Builder()
+            .deleteRealmIfMigrationNeeded()
+            .allowQueriesOnUiThread(true)
+            .allowWritesOnUiThread(true)
+            .compactOnLaunch()
+            .build()
+        Realm.setDefaultConfiguration(config)
+        val realm = Realm.getDefaultInstance()
+        Log.v("EXAMPLE", "Successfully opened a realm at: ${realm.path}")
+
+/*
         app.loginAsync(credentials) {
             if (it.isSuccess) {
                 Log.v("QUICKSTART", "Successfully authenticated anonymously.")
-                val partitionValue = user?.id
+                val partitionValue = "azul.png"
                 user = app.currentUser()
                 val config = SyncConfiguration.Builder(user,partitionValue)
                     .build()
 
                 realm = Realm.getInstance(config)
-
-
-
             } else {
                 Log.e("QUICKSTART", "Failed to log in. Error: ${it.error}")
             }
-        }//part of realm
+        }//part of realm*/
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -126,3 +143,17 @@ class MainActivity : AppCompatActivity() {
 /*You wot*/
 
 }//main act end
+
+
+
+open class Lesson(
+    @PrimaryKey var _id: ObjectId? = null,
+
+    var _partition: String = "",
+
+    var image: String? = null,
+
+    var sound: String? = null,
+
+    var word: String? = null
+): RealmObject() {}
