@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androclass="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0072D7"
+    tools:context=".emailupload">
+
+    <!--Edit text for email id-->
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="22dp"
+        android:autofillHints=""
+        android:hint="@string/email_edittext"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="text" />
+
+    <!--Edit text for email subject-->
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_marginTop="20dp"
+        android:hint="@string/email_subject"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="text"/>
+
+    <!--Edit text for email body-->
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_marginTop="30dp"
+        android:hint="@string/email_body"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="text"/>
+
+    <!--text Views for label-->
+    <TextView
+        android:id="@+id/textView1"
+        android:textColor="@color/white"
+        android:fontFamily="@font/chango"
+        android:textSize="18sp"
+        android:text="Send To:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textColor="@color/white"
+        android:fontFamily="@font/chango"
+        android:textSize="18sp"
+        android:text="Email Subject:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:textColor="@color/white"
+        android:fontFamily="@font/chango"
+        android:textSize="18sp"
+        android:text="Email Body:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        />
+    <!--Button to send email-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_marginLeft="-91dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="22dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/chango"
+        android:text="Send email!!"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="361dp"
+        android:fontFamily="@font/chango"
+        android:text="Make sure you are connected to the internet!"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignTop="@+id/textView4"
+        android:fontFamily="@font/chango"
+        android:text="¡Asegúrate de estar conectado a Internet!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+</RelativeLayout>

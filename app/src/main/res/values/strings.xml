@@ -28,4 +28,13 @@
     <string name="to_t_sounds_page">Lessons</string>
     <string name="to_l_sounds_page">Lessons</string>
     <string name="please_select_a_sound_you_want_to_start_with">Please select a sound to practice:</string>
+    <string name="name">Name:</string>
+    <string name="age">Age:</string>
+    <string name="password">Password:</string>
+    <string name="username">Username:</string>
+    <string name="title_activity_emailupload">emailupload</string>
+
+    <string name="email_edittext">Enter email here</string>
+    <string name="email_subject">Subject</string>
+    <string name="email_body">Body</string>
 </resources>
