@@ -47,13 +47,14 @@ class IndieLessonsFragment : Fragment() {
 
             val task2 = realm.where(Lessons::class.java).equalTo("word","dog").findFirst()
             if (task2 != null) {
-                println("THIS IS A TEST ${task2.word}")
+                println("THIS IS A TEST ${task2.image}")
                // binding.textView6.text = "${task2.word}"
             }
         val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
         //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
         //binding.imageView3.
             val opa = "${task2!!.word}"
+            val opa3 = "${task2!!.image}"
             Log.v("EXAMPLE", "Fetched Max: $task2")
         val opa2 = context?.let { getDrawableByFileName(it,opa) }
             realm.close()
@@ -64,6 +65,7 @@ class IndieLessonsFragment : Fragment() {
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
         //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
         binding.textView6.text = opa
+        binding.Lessonid.text = opa3
         binding.imageView3.setImageDrawable(opa2)
         return binding.root
 
