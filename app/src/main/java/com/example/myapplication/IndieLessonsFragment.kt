@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -16,6 +17,8 @@ import io.realm.annotations.PrimaryKey
 import io.realm.kotlin.where
 import io.realm.mongodb.sync.SyncConfiguration
 import io.realm.RealmObject;
+import io.realm.exceptions.RealmFileException
+import io.realm.kotlin.createObject
 import org.bson.types.ObjectId;
 
 class IndieLessonsFragment : Fragment() {
@@ -30,17 +33,38 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val realm = Realm.getDefaultInstance()
-        val query = realm.where(Lesson::class.java)
-        val lesson = query.rawPredicate("word = 'pollo'").findAll()
-        //val lesson : RealmQuery<Lesson>? = realm.where<Lesson>().beginsWith("image","pollo")
-        Log.v("QUICKSTART", lesson.toString())
-        //val results = lesson.equalTo("word","pollo")
-        //var hello : RealmQuery<Lesson>? = lesson
-        Log.v("QUICKSTART", lesson.toString())
-        realm.close()
+        // THIS EXECUTES A WRITE TO THE DATABSE (LIKE IN MAIN ACTIVITY)
+        // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
+        // THE VARIABLE IS THEN PRINTED TO SCREEN
+        lateinit var realm: Realm
+        //try {
+            realm = Realm.getDefaultInstance()
+            Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+
+            realm.executeTransaction { r: Realm ->
+                // Instantiate the class using the factory function.
+                val turtle = r.createObject(Lessons::class.java, ObjectId())
+                // Configure the instance.
+                turtle.word = "SLICKBACK"
+            }
+
+
+
+            val task2 = realm.where(Lessons::class.java).equalTo("word","SLICKBACK").findFirst()
+            if (task2 != null) {
+                println("THIS IS A TEST ${task2.word}")
+               // binding.textView6.text = "${task2.word}"
+            }
+            val opa = "${task2!!.word}"
+            Log.v("EXAMPLE", "Fetched Max: $task2")
+            realm.close()
+        //} catch(ex: RealmFileException) {
+          //  Log.v("EXAMPLE", "Error opening the realm.")
+            //Log.v("EXAMPLE", ex.toString())
+        //}
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
-        binding.textView6.text = "Hi"
+        //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
+        binding.textView6.text = opa
         return binding.root
 
     }

@@ -14,6 +14,7 @@ import android.view.MenuItem
 import com.example.myapplication.databinding.ActivityMainBinding
 import io.realm.*
 import io.realm.annotations.PrimaryKey
+import io.realm.exceptions.RealmFileException
 import io.realm.kotlin.where
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
@@ -38,50 +39,60 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // Init Realm
         Realm.init(this)
-
-        val appID : String = "opsmiletracker-fbjym";
+        val appID : String = "opsmiletracker-awmho";
         app = App(AppConfiguration.Builder(appID)
             .build())
-
-        val credentials: Credentials = Credentials.emailPassword(
-            "davion226@gmail.com",
-            "Password"
-        )
-
+        val credentials: Credentials = Credentials.anonymous()
+        //      USER AUTH
+        //      USER AUTH
         var user: User? = null
         app.loginAsync(credentials) {
             if (it.isSuccess) {
                 Log.v(TAG, "Successfully authenticated anonymously.")
                 user = app.currentUser()
+
+                val config = RealmConfiguration.Builder()
+                    .deleteRealmIfMigrationNeeded()
+                    .allowQueriesOnUiThread(true)
+                    .allowWritesOnUiThread(true)
+                    .build()
+            // THIS GETS THE INSTANCE
+            // EXECUTES A TRANSACTION TO ADD TO THE DATABASE
+            // PULLS A NAME(WORD) FROM THE DATABASE
+
+                try {
+                    realm = Realm.getInstance(config)
+                    Realm.setDefaultConfiguration(config)
+                    Log.v(TAG, "Successfully opened a realm at: ${realm.path}")
+
+                    realm.executeTransaction { r: Realm ->
+                        // Instantiate the class using the factory function.
+                        val turtle = r.createObject(Lessons::class.java, ObjectId())
+                        // Configure the instance.
+                        turtle.word = "SLICKBACK"
+                    }
+                    val task = realm.where(Lessons::class.java).equalTo("word","SLICKBACK").findAll()
+                    val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
+                    if (task2 != null) {
+                        println("THIS IS A TEST ${task2.word}")
+                    }
+                    task.forEach{ task -> println("Turtle: ${task.word}") }
+
+
+
+                    Log.v("EXAMPLE", "Fetched Max: $task")
+                    realm.close()
+                } catch(ex: RealmFileException) {
+                    Log.v("EXAMPLE", "Error opening the realm.")
+                    Log.v("EXAMPLE", ex.toString())
+                }
             } else {
                 Log.e(TAG, it.error.toString())
             }
         }
 
-        val config = RealmConfiguration.Builder()
-            .deleteRealmIfMigrationNeeded()
-            .allowQueriesOnUiThread(true)
-            .allowWritesOnUiThread(true)
-            .compactOnLaunch()
-            .build()
-        Realm.setDefaultConfiguration(config)
-        val realm = Realm.getDefaultInstance()
-        Log.v("EXAMPLE", "Successfully opened a realm at: ${realm.path}")
 
-/*
-        app.loginAsync(credentials) {
-            if (it.isSuccess) {
-                Log.v("QUICKSTART", "Successfully authenticated anonymously.")
-                val partitionValue = "azul.png"
-                user = app.currentUser()
-                val config = SyncConfiguration.Builder(user,partitionValue)
-                    .build()
 
-                realm = Realm.getInstance(config)
-            } else {
-                Log.e("QUICKSTART", "Failed to log in. Error: ${it.error}")
-            }
-        }//part of realm*/
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -103,16 +114,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        // the ui thread realm uses asynchronous transactions, so we can only safely close the realm
-        // when the activity ends and we can safely assume that those transactions have completed
-        realm.close()
-        app.currentUser()?.logOutAsync() {
-            if (it.isSuccess) {
-                Log.v("QUICKSTART", "Successfully logged out.")
-            } else {
-                Log.e("QUICKSTART", "Failed to log out, error: ${it.error}")
-            }
-        }
+
+
     }
 
 
@@ -144,16 +147,24 @@ class MainActivity : AppCompatActivity() {
 
 }//main act end
 
-
-
-open class Lesson(
-    @PrimaryKey var _id: ObjectId? = null,
-
-    var _partition: String = "",
+open class Lessons(
+    @PrimaryKey    var _id: ObjectId? = null,
 
     var image: String? = null,
 
     var sound: String? = null,
 
     var word: String? = null
+): RealmObject() {}
+
+open class Stickers(
+    @PrimaryKey    var _id: ObjectId? = null,
+
+    var availlable: Boolean? = null,
+
+    var birdWeaaringSticker: String? = null,
+
+    var stickerName: String? = null,
+
+    var stickerPrice: Long? = null
 ): RealmObject() {}
