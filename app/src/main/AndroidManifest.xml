@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".emailupload"
+            android:exported="false"
+            android:label="@string/title_activity_emailupload"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".patientscreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MyApplication.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
