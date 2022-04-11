@@ -18,18 +18,7 @@ class ShoppingFragment : Fragment() {
 
         private var _binding: FragmentShoppingScreenBinding? = null
 
-        val stickies = arrayOf(
-            StickerBundle(_id = R.drawable.hat, price = 20 , birdWeaaringSticker = R.drawable.hat),
-            StickerBundle(R.drawable.flag, 10, R.drawable.flagbird),
-            StickerBundle(R.drawable.sunglasses, 15 ,R.drawable.sunglassesbird) ,
-            StickerBundle(R.drawable.tshirt,20 ,R.drawable.tshirtbird ),
-            StickerBundle(R.drawable.sneakers,30,R.drawable.sneakersbird),
-            StickerBundle(R.drawable.pinkboots,25,R.drawable.pinkbootsbird),
-            StickerBundle( R.drawable.santhat, 30, R.drawable.santahatbird),
-            StickerBundle(R.drawable.easter,45,R.drawable.easterbird),
-            StickerBundle(R.drawable.halloween,45,R.drawable.bballbird),
-            StickerBundle(R.drawable.bball,50,R.drawable.halloweenbird)
-        )
+
         // This property is only valid between onCreateView and
         // onDestroyView.
         private val binding get() = _binding!!
