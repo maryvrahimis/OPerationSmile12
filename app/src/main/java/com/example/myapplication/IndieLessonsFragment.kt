@@ -65,6 +65,7 @@ class IndieLessonsFragment : Fragment() {
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
         //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
         binding.textView6.text = opa
+        //binding.imageView3.
         return binding.root
 
     }
