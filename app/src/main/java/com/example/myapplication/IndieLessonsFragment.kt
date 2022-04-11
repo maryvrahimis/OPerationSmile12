@@ -45,7 +45,7 @@ class IndieLessonsFragment : Fragment() {
 
 
 
-            val task2 = realm.where(Lessons::class.java).equalTo("word","bballbird").findFirst()
+            val task2 = realm.where(Lessons::class.java).equalTo("word","dog").findFirst()
             if (task2 != null) {
                 println("THIS IS A TEST ${task2.word}")
                // binding.textView6.text = "${task2.word}"
