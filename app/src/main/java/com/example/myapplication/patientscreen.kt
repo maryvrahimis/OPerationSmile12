@@ -39,7 +39,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         val text = parent?.getItemIdAtPosition(position).toString()
-        Toast.makeText(getParent(), text, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(getParent(), text, Toast.LENGTH_SHORT).show()
     }
 
     override fun onNothingSelected(parent: AdapterView<*>) {
