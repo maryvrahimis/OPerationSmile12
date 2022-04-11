@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.ContentValues
+import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.IndieLessonsBinding
 import io.realm.Realm
@@ -38,22 +40,23 @@ class IndieLessonsFragment : Fragment() {
                 // Instantiate the class using the factory function.
                 val turtle = r.createObject(Lessons::class.java, ObjectId())
                 // Configure the instance.
-                turtle.word = "SLICKBACK"
+                turtle.word = "bballbird"
             }
 
 
 
-            val task2 = realm.where(Lessons::class.java).equalTo("word","SLICKBACK").findFirst()
+            val task2 = realm.where(Lessons::class.java).equalTo("word","dog").findFirst()
             if (task2 != null) {
-                println("THIS IS A TEST ${task2.word}")
+                println("THIS IS A TEST ${task2.image}")
                // binding.textView6.text = "${task2.word}"
             }
-        val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/drawable/bballbird.png")
+        val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
         //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
         //binding.imageView3.
             val opa = "${task2!!.word}"
+            val opa3 = "${task2!!.image}"
             Log.v("EXAMPLE", "Fetched Max: $task2")
-
+        val opa2 = context?.let { getDrawableByFileName(it,opa) }
             realm.close()
         //} catch(ex: RealmFileException) {
           //  Log.v("EXAMPLE", "Error opening the realm.")
@@ -62,7 +65,8 @@ class IndieLessonsFragment : Fragment() {
         _binding = IndieLessonsBinding.inflate(inflater, container, false)
         //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
         binding.textView6.text = opa
-        binding.imageView3.setImageURI(imgUri)
+        binding.Lessonid.text = opa3
+        binding.imageView3.setImageDrawable(opa2)
         return binding.root
 
     }
@@ -85,5 +89,9 @@ class IndieLessonsFragment : Fragment() {
 }
 
 
-
-
+fun getDrawableByFileName(context: Context, fileName: String): Drawable? {
+    return ContextCompat.getDrawable(
+        context,
+        context.resources.getIdentifier(fileName, "drawable", context.packageName)
+    )
+}
