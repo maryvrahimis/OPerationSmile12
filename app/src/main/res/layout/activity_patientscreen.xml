@@ -187,8 +187,8 @@
 
     <TextView
         android:id="@+id/test_name"
-        android:layout_width="184dp"
-        android:layout_height="39dp"
+        android:layout_width="186dp"
+        android:layout_height="62dp"
         android:fontFamily="@font/chango"
         android:text="Henry Jones"
         android:textColor="@color/white"
