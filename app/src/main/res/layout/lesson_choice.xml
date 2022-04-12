@@ -32,13 +32,13 @@
         android:layout_width="112dp"
         android:layout_height="96dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1dp"
         android:backgroundTint="#FFC107"
         android:fontFamily="@font/chango"
         android:text="P Sound"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button3"
@@ -119,10 +119,10 @@
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/p_lips"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintBottom_toTopOf="@+id/PsoundsButton"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -139,7 +139,7 @@
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="1dp"
         android:src="@drawable/t_lips"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent" />

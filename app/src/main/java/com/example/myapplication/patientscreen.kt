@@ -41,7 +41,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
         val textView: TextView = findViewById(R.id.dateAndTime)
-        val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy'at' HH:mm:ss z")
+        val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy' at ' HH:mm:ss z")
         val currentDateAndTime: String = simpleDateFormat.format(Date())
         textView.text = currentDateAndTime
 

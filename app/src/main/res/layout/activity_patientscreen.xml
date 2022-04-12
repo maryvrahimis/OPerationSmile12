@@ -111,8 +111,8 @@
 
     <TextView
         android:id="@+id/dateAndTime"
-        android:layout_width="175dp"
-        android:layout_height="65dp"
+        android:layout_width="183dp"
+        android:layout_height="163dp"
         android:fontFamily="@font/chango"
         android:text="test"
         android:textAlignment="center"
@@ -120,10 +120,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+        app:layout_constraintVertical_bias="0.873" />
 
     <TextView
         android:id="@+id/test_name3"
@@ -142,8 +142,8 @@
 
     <TextView
         android:id="@+id/test_name4"
-        android:layout_width="184dp"
-        android:layout_height="39dp"
+        android:layout_width="193dp"
+        android:layout_height="58dp"
         android:fontFamily="@font/chango"
         android:text="hj22opsmile"
         android:textColor="@color/white"
