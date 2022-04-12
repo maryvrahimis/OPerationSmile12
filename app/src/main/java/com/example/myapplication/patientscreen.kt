@@ -40,10 +40,12 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
+
+        /*
         val textView: TextView = findViewById(R.id.dateAndTime)
         val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy' at ' HH:mm:ss z")
         val currentDateAndTime: String = simpleDateFormat.format(Date())
-        textView.text = currentDateAndTime
+        textView.text = currentDateAndTime */
 
 
         /*
@@ -73,9 +75,13 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         if (parent?.getItemAtPosition(position).toString() == "Mike") {
             val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.client_age)
+            val ageField: TextView = findViewById(R.id.test_name2)
             val usernameField: TextView = findViewById(R.id.test_name3)
             val passwordField: TextView = findViewById(R.id.test_name4)
+            val p_sounds_completed: TextView = findViewById(R.id.testname5)
+            val k_sounds_completed: TextView = findViewById(R.id.testname6)
+            val t_sounds_completed: TextView = findViewById(R.id.testname7)
+            val l_sounds_completed: TextView = findViewById(R.id.testname8)
             nameField.text = "Mike Guy"
             ageField.text = "19"
             usernameField.text = "mguy12"
@@ -83,23 +89,31 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
         if (parent?.getItemAtPosition(position).toString() == "Vinny"){
             val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.client_age)
+            val ageField: TextView = findViewById(R.id.test_name2)
             val usernameField: TextView = findViewById(R.id.test_name3)
             val passwordField: TextView = findViewById(R.id.test_name4)
-            nameField.text = "Test Person"
+            val p_sounds_completed: TextView = findViewById(R.id.testname5)
+            val k_sounds_completed: TextView = findViewById(R.id.testname6)
+            val t_sounds_completed: TextView = findViewById(R.id.testname7)
+            val l_sounds_completed: TextView = findViewById(R.id.testname8)
+            nameField.text = "Vinny Winny"
             ageField.text = "18"
-            usernameField.text = "tperson5"
-            passwordField.text = "tpopsmile"
+            usernameField.text = "vwinny66"
+            passwordField.text = "vwopsmile"
         }
-        if (parent?.getItemAtPosition(position).toString() == "Mia") {
+        if (parent?.getItemAtPosition(position).toString() == "Gia") {
             val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.client_age)
+            val ageField: TextView = findViewById(R.id.test_name2)
             val usernameField: TextView = findViewById(R.id.test_name3)
             val passwordField: TextView = findViewById(R.id.test_name4)
-            nameField.text = "Skeleton"
-            ageField.text = "99"
-            usernameField.text = "old bones"
-            passwordField.text = "obopsmile"
+            val p_sounds_completed: TextView = findViewById(R.id.testname5)
+            val k_sounds_completed: TextView = findViewById(R.id.testname6)
+            val t_sounds_completed: TextView = findViewById(R.id.testname7)
+            val l_sounds_completed: TextView = findViewById(R.id.testname8)
+            nameField.text = "Gia Hanes"
+            ageField.text = "19"
+            usernameField.text = "ghanes5"
+            passwordField.text = "ghopsmile"
         }
     }
 
