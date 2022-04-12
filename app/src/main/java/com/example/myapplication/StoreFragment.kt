@@ -1,7 +1,9 @@
 package com.example.myapplication
 
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +13,8 @@ import com.example.myapplication.databinding.FragmentReportsBinding
 import com.example.myapplication.databinding.FragmentStoreBinding
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.databinding.FragmentLessonsBinding
+import io.realm.Realm
+import org.bson.types.ObjectId
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

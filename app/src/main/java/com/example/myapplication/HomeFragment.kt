@@ -12,6 +12,8 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
+import io.realm.Realm
+import io.realm.RealmConfiguration
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -43,6 +45,11 @@ class HomeFragment : Fragment() {
         var points: Int = 0
         var days: Int = 0
         super.onViewCreated(view, savedInstanceState)
+
+        Realm.init(context)
+        val config = RealmConfiguration.Builder().build()
+        Realm.setDefaultConfiguration(config)
+
         binding.streakText.setText((days.toString() + " dias"))
         binding.lessonsButton.setOnClickListener {
 
