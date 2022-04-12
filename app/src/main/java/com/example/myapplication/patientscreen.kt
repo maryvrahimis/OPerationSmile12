@@ -45,10 +45,6 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val currentDateAndTime: String = simpleDateFormat.format(Date())
         textView.text = currentDateAndTime
 
-        val newname: String = "GOd please work"
-
-        val thishastochange: TextView = findViewById(R.id.test_name)
-        thishastochange.text = newname
 
         /*
         val realm = Realm.getDefaultInstance()
@@ -75,9 +71,11 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         val text = parent?.getItemIdAtPosition(position).toString()
 
-        if (parent?.getItemAtPosition(position) == "Mike"){
-            val textView: TextView = findViewById(R.id.test_name)
-            println(textView)
+        if (parent?.getItemAtPosition(position).toString() == "Mike"){
+            val newname: String = "GOd please work"
+            val thishastochange: TextView = findViewById(R.id.test_name)
+            thishastochange.text = newname
+
         }
     }
 
