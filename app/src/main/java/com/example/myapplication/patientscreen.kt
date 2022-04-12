@@ -45,6 +45,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val currentDateAndTime: String = simpleDateFormat.format(Date())
         textView.text = currentDateAndTime
 
+        /*
         val realm = Realm.getDefaultInstance()
         Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
 
@@ -63,9 +64,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
         val opa = "${task2!!.name}"
         realm.close()
-        binding.testName.text = opa
-
-
+        binding.testName.text = opa */
     }
 
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
@@ -76,14 +75,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(parent: AdapterView<*>) {
         // Another interface callback
     }
-
-
 }
-
-open class Frog(var name: String = "",
-                var age: Int = 0,
-                var species: String? = null,
-                var owner: String? = null): RealmObject()
 
 open class Patients(
     var _id: ObjectId? = null,
@@ -91,10 +83,10 @@ open class Patients(
     var age: String? = null,
     var username: String? = null,
     var password: String? = null,
-    val k_sounds_completed: Boolean? = null,
-    val p_sounds_completed: Boolean? = null,
-    val l_sounds_completed: Boolean? = null,
-    val t_sounds_completed: Boolean? = null,
+    var k_sounds_completed: Boolean? = null,
+    var p_sounds_completed: Boolean? = null,
+    var l_sounds_completed: Boolean? = null,
+    var t_sounds_completed: Boolean? = null,
     var k_sounds_completed_time: String? = null,
     var p_sounds_completed_time: String? = null,
     var l_sounds_completed_time: String? = null,
