@@ -28,7 +28,7 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // THIS EXECUTES A WRITE TO THE DATABSE (LIKE IN MAIN ACTIVITY)
+        // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
         // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
         // THE VARIABLE IS THEN PRINTED TO SCREEN
         lateinit var realm: Realm
@@ -43,9 +43,7 @@ class IndieLessonsFragment : Fragment() {
                 turtle.word = "pollo"
             }
 
-
-
-            val task2 = realm.where(Lessons::class.java).equalTo("word","bballbird").findFirst()
+            val task2 = realm.where(Lessons::class.java).equalTo("word","pollo").findFirst()
             if (task2 != null) {
                 println("THIS IS A TEST ${task2.image}")
                // binding.textView6.text = "${task2.word}"
@@ -68,7 +66,6 @@ class IndieLessonsFragment : Fragment() {
         binding.Lessonid.text = opa3
         binding.imageView3.setImageDrawable(opa2)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
