@@ -71,11 +71,35 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         val text = parent?.getItemIdAtPosition(position).toString()
 
+        if (parent?.getItemAtPosition(position).toString() == "Mike") {
+            val nameField: TextView = findViewById(R.id.test_name)
+            val ageField: TextView = findViewById(R.id.client_age)
+            val usernameField: TextView = findViewById(R.id.test_name3)
+            val passwordField: TextView = findViewById(R.id.test_name4)
+            nameField.text = "Mike Guy"
+            ageField.text = "19"
+            usernameField.text = "mguy12"
+            passwordField.text = "mgopsmile"
+        }
         if (parent?.getItemAtPosition(position).toString() == "Vinny"){
-            val newname: String = "GOd please work"
-            val thishastochange: TextView = findViewById(R.id.test_name)
-            thishastochange.text = newname
-
+            val nameField: TextView = findViewById(R.id.test_name)
+            val ageField: TextView = findViewById(R.id.client_age)
+            val usernameField: TextView = findViewById(R.id.test_name3)
+            val passwordField: TextView = findViewById(R.id.test_name4)
+            nameField.text = "Test Person"
+            ageField.text = "18"
+            usernameField.text = "tperson5"
+            passwordField.text = "tpopsmile"
+        }
+        if (parent?.getItemAtPosition(position).toString() == "Mia") {
+            val nameField: TextView = findViewById(R.id.test_name)
+            val ageField: TextView = findViewById(R.id.client_age)
+            val usernameField: TextView = findViewById(R.id.test_name3)
+            val passwordField: TextView = findViewById(R.id.test_name4)
+            nameField.text = "Skeleton"
+            ageField.text = "99"
+            usernameField.text = "old bones"
+            passwordField.text = "obopsmile"
         }
     }
 
