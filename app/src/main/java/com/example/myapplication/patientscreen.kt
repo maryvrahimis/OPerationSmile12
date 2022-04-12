@@ -86,6 +86,10 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             ageField.text = "19"
             usernameField.text = "mguy12"
             passwordField.text = "mgopsmile"
+            p_sounds_completed.text = "yes"
+            k_sounds_completed.text = "yes"
+            t_sounds_completed.text = "yes"
+            l_sounds_completed.text = "yes"
         }
         if (parent?.getItemAtPosition(position).toString() == "Vinny"){
             val nameField: TextView = findViewById(R.id.test_name)
@@ -100,6 +104,10 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             ageField.text = "18"
             usernameField.text = "vwinny66"
             passwordField.text = "vwopsmile"
+            p_sounds_completed.text = "no"
+            k_sounds_completed.text = "yes"
+            t_sounds_completed.text = "no"
+            l_sounds_completed.text = "yes"
         }
         if (parent?.getItemAtPosition(position).toString() == "Gia") {
             val nameField: TextView = findViewById(R.id.test_name)
@@ -114,6 +122,10 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             ageField.text = "19"
             usernameField.text = "ghanes5"
             passwordField.text = "ghopsmile"
+            p_sounds_completed.text = "no"
+            k_sounds_completed.text = "no"
+            t_sounds_completed.text = "no"
+            l_sounds_completed.text = "no"
         }
     }
 
