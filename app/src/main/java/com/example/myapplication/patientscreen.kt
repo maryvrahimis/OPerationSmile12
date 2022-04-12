@@ -21,7 +21,7 @@ import android.widget.TextView
 import java.text.SimpleDateFormat
 import io.realm.Realm
 import org.bson.types.ObjectId
-import com.example.myapplication.databinding.ActivityPatientscreenBinding
+//import com.example.myapplication.databinding.ActivityPatientscreenBinding
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.util.*
@@ -29,8 +29,8 @@ import java.util.*
 
 class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
-    private var _binding: ActivityPatientscreenBinding? = null
-    private val binding get() = _binding!!
+    //private var _binding: ActivityPatientscreenBinding? = null
+    //private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +69,11 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         val text = parent?.getItemIdAtPosition(position).toString()
-        Toast.makeText(getParent(), text, Toast.LENGTH_SHORT).show()
+
+        if (text == "Mike"){
+            val textView: TextView = findViewById(R.id.test_name)
+            textView.text = "Mike Guy"
+        }
     }
 
     override fun onNothingSelected(parent: AdapterView<*>) {
