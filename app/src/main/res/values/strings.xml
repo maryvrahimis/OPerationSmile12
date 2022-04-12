@@ -6,7 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-<!--  -->
+    <!--  -->
     <string name="title_activity_paitentscreen">PaitentscreenActivity</string>
     <string name="patient_screen">Patient Screen</string>
     <string name="test_name">Test Name</string>
@@ -37,4 +37,6 @@
     <string name="email_edittext">Enter email here</string>
     <string name="email_subject">Subject</string>
     <string name="email_body">Body</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
