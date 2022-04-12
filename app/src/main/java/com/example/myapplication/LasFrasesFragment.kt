@@ -28,6 +28,26 @@ class LasFrasesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+//        button_start_recording.setOnClickListener {
+//            if (ContextCompat.checkSelfPermission(this,
+//                    Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
+//                    Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+//                val permissions = arrayOf(android.Manifest.permission.RECORD_AUDIO, android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.READ_EXTERNAL_STORAGE)
+//                ActivityCompat.requestPermissions(this, permissions,0)
+//            } else {
+//                startRecording()
+//            }
+//        }
+//
+//        button_stop_recording.setOnClickListener{
+//            stopRecording()
+//        }
+//
+//        button_pause_recording.setOnClickListener {
+//            pauseRecording()
+//        }
+
         binding.next.setOnClickListener {findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment) }
 
     }
