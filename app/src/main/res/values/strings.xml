@@ -39,4 +39,5 @@
     <string name="email_body">Body</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_name_test_please_help">Mike</string>
 </resources>
