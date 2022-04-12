@@ -40,12 +40,12 @@ class IndieLessonsFragment : Fragment() {
                 // Instantiate the class using the factory function.
                 val turtle = r.createObject(Lessons::class.java, ObjectId())
                 // Configure the instance.
-                turtle.word = "bballbird"
+                turtle.word = "pollo"
             }
 
 
 
-            val task2 = realm.where(Lessons::class.java).equalTo("word","dog").findFirst()
+            val task2 = realm.where(Lessons::class.java).equalTo("word","bballbird").findFirst()
             if (task2 != null) {
                 println("THIS IS A TEST ${task2.image}")
                // binding.textView6.text = "${task2.word}"
@@ -54,7 +54,7 @@ class IndieLessonsFragment : Fragment() {
         //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
 
             val opa = "${task2!!.word}"
-            val opa3 = "${task2!!.image}"
+            val opa3 = "${task2!!.word}"
             Log.v("EXAMPLE", "Fetched Max: $task2")
         val opa2 = context?.let { getDrawableByFileName(it,opa) }
             realm.close()
