@@ -50,9 +50,9 @@ class IndieLessonsFragment : Fragment() {
                 println("THIS IS A TEST ${task2.image}")
                // binding.textView6.text = "${task2.word}"
             }
-        val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
+        //val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
         //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
-        //binding.imageView3.
+
             val opa = "${task2!!.word}"
             val opa3 = "${task2!!.image}"
             Log.v("EXAMPLE", "Fetched Max: $task2")
