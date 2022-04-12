@@ -71,7 +71,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         val text = parent?.getItemIdAtPosition(position).toString()
 
-        if (parent?.getItemAtPosition(position).toString() == "Mike"){
+        if (parent?.getItemAtPosition(position).toString() == "Vinny"){
             val newname: String = "GOd please work"
             val thishastochange: TextView = findViewById(R.id.test_name)
             thishastochange.text = newname
