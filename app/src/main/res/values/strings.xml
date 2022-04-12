@@ -16,10 +16,8 @@
     <string name="lessons">Lessons</string>
     <string-array name="names_array">
         <item>Mike</item>
-        <item>Vinny</item>
-        <item>Emily</item>
+        <item>Test</item>
         <item>Mia</item>
-        <item>John</item>
     </string-array>
     <string name="to_settings_page">Lessons</string>
     <string name="to_awards_page">Lessons</string>
@@ -39,4 +37,5 @@
     <string name="email_body">Body</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_name_test_please_help">Mike</string>
 </resources>
