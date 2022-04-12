@@ -57,7 +57,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/currentMascotHome"
             android:layout_width="137dp"
             android:layout_height="141dp"
             android:src="@drawable/hatbird"

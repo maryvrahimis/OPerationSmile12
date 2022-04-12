@@ -4,6 +4,9 @@ plugins {
     id 'kotlin-kapt'
     id 'realm-android'
     id 'kotlin-android'
+
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
 }
 
 android {

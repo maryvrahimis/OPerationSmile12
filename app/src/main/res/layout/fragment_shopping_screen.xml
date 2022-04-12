@@ -7,6 +7,16 @@
     android:background="#0072DE"
     android:elevation="30dp">
 
+    <ImageView
+        android:id="@+id/testSticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
         android:layout_width="wrap_content"
@@ -68,7 +78,7 @@
         android:layout_width="333dp"
         android:layout_height="409dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="231dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="100dp"
         android:background="@color/white"
@@ -491,7 +501,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <Button
             android:id="@+id/exitHatButton"
@@ -1086,7 +1096,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/currentMascotHome"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
