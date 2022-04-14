@@ -15,11 +15,9 @@
     <string name="spinner_name">Spinner Name</string>
     <string name="lessons">Lessons</string>
     <string-array name="names_array">
-
-            <item>Mike</item>
-            <item>Vinny</item>
-            <item>Gia</item>
-
+        <item>Mike</item>
+        <item>Vinny</item>
+        <item>Gia</item>
     </string-array>
     <string name="to_settings_page">Lessons</string>
     <string name="to_awards_page">Lessons</string>
