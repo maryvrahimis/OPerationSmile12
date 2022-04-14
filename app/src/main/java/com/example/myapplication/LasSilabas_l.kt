@@ -1,5 +1,5 @@
 package com.example.myapplication
-
+/*
 import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
@@ -129,3 +129,5 @@ class LasSilabas_l : Fragment() {
         _binding = null
     }
 }
+
+ */

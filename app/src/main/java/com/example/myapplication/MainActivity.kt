@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-
+    public var done: Boolean = false
     lateinit var realm: Realm
     lateinit var app: App
 
@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
                     .allowQueriesOnUiThread(true)
                     .allowWritesOnUiThread(true)
                     .build()
-            // THIS GETS THE INSTANCE
-            // EXECUTES A TRANSACTION TO ADD TO THE DATABASE
-            // PULLS A NAME(WORD) FROM THE DATABASE
+                // THIS GETS THE INSTANCE
+                // EXECUTES A TRANSACTION TO ADD TO THE DATABASE
+                // PULLS A NAME(WORD) FROM THE DATABASE
 
                 try {
                     realm = Realm.getInstance(config)
@@ -168,3 +168,19 @@ open class Stickers(
 
     var stickerPrice: Long? = null
 ): RealmObject() {}
+
+
+open class stickerList(
+    @PrimaryKey    var _id: ObjectId? = null,
+
+    var stickerName: String? = null,
+): RealmObject() {
+
+}
+
+open class Purchase(
+    var Points: Int? = null,
+
+): RealmObject() {
+
+}

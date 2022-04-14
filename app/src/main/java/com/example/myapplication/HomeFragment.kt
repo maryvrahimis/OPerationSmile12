@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 import androidx.core.view.isVisible
+import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
 import io.realm.Realm
@@ -46,9 +49,17 @@ class HomeFragment : Fragment() {
         var days: Int = 0
         super.onViewCreated(view, savedInstanceState)
 
-        Realm.init(context)
-        val config = RealmConfiguration.Builder().build()
-        Realm.setDefaultConfiguration(config)
+
+        setFragmentResultListener("requestKey") { requestKey, bundle ->
+            // We use a String here, but any type that can be put in a Bundle is supported
+            val result = bundle.getBoolean("bundleKey")
+            if (result){
+                binding.completedLesson.isVisible = true
+                binding.notCompletedLesson.isVisible = false
+                //binding.totalPointsText.text = opa
+
+            }
+        }
 
         binding.streakText.setText((days.toString() + " dias"))
         binding.lessonsButton.setOnClickListener {

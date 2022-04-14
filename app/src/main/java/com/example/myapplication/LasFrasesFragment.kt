@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.LasFrasesBinding
 
@@ -48,7 +50,12 @@ class LasFrasesFragment : Fragment() {
 //            pauseRecording()
 //        }
 
-        binding.next.setOnClickListener {findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment) }
+        binding.next.setOnClickListener {
+            val result = true
+            // Use the Kotlin extension in the fragment-ktx artifact
+            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
+            findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
+        }
 
     }
 
