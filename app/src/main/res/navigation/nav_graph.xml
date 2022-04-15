@@ -61,8 +61,8 @@
             app:destination="@id/closetFragment2" />
         <action
             android:id="@+id/actoinStoreToShopping"
-            app:destination="@id/shpppingFragment"
-            app:popUpTo="@id/shpppingFragment" />
+            app:destination="@id/shoppingFragment"
+            app:popUpTo="@id/shoppingFragment" />
     </fragment>
     <fragment
         android:id="@+id/reportsFragment"
@@ -82,9 +82,9 @@
             app:destination="@id/HomeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/shpppingFragment"
+        android:id="@+id/shoppingFragment"
         android:name="com.example.myapplication.ShoppingFragment"
-        android:label="ShpppingFragment" >
+        android:label="ShoppingFragment">
         <action
             android:id="@+id/actoinShoppingToHome"
             app:destination="@id/HomeFragment" />
