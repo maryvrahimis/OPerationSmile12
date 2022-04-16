@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentLessonsBinding
 
@@ -38,7 +40,14 @@ class LessonsFragment : Fragment() {
         binding.next.setOnClickListener {
             findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
         }
-        binding.panButton.setOnClickListener {
+        binding.pan.setOnClickListener {
+            val id = R.id.pan
+            val result = resources.getResourceEntryName(id)
+            println("THIS IS R.id.pan $result")
+            // Use the Kotlin extension in the fragment-ktx artifact
+
+            //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
+            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
     }

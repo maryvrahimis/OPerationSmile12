@@ -34,6 +34,7 @@ class LesssonsFragmentL : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_lesssons_l, container, false)
     }
 

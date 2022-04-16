@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                         // Instantiate the class using the factory function.
                         val turtle = r.createObject(Lessons::class.java, ObjectId())
                         // Configure the instance.
-                        turtle.word = "SLICKBACK"
+                        turtle.word = "pan"
                     }
                     val task = realm.where(Lessons::class.java).equalTo("word","SLICKBACK").findAll()
                     val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()

@@ -168,7 +168,7 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView29"
         app:layout_constraintEnd_toStartOf="@+id/imageView31"
-        app:layout_constraintTop_toBottomOf="@+id/panButton" />
+        app:layout_constraintTop_toBottomOf="@+id/pan" />
 
     <TextView
         android:id="@+id/textView33"
@@ -259,7 +259,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
     <ImageButton
-        android:id="@+id/panButton"
+        android:id="@+id/pan"
         android:layout_width="111dp"
         android:layout_height="113dp"
         android:layout_marginStart="29dp"
