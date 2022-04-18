@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 // THIS GETS THE INSTANCE
                 // EXECUTES A TRANSACTION TO ADD TO THE DATABASE
                 // PULLS A NAME(WORD) FROM THE DATABASE
-
+//
                 try {
                     realm = Realm.getInstance(config)
                     Realm.setDefaultConfiguration(config)

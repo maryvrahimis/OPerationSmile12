@@ -48,6 +48,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         textView.text = currentDateAndTime */
 
 
+
         /*
         val realm = Realm.getDefaultInstance()
         Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
@@ -71,6 +72,30 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
+        lateinit var realm: Realm
+        //try {
+        //FRAGMENT LISTEN
+        //FRAGMENT LISTEN
+
+        realm = Realm.getDefaultInstance()
+        Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+
+        // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
+        realm.executeTransaction { r: Realm ->
+            // Instantiate the class using the factory function.
+            val turtle = r.createObject(Lessons::class.java, ObjectId())
+            // Configure the instance.
+            turtle.word = "pina"
+        }
+
+        // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
+        // THE VARIABLE IS THEN PRINTED TO SCREEN
+        val task2 = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
+        if (task2 != null) {
+            println("THIS IS A TEST ${task2.image}")
+            // binding.textView6.text = "${task2.word}"
+        }
+
         val text = parent?.getItemIdAtPosition(position).toString()
 
         if (parent?.getItemAtPosition(position).toString() == "Mike") {
@@ -82,7 +107,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val k_sounds_completed: TextView = findViewById(R.id.testname6)
             val t_sounds_completed: TextView = findViewById(R.id.testname7)
             val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = "Mike Guy"
+            nameField.text = task2.toString()
             ageField.text = "19"
             usernameField.text = "mguy12"
             passwordField.text = "mgopsmile"
