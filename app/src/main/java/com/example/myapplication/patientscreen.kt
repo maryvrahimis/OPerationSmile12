@@ -135,11 +135,13 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 }
 
 open class Patients(
+    @PrimaryKey
     var _id: ObjectId? = null,
-    var name: String = "",
+    var name: String? = null,
     var age: String? = null,
     var username: String? = null,
     var password: String? = null,
+    var points: String? = null,
     var k_sounds_completed: Boolean? = null,
     var p_sounds_completed: Boolean? = null,
     var l_sounds_completed: Boolean? = null,
@@ -147,7 +149,8 @@ open class Patients(
     var k_sounds_completed_time: String? = null,
     var p_sounds_completed_time: String? = null,
     var l_sounds_completed_time: String? = null,
-    var t_sounds_completed_time: String? = null): RealmObject()
+    var t_sounds_completed_time: String? = null,
+    var stickerIDCloset: String? = null): RealmObject()
 
 
 

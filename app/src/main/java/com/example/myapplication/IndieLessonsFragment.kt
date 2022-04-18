@@ -51,8 +51,9 @@ class IndieLessonsFragment : Fragment() {
             // Instantiate the class using the factory function.
             val turtle = r.createObject(Lessons::class.java, ObjectId())
             // Configure the instance.
-            turtle.word = "pollo"
+            turtle.word = "pina"
         }
+
         // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
         // THE VARIABLE IS THEN PRINTED TO SCREEN
         val task2 = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
@@ -60,6 +61,7 @@ class IndieLessonsFragment : Fragment() {
             println("THIS IS A TEST ${task2.image}")
             // binding.textView6.text = "${task2.word}"
         }
+
         //val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
         //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
 
