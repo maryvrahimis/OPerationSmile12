@@ -6,64 +6,81 @@
     android:layout_height="match_parent"
     android:background="#0072D7">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="311dp"
+        android:layout_height="234dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="38dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonID">
+
+        <ImageView
+            android:id="@+id/lessonImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/pan"
+            tools:srcCompat="@drawable/pan" />
+    </androidx.cardview.widget.CardView>
+
     <TextView
-        android:id="@+id/Lessonid"
-        android:layout_width="408dp"
-        android:layout_height="64dp"
+        android:id="@+id/lessonID"
+        android:layout_width="248dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
         android:fontFamily="@font/chango"
         android:text="Lessons"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Lessons" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="305dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="38dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Lessonid"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/pan"
-        tools:srcCompat="@drawable/pan" />
-
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/lessonInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:fontFamily="@font/chango"
         android:text="Slowly and as best that you can, say the given word."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/lessonWord"
         tools:text="Slowly and as best that you can, say the given word." />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/lessonWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="163dp"
         android:fontFamily="@font/chango"
         android:text="Pan"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5"
         tools:text="Pan" />
 
     <ImageButton
@@ -77,7 +94,7 @@
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/lessonInstruction"
         app:srcCompat="@drawable/ic_record_fill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

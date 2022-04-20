@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import com.example.myapplication.databinding.IndieLessonsBinding
 import io.realm.Realm
+import io.realm.exceptions.RealmFileException
 import org.bson.types.ObjectId
 
 class IndieLessonsFragment : Fragment() {
@@ -36,63 +38,70 @@ class IndieLessonsFragment : Fragment() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lateinit var realm: Realm
-        //try {
-        //FRAGMENT LISTEN
-        //FRAGMENT LISTEN
 
-        realm = Realm.getDefaultInstance()
-        Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+        /*
+        UNUSED BUT MAYBE STILL IMPORTANT
 
-        // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
-        realm.executeTransaction { r: Realm ->
-            // Instantiate the class using the factory function.
-            val turtle = r.createObject(Lessons::class.java, ObjectId())
-            // Configure the instance.
-            turtle.word = "pina"
-        }
-
-        // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
-        // THE VARIABLE IS THEN PRINTED TO SCREEN
-        val task2 = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
-        if (task2 != null) {
-            println("THIS IS A TEST ${task2.image}")
-            // binding.textView6.text = "${task2.word}"
-        }
-
-        //val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
-        //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
-
+        val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
+        uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
         val opa = "${task2!!.word}"
-        val opa3 = "${task2!!.word}"
-        Log.v("EXAMPLE", "Fetched Max: $task2")
+        */
 
-        //TAKES THE RESOURCE ID FROM LESSONS FRAGMENT AND FINDS THE IMAGE IN THE DATABASE
-        setFragmentResultListener("requestKey") { requestKey, bundle ->
-        // We use a String here, but any type that can be put in a Bundle is supported
-         val result = bundle.getString("bundleKey")
+        try
+        {
+            val realm: Realm = Realm.getDefaultInstance()
+            Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
 
-        val opa2 = context?.let { getDrawableByFileName(it, result) }
-        realm.close()
-        //} catch(ex: RealmFileException) {
-        //  Log.v("EXAMPLE", "Error opening the realm.")
-        //Log.v("EXAMPLE", ex.toString())
-        //}
+            // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
+            realm.executeTransaction { r: Realm ->
+                // Instantiate the class using the factory function.
+                val turtle = r.createObject(Lessons::class.java, ObjectId())
+                // Configure the instance.
+                turtle.word = "pina"
+            }
 
-        //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
-        binding.textView6.text = opa
-        binding.Lessonid.text = opa3
-        binding.imageView3.setImageDrawable(opa2)
-         }
+            // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
+            // THE VARIABLE IS THEN PRINTED TO SCREEN
+            val lesson = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
+            if (lesson != null)
+            {
+                println("THIS IS A TEST ${lesson.image}")
+                // binding.textView6.text = "${task2.word}"
+            }
+            Log.v("EXAMPLE", "Fetched Max: $lesson")
+
+            //FRAGMENT LISTEN
+            //FRAGMENT LISTEN
+            //TAKES THE RESOURCE ID FROM LESSONS FRAGMENT AND FINDS THE IMAGE IN THE DATABASE
+            setFragmentResultListener("requestKey")
+            { requestKey, bundle ->
+                // We use a String here, but any type that can be put in a Bundle is supported
+                val result = bundle.getString("bundleKey")
+                val lessonName = context?.let { getDrawableByFileName(it, result) }
+                realm.close()
+
+                //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
+                binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
+                binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
+                binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
+                binding.lessonImage.setImageDrawable(lessonName)
+            }
+        }
+        catch (ex: RealmFileException)
+            {
+                Log.v("EXAMPLE", "Error opening the realm.")
+                Log.v("EXAMPLE", ex.toString())
+            }
+
 //        binding.buttonSecond.setOnClickListener {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
        // binding.backButton.setOnClickListener {
          //   findNavController().navigate(R.id.action_indieLessonsFragment_to_LessonsFragment)
         //}
-
     }
 
     override fun onDestroyView() {

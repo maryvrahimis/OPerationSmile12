@@ -83,16 +83,31 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
         realm.executeTransaction { r: Realm ->
             // Instantiate the class using the factory function.
-            val turtle = r.createObject(Lessons::class.java, ObjectId())
+            val turtle = r.createObject(Patients::class.java, ObjectId())
             // Configure the instance.
-            turtle.word = "pina"
+            turtle.name = "SLICKBACK"
+            turtle.age = "69"
+            turtle.username = "aPimpNamedSlickback"
+            turtle.password = "discordKitt3n"
+            turtle.p_sounds_completed = true
+            turtle.k_sounds_completed = true
+            turtle.t_sounds_completed = true
+            turtle.l_sounds_completed = true
+
         }
 
         // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
         // THE VARIABLE IS THEN PRINTED TO SCREEN
-        val task2 = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
-        if (task2 != null) {
-            println("THIS IS A TEST ${task2.image}")
+        val patient = realm.where(Patients::class.java).equalTo("name", "SLICKBACK").findFirst()
+        //val age = realm.where(Patients::class.java).equalTo("age", "69").findFirst()
+        //val username = realm.where(Patients::class.java).equalTo("username", "aPimpNamedSlickback").findFirst()
+        //val password = realm.where(Patients::class.java).equalTo("password", "discordKitt3n").findFirst()
+        //val p_sounds_completed = realm.where(Patients::class.java).equalTo("p_sounds_completed", true).findFirst()
+        //val k_sounds_completed = realm.where(Patients::class.java).equalTo("k_sounds_completed", true).findFirst()
+        //val t_sounds_completed = realm.where(Patients::class.java).equalTo("t_sounds_completed", true).findFirst()
+        //val l_sounds_completed = realm.where(Patients::class.java).equalTo("l_sounds_completed", true).findFirst()
+        if (patient != null) {
+            println("THIS IS A TEST ${patient!!.p_sounds_completed.toString()}")
             // binding.textView6.text = "${task2.word}"
         }
 
@@ -107,14 +122,14 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val k_sounds_completed: TextView = findViewById(R.id.testname6)
             val t_sounds_completed: TextView = findViewById(R.id.testname7)
             val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = task2.toString()
-            ageField.text = "19"
-            usernameField.text = "mguy12"
-            passwordField.text = "mgopsmile"
-            p_sounds_completed.text = "yes"
-            k_sounds_completed.text = "yes"
-            t_sounds_completed.text = "yes"
-            l_sounds_completed.text = "yes"
+            nameField.text = patient!!.name.toString()
+            ageField.text = patient!!.age.toString()
+            usernameField.text = patient!!.username.toString()
+            passwordField.text = patient!!.password.toString()
+            p_sounds_completed.text = patient.p_sounds_completed.toString()
+            k_sounds_completed.text = patient.k_sounds_completed.toString()
+            t_sounds_completed.text = patient.t_sounds_completed.toString()
+            l_sounds_completed.text = patient.l_sounds_completed.toString()
         }
         if (parent?.getItemAtPosition(position).toString() == "Vinny"){
             val nameField: TextView = findViewById(R.id.test_name)
