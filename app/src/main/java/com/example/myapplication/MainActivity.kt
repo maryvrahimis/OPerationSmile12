@@ -184,3 +184,33 @@ open class Purchase(
 ): RealmObject() {
 
 }
+
+open class Login(
+    @PrimaryKey var _id: ObjectId? = null,
+
+   var email: String? = null,
+
+    var name: String? = null,
+
+    var salt: String? = null,
+
+    var password: String? = null
+): RealmObject() {}
+
+//interface CallBackFun2 {
+//    fun onSuccess()
+//
+//    fun onFailure(error: String)
+//}
+
+//open class Login(
+//    @PrimaryKey var _id: ObjectId? = null,
+//
+//    var email: String? = null,
+//
+//    var password: String? = null,
+//
+//    var salt: String? = null,
+//
+//    var name: String? = null
+//): RealmObject() {}
