@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/lessonInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -57,7 +57,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/lessonInstruction" />
 
     <Button
         android:id="@+id/shoppingtoClosetButton"
@@ -682,7 +682,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView23"
+            android:id="@+id/papaya"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
@@ -714,7 +714,7 @@
 
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/perroText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -764,7 +764,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/parque"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
@@ -774,7 +774,7 @@
             app:srcCompat="@drawable/star" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/patoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -847,7 +847,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView25"
+            android:id="@+id/perro"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
@@ -869,7 +869,7 @@
             android:translationY="95dp" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/panText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -929,7 +929,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView26"
+            android:id="@+id/pato"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
@@ -1178,7 +1178,7 @@
             android:translationY="140dp" />
 
         <ImageView
-            android:id="@+id/imageView30"
+            android:id="@+id/pez"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"

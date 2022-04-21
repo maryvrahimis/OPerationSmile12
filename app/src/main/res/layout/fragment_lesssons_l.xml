@@ -27,27 +27,27 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/papaya"
         android:layout_width="113dp"
         android:layout_height="98dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="36dp"
         android:src="@drawable/luz"
-        app:layout_constraintEnd_toStartOf="@+id/imageView24"
+        app:layout_constraintEnd_toStartOf="@+id/parque"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/parque"
         android:layout_width="114dp"
         android:layout_height="103dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/parque"
-        app:layout_constraintEnd_toStartOf="@+id/imageView25"
+        app:layout_constraintEnd_toStartOf="@+id/perro"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/perro"
         android:layout_width="109dp"
         android:layout_height="113dp"
         android:layout_marginTop="144dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView26"
+        android:id="@+id/pato"
         android:layout_width="117dp"
         android:layout_height="103dp"
         android:layout_marginStart="4dp"
@@ -67,37 +67,37 @@
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <ImageView
-        android:id="@+id/imageView28"
+        android:id="@+id/pera"
         android:layout_width="115dp"
         android:layout_height="107dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:src="@drawable/pera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintTop_toBottomOf="@+id/perroText" />
 
     <ImageView
-        android:id="@+id/imageView29"
+        android:id="@+id/pepino"
         android:layout_width="111dp"
         android:layout_height="113dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/pepino"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintTop_toBottomOf="@+id/patoText" />
 
     <ImageView
-        android:id="@+id/imageView30"
+        android:id="@+id/pez"
         android:layout_width="111dp"
         android:layout_height="113dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="36dp"
         android:src="@drawable/pez"
-        app:layout_constraintEnd_toStartOf="@+id/imageView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintEnd_toStartOf="@+id/pina"
+        app:layout_constraintTop_toBottomOf="@+id/panText" />
 
     <ImageView
-        android:id="@+id/imageView31"
+        android:id="@+id/pina"
         android:layout_width="111dp"
         android:layout_height="113dp"
         android:layout_marginTop="24dp"
@@ -116,7 +116,7 @@
         android:text="Luz"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+        app:layout_constraintTop_toBottomOf="@+id/papaya" />
 
     <TextView
         android:id="@+id/textView29"
@@ -127,11 +127,11 @@
         android:fontFamily="@font/chango"
         android:text="Parque"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView30"
-        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+        app:layout_constraintEnd_toStartOf="@+id/perroText"
+        app:layout_constraintTop_toBottomOf="@+id/parque" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/perroText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -141,11 +141,11 @@
         android:text="Perro"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+        app:layout_constraintStart_toEndOf="@+id/parque"
+        app:layout_constraintTop_toBottomOf="@+id/perro" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/patoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -153,11 +153,11 @@
         android:fontFamily="@font/chango"
         android:text="Pato"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView32"
-        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+        app:layout_constraintEnd_toStartOf="@+id/panText"
+        app:layout_constraintTop_toBottomOf="@+id/pato" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/panText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
@@ -166,8 +166,8 @@
         android:fontFamily="@font/chango"
         android:text="Pan"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/imageView29"
-        app:layout_constraintEnd_toStartOf="@+id/imageView31"
+        app:layout_constraintBottom_toTopOf="@+id/pepino"
+        app:layout_constraintEnd_toStartOf="@+id/pina"
         app:layout_constraintTop_toBottomOf="@+id/pan" />
 
     <TextView
@@ -180,7 +180,7 @@
         android:text="Pera"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+        app:layout_constraintTop_toBottomOf="@+id/pera" />
 
     <TextView
         android:id="@+id/textView34"
@@ -208,7 +208,7 @@
         android:text="Pepino"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView29" />
+        app:layout_constraintTop_toBottomOf="@+id/pepino" />
 
     <TextView
         android:id="@+id/textView36"
@@ -220,7 +220,7 @@
         android:text="Pez"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/textView35"
-        app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+        app:layout_constraintTop_toBottomOf="@+id/pez" />
 
     <TextView
         android:id="@+id/textView38"
@@ -232,7 +232,7 @@
         android:text="Pina"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+        app:layout_constraintTop_toBottomOf="@+id/pina" />
 
     <TextView
         android:id="@+id/textView39"
@@ -268,8 +268,8 @@
         android:background="#00FFFFFF"
         android:scaleType="centerInside"
         android:src="@drawable/pan"
-        app:layout_constraintEnd_toStartOf="@+id/imageView28"
-        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:layout_constraintEnd_toStartOf="@+id/pera"
+        app:layout_constraintStart_toEndOf="@+id/pato"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

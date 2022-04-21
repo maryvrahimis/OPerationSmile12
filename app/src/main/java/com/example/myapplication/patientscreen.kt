@@ -48,6 +48,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         textView.text = currentDateAndTime */
 
 
+
         /*
         val realm = Realm.getDefaultInstance()
         Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
@@ -69,8 +70,47 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         realm.close()
         binding.testName.text = opa */
     }
-
+// This is a test
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
+        lateinit var realm: Realm
+        //try {
+        //FRAGMENT LISTEN
+        //FRAGMENT LISTEN
+
+        realm = Realm.getDefaultInstance()
+        Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+
+        // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
+        realm.executeTransaction { r: Realm ->
+            // Instantiate the class using the factory function.
+            val turtle = r.createObject(Patients::class.java, ObjectId())
+            // Configure the instance.
+            turtle.name = "SLICKBACK"
+            turtle.age = "69"
+            turtle.username = "aPimpNamedSlickback"
+            turtle.password = "discordKitt3n"
+            turtle.p_sounds_completed = true
+            turtle.k_sounds_completed = true
+            turtle.t_sounds_completed = true
+            turtle.l_sounds_completed = true
+
+        }
+
+        // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
+        // THE VARIABLE IS THEN PRINTED TO SCREEN
+        val patient = realm.where(Patients::class.java).equalTo("name", "SLICKBACK").findFirst()
+        //val age = realm.where(Patients::class.java).equalTo("age", "69").findFirst()
+        //val username = realm.where(Patients::class.java).equalTo("username", "aPimpNamedSlickback").findFirst()
+        //val password = realm.where(Patients::class.java).equalTo("password", "discordKitt3n").findFirst()
+        //val p_sounds_completed = realm.where(Patients::class.java).equalTo("p_sounds_completed", true).findFirst()
+        //val k_sounds_completed = realm.where(Patients::class.java).equalTo("k_sounds_completed", true).findFirst()
+        //val t_sounds_completed = realm.where(Patients::class.java).equalTo("t_sounds_completed", true).findFirst()
+        //val l_sounds_completed = realm.where(Patients::class.java).equalTo("l_sounds_completed", true).findFirst()
+        if (patient != null) {
+            println("THIS IS A TEST ${patient!!.p_sounds_completed.toString()}")
+            // binding.textView6.text = "${task2.word}"
+        }
+
         val text = parent?.getItemIdAtPosition(position).toString()
 
         if (parent?.getItemAtPosition(position).toString() == "Mike") {
@@ -82,14 +122,14 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val k_sounds_completed: TextView = findViewById(R.id.testname6)
             val t_sounds_completed: TextView = findViewById(R.id.testname7)
             val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = "Mike Guy"
-            ageField.text = "19"
-            usernameField.text = "mguy12"
-            passwordField.text = "mgopsmile"
-            p_sounds_completed.text = "yes"
-            k_sounds_completed.text = "yes"
-            t_sounds_completed.text = "yes"
-            l_sounds_completed.text = "yes"
+            nameField.text = patient!!.name.toString()
+            ageField.text = patient!!.age.toString()
+            usernameField.text = patient!!.username.toString()
+            passwordField.text = patient!!.password.toString()
+            p_sounds_completed.text = patient.p_sounds_completed.toString()
+            k_sounds_completed.text = patient.k_sounds_completed.toString()
+            t_sounds_completed.text = patient.t_sounds_completed.toString()
+            l_sounds_completed.text = patient.l_sounds_completed.toString()
         }
         if (parent?.getItemAtPosition(position).toString() == "Vinny"){
             val nameField: TextView = findViewById(R.id.test_name)
@@ -135,11 +175,13 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 }
 
 open class Patients(
+    @PrimaryKey
     var _id: ObjectId? = null,
-    var name: String = "",
+    var name: String? = null,
     var age: String? = null,
     var username: String? = null,
     var password: String? = null,
+    var points: String? = null,
     var k_sounds_completed: Boolean? = null,
     var p_sounds_completed: Boolean? = null,
     var l_sounds_completed: Boolean? = null,
@@ -147,7 +189,8 @@ open class Patients(
     var k_sounds_completed_time: String? = null,
     var p_sounds_completed_time: String? = null,
     var l_sounds_completed_time: String? = null,
-    var t_sounds_completed_time: String? = null): RealmObject()
+    var t_sounds_completed_time: String? = null,
+    var stickerIDCloset: String? = null): RealmObject()
 
 
 
