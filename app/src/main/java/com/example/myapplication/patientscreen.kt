@@ -41,12 +41,9 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
 
-        /*
-        val textView: TextView = findViewById(R.id.dateAndTime)
-        val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy' at ' HH:mm:ss z")
-        val currentDateAndTime: String = simpleDateFormat.format(Date())
-        textView.text = currentDateAndTime */
 
+        val textView: TextView = findViewById(R.id.textView5)
+        textView.text = LasFrasesFragment().currentDateAndTime
 
 
         /*
@@ -192,5 +189,9 @@ open class Patients(
     var t_sounds_completed_time: String? = null,
     var stickerIDCloset: String? = null): RealmObject()
 
+class Timecheck{
+
+
+}
 
 

@@ -9,9 +9,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.LasFrasesBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class LasFrasesFragment : Fragment() {
+    val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy' at ' HH:mm:ss z")
 
+    val currentDateAndTime: String?
+        get() {
+           return currentDateAndTime
+        }
     private var _binding: LasFrasesBinding? = null
 
     // This property is only valid between onCreateView and
@@ -55,6 +62,7 @@ class LasFrasesFragment : Fragment() {
             // Use the Kotlin extension in the fragment-ktx artifact
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
             findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
+            val currentDateAndTime: String = simpleDateFormat.format(Date())
         }
 
     }
