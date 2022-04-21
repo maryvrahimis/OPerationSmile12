@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".LoginActivity">
+    tools:context=".LoginFragment">
 
     <TextView
         android:id="@+id/textView20"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView21">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/emailaddress"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -49,11 +49,11 @@
             android:background="@drawable/background_btn_intro2"
             android:ems="10"
             android:hint="Usuario"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:paddingStart="20dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -63,11 +63,11 @@
             android:background="@drawable/background_btn_intro2"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingStart="20dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/LoginButton"
             style="@style/TextAppearance.AppCompat.Widget.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,6 +77,21 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/btn_blue"
             android:text="Iniciar sesión"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/LogToReg"
+            style="@style/TextAppearance.AppCompat.Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_blue"
+            android:text="Registracion"
             android:textColor="#ffffff"
             android:textSize="24sp"
             android:textStyle="bold" />
