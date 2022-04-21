@@ -5,8 +5,8 @@ plugins {
     id 'realm-android'
     id 'kotlin-android'
 
-    id 'kotlin-android-extensions'
-    id 'androidx.navigation.safeargs'
+//    id 'kotlin-android-extensions'
+//    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -74,5 +74,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.1.1'
-
+    implementation 'commons-codec:commons-codec:1.13'
 }

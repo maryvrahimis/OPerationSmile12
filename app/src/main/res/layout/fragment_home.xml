@@ -116,12 +116,12 @@
             android:id="@+id/totalPointsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="0 points"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold"
             android:translationX="200dp"
-            android:translationY="55dp"
-            android:text="0 points" />
+            android:translationY="55dp" />
 
         <ImageView
             android:id="@+id/imageView19"

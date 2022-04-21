@@ -11,11 +11,12 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="16dp"
         android:text="REGISTRO"
         android:textColor="@color/teal_200"
         android:textSize="55sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView21">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/namereg"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -53,7 +54,7 @@
             android:paddingStart="20dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/emailreg"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -63,11 +64,11 @@
             android:background="@drawable/background_btn_intro2"
             android:ems="10"
             android:hint="Email"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:paddingStart="20dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/passwordreg"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -77,11 +78,11 @@
             android:background="@drawable/background_btn_intro2"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingStart="20dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/passwordconf"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
@@ -91,16 +92,16 @@
             android:background="@drawable/background_btn_intro2"
             android:ems="10"
             android:hint="Volver a escribir la contraseña"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingStart="20dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonreg"
             style="@style/TextAppearance.AppCompat.Widget.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/btn_blue"
