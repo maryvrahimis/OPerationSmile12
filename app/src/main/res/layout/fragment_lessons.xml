@@ -76,6 +76,216 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/pato7"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pato"
+                app:layout_constraintEnd_toStartOf="@+id/pan4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepinoText"
+                app:srcCompat="@drawable/pollo" />
+
+            <ImageButton
+                android:id="@+id/pan7"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/pies"
+                app:layout_constraintEnd_toStartOf="@+id/perro4"
+                app:layout_constraintStart_toEndOf="@+id/pato4"
+                app:layout_constraintTop_toBottomOf="@+id/pezText" />
+
+            <ImageView
+                android:id="@+id/perro7"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/dog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pan4"
+                app:layout_constraintTop_toBottomOf="@+id/pinaText"
+                app:srcCompat="@drawable/postre" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pollo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pato4" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pies"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView46"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/pan4" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Postre"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/perro4" />
+
+            <ImageView
+                android:id="@+id/pato6"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pato"
+                app:layout_constraintEnd_toStartOf="@+id/pan4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepinoText"
+                app:srcCompat="@drawable/pollo" />
+
+            <ImageButton
+                android:id="@+id/pan6"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/pies"
+                app:layout_constraintEnd_toStartOf="@+id/perro4"
+                app:layout_constraintStart_toEndOf="@+id/pato4"
+                app:layout_constraintTop_toBottomOf="@+id/pezText" />
+
+            <ImageView
+                android:id="@+id/perro6"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/dog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pan4"
+                app:layout_constraintTop_toBottomOf="@+id/pinaText"
+                app:srcCompat="@drawable/postre" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pollo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pato4" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pies"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView46"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/pan4" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Postre"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/perro4" />
+
+            <ImageView
+                android:id="@+id/pato5"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/pato"
+                app:layout_constraintEnd_toStartOf="@+id/pan4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pepinoText"
+                app:srcCompat="@drawable/pollo" />
+
+            <ImageButton
+                android:id="@+id/pan5"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/pies"
+                app:layout_constraintEnd_toStartOf="@+id/perro4"
+                app:layout_constraintStart_toEndOf="@+id/pato4"
+                app:layout_constraintTop_toBottomOf="@+id/pezText" />
+
+            <ImageView
+                android:id="@+id/perro5"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:src="@drawable/dog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pan4"
+                app:layout_constraintTop_toBottomOf="@+id/pinaText"
+                app:srcCompat="@drawable/postre" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pollo"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pato4" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pies"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView46"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/pan4" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Postre"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/perro4" />
+
+            <ImageView
                 android:id="@+id/pina"
                 android:layout_width="137dp"
                 android:layout_height="110dp"
@@ -97,7 +307,7 @@
 
             <TextView
                 android:id="@+id/pepinoText"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Pepino"
@@ -110,7 +320,7 @@
 
             <TextView
                 android:id="@+id/pezText"
-                android:layout_width="136dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Pez"
@@ -123,7 +333,7 @@
 
             <TextView
                 android:id="@+id/pinaText"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Pina"
@@ -178,7 +388,7 @@
 
             <TextView
                 android:id="@+id/parqueText"
-                android:layout_width="136dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Parque"
@@ -191,7 +401,7 @@
 
             <TextView
                 android:id="@+id/peraText"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Pera"
@@ -204,7 +414,7 @@
 
             <TextView
                 android:id="@+id/papayaText"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
                 android:text="Papaya"
@@ -289,17 +499,17 @@
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pan"
+                android:src="@drawable/pies"
                 app:layout_constraintEnd_toStartOf="@+id/perro4"
                 app:layout_constraintStart_toEndOf="@+id/pato4"
                 app:layout_constraintTop_toBottomOf="@+id/pezText" />
 
             <TextView
                 android:id="@+id/textView44"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pato"
+                android:text="Pollo"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -309,10 +519,10 @@
 
             <TextView
                 android:id="@+id/textView46"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Perro"
+                android:text="Postre"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
@@ -327,14 +537,15 @@
                 android:src="@drawable/pato"
                 app:layout_constraintEnd_toStartOf="@+id/pan4"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pepinoText" />
+                app:layout_constraintTop_toBottomOf="@+id/pepinoText"
+                app:srcCompat="@drawable/pollo" />
 
             <TextView
                 android:id="@+id/textView45"
-                android:layout_width="136dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pan"
+                android:text="Pies"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -349,7 +560,8 @@
                 android:src="@drawable/dog"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/pan4"
-                app:layout_constraintTop_toBottomOf="@+id/pinaText" />
+                app:layout_constraintTop_toBottomOf="@+id/pinaText"
+                app:srcCompat="@drawable/postre" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -70,7 +70,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         realm.close()
         binding.testName.text = opa */
     }
-
+// This is a test
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
         lateinit var realm: Realm
         //try {
