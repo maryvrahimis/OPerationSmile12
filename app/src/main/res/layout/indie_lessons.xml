@@ -37,12 +37,11 @@
 
     <TextView
         android:id="@+id/lessonID"
-        android:layout_width="248dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginEnd="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/chango"
         android:text="Lessons"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,5 +95,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lessonInstruction"
         app:srcCompat="@drawable/ic_record_fill" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

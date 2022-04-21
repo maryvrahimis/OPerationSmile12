@@ -714,7 +714,7 @@
 
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/perroText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -774,7 +774,7 @@
             app:srcCompat="@drawable/star" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/patoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -869,7 +869,7 @@
             android:translationY="95dp" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/panText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

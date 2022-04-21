@@ -74,7 +74,7 @@
         android:layout_marginEnd="4dp"
         android:src="@drawable/pera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintTop_toBottomOf="@+id/perroText" />
 
     <ImageView
         android:id="@+id/pepino"
@@ -84,7 +84,7 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/pepino"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+        app:layout_constraintTop_toBottomOf="@+id/patoText" />
 
     <ImageView
         android:id="@+id/pez"
@@ -94,7 +94,7 @@
         android:layout_marginEnd="36dp"
         android:src="@drawable/pez"
         app:layout_constraintEnd_toStartOf="@+id/pina"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/panText" />
 
     <ImageView
         android:id="@+id/pina"
@@ -127,11 +127,11 @@
         android:fontFamily="@font/chango"
         android:text="Parque"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView30"
+        app:layout_constraintEnd_toStartOf="@+id/perroText"
         app:layout_constraintTop_toBottomOf="@+id/parque" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/perroText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/perro" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/patoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -153,11 +153,11 @@
         android:fontFamily="@font/chango"
         android:text="Pato"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView32"
+        app:layout_constraintEnd_toStartOf="@+id/panText"
         app:layout_constraintTop_toBottomOf="@+id/pato" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/panText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
