@@ -42,8 +42,8 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner.onItemSelectedListener = this
 
 
-        val textView: TextView = findViewById(R.id.textView5)
-        textView.text = LasFrasesFragment().currentDateAndTime
+        //val textView: TextView = findViewById(R.id.textView5)
+       //textView.text = LasFrasesFragment().currentDateAndTime
 
 
         /*
