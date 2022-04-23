@@ -7,14 +7,6 @@
     android:background="#0072D7"
     tools:context=".LessonsFragment">
 
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
@@ -26,171 +18,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/papaya"
-        android:layout_width="113dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="36dp"
-        android:src="@drawable/luz"
-        app:layout_constraintEnd_toStartOf="@+id/parque"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/parque"
-        android:layout_width="114dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/parque"
-        app:layout_constraintEnd_toStartOf="@+id/perro"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/perro"
-        android:layout_width="109dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/dog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/pato"
-        android:layout_width="117dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/pato"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-    <ImageView
-        android:id="@+id/pera"
-        android:layout_width="115dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/pera"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perroText" />
-
-    <ImageView
-        android:id="@+id/pepino"
-        android:layout_width="111dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/pepino"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patoText" />
-
-    <ImageView
-        android:id="@+id/pez"
-        android:layout_width="111dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="36dp"
-        android:src="@drawable/pez"
-        app:layout_constraintEnd_toStartOf="@+id/pina"
-        app:layout_constraintTop_toBottomOf="@+id/panText" />
-
-    <ImageView
-        android:id="@+id/pina"
-        android:layout_width="111dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/pina"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="85dp"
-        android:fontFamily="@font/chango"
-        android:text="Luz"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/papaya" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="96dp"
-        android:fontFamily="@font/chango"
-        android:text="Parque"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/perroText"
-        app:layout_constraintTop_toBottomOf="@+id/parque" />
-
-    <TextView
-        android:id="@+id/perroText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="49dp"
-        android:fontFamily="@font/chango"
-        android:text="Perro"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/parque"
-        app:layout_constraintTop_toBottomOf="@+id/perro" />
-
-    <TextView
-        android:id="@+id/patoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="104dp"
-        android:fontFamily="@font/chango"
-        android:text="Pato"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/panText"
-        app:layout_constraintTop_toBottomOf="@+id/pato" />
-
-    <TextView
-        android:id="@+id/panText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="7dp"
-        android:fontFamily="@font/chango"
-        android:text="Pan"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/pepino"
-        app:layout_constraintEnd_toStartOf="@+id/pina"
-        app:layout_constraintTop_toBottomOf="@+id/pan" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/chango"
-        android:text="Pera"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pera" />
-
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="105dp"
         android:fontFamily="@font/chango"
         android:text="Las Palabras "
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -199,77 +34,487 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/chango"
-        android:text="Pepino"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pepino" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/chango"
-        android:text="Pez"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/textView35"
-        app:layout_constraintTop_toBottomOf="@+id/pez" />
-
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="36dp"
-        android:fontFamily="@font/chango"
-        android:text="Pina"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pina" />
-
-    <TextView
         android:id="@+id/textView39"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
         android:fontFamily="@font/chango"
         android:text="Repite cada palabra cinco veces"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <TextView
         android:id="@+id/textView41"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginEnd="91dp"
         android:fontFamily="@font/chango"
         android:text="Para practicar el sonido"
         android:textAlignment="center"
         android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
-    <ImageButton
-        android:id="@+id/pan"
-        android:layout_width="111dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="31dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        android:src="@drawable/pan"
-        app:layout_constraintEnd_toStartOf="@+id/pera"
-        app:layout_constraintStart_toEndOf="@+id/pato"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="417dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="71dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/regalo"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/regalo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/arbol"
+                app:layout_constraintTop_toBottomOf="@+id/azulText" />
+
+            <ImageButton
+                android:id="@+id/aguila"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/aguila"
+                app:layout_constraintEnd_toStartOf="@+id/arbol"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lecturaText" />
+
+            <ImageButton
+                android:id="@+id/bailar"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/bailar"
+                app:layout_constraintEnd_toStartOf="@+id/papel"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/pastel"
+                app:layout_constraintTop_toBottomOf="@+id/solText" />
+
+            <TextView
+                android:id="@+id/bailarText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Bailar"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/papelText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/pastelText"
+                app:layout_constraintTop_toBottomOf="@+id/bailar" />
+
+            <TextView
+                android:id="@+id/regaloText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Regalo"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/arbolText"
+                app:layout_constraintTop_toBottomOf="@+id/regalo" />
+
+            <TextView
+                android:id="@+id/aguilaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Aguila"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/arbolText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aguila" />
+
+            <ImageButton
+                android:id="@+id/lechuga"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lechuga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lecho"
+                app:layout_constraintTop_toBottomOf="@+id/loboText" />
+
+            <ImageButton
+                android:id="@+id/lago"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lago"
+                app:layout_constraintEnd_toStartOf="@+id/lecho"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lapizText" />
+
+            <TextView
+                android:id="@+id/lagoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lago"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/lechoText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lago" />
+
+            <TextView
+                android:id="@+id/lechoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lecho"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/lechugaText"
+                app:layout_constraintStart_toEndOf="@+id/lagoText"
+                app:layout_constraintTop_toBottomOf="@+id/lecho" />
+
+            <TextView
+                android:id="@+id/lechugaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lechuga"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lechoText"
+                app:layout_constraintTop_toBottomOf="@+id/lechuga" />
+
+            <ImageButton
+                android:id="@+id/lecho"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lecho"
+                app:layout_constraintEnd_toStartOf="@+id/lechuga"
+                app:layout_constraintStart_toEndOf="@+id/lago"
+                app:layout_constraintTop_toBottomOf="@+id/lataText" />
+
+            <ImageButton
+                android:id="@+id/lata"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lata"
+                app:layout_constraintEnd_toStartOf="@+id/lobo"
+                app:layout_constraintStart_toEndOf="@+id/lapiz"
+                app:layout_constraintTop_toBottomOf="@+id/lecheText" />
+
+            <ImageButton
+                android:id="@+id/lapiz"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lapiz"
+                app:layout_constraintEnd_toStartOf="@+id/lata"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/luzText" />
+
+            <ImageButton
+                android:id="@+id/lobo"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lobo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lata"
+                app:layout_constraintTop_toBottomOf="@+id/libroText" />
+
+            <TextView
+                android:id="@+id/lataText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lata"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/loboText"
+                app:layout_constraintStart_toEndOf="@+id/lapizText"
+                app:layout_constraintTop_toBottomOf="@+id/lata" />
+
+            <TextView
+                android:id="@+id/loboText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lobo"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lataText"
+                app:layout_constraintTop_toBottomOf="@+id/lobo" />
+
+            <TextView
+                android:id="@+id/lapizText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lapiz"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/lataText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lapiz" />
+
+            <ImageButton
+                android:id="@+id/luz"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/luz"
+                app:layout_constraintEnd_toStartOf="@+id/leche"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/libro"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/libro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/leche"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/leche"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/leche"
+                app:layout_constraintEnd_toStartOf="@+id/libro"
+                app:layout_constraintStart_toEndOf="@+id/luz"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/luzText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Luz"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/lecheText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/luz" />
+
+            <TextView
+                android:id="@+id/lecheText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Leche"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/libroText"
+                app:layout_constraintStart_toEndOf="@+id/luzText"
+                app:layout_constraintTop_toBottomOf="@+id/leche" />
+
+            <TextView
+                android:id="@+id/libroText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Libro"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lecheText"
+                app:layout_constraintTop_toBottomOf="@+id/libro" />
+            <!--REPLACE THIS ONE-->
+            <ImageButton
+                android:id="@+id/papel"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/papel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/arbol"
+                app:layout_constraintTop_toBottomOf="@+id/lechugaText" />
+
+            <ImageButton
+                android:id="@+id/pastel"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/pastel"
+                app:layout_constraintEnd_toStartOf="@+id/arbol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lagoText" />
+
+            <TextView
+                android:id="@+id/pastelText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Pastel"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/arbolText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pastel" />
+
+            <ImageButton
+                android:id="@+id/arbol"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/arbol"
+                app:layout_constraintEnd_toStartOf="@+id/papel"
+                app:layout_constraintStart_toEndOf="@+id/pastel"
+                app:layout_constraintTop_toBottomOf="@+id/lechoText" />
+
+            <TextView
+                android:id="@+id/arbolText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Arbol"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/papelText"
+                app:layout_constraintStart_toEndOf="@+id/pastelText"
+                app:layout_constraintTop_toBottomOf="@+id/papel" />
+
+            <TextView
+                android:id="@+id/papelText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Papel"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/arbolText"
+                app:layout_constraintTop_toBottomOf="@+id/papel" />
+
+            <ImageButton
+                android:id="@+id/lectura"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/lectura"
+                app:layout_constraintEnd_toStartOf="@+id/sol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pastelText" />
+
+            <TextView
+                android:id="@+id/lecturaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Lectura"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/solText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lectura" />
+
+            <ImageButton
+                android:id="@+id/sol"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/sol"
+                app:layout_constraintEnd_toStartOf="@+id/azul"
+                app:layout_constraintStart_toEndOf="@+id/lectura"
+                app:layout_constraintTop_toBottomOf="@+id/arbolText" />
+
+            <ImageButton
+                android:id="@+id/azul"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/azul"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sol"
+                app:layout_constraintTop_toBottomOf="@+id/papelText" />
+
+            <TextView
+                android:id="@+id/azulText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Azul"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/solText"
+                app:layout_constraintTop_toBottomOf="@+id/sol" />
+
+            <TextView
+                android:id="@+id/solText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Sol"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/azulText"
+                app:layout_constraintStart_toEndOf="@+id/lecturaText"
+                app:layout_constraintTop_toBottomOf="@+id/lectura" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -70,6 +70,14 @@ class IndieLessonsFragment : Fragment() {
             {
                 println("THIS IS A TEST ${lesson.image}")
                 // binding.textView6.text = "${task2.word}"
+            }else
+            {
+                realm.executeTransaction { r: Realm ->
+                // Instantiate the class using the factory function.
+                val turtle = r.createObject(Lessons::class.java, ObjectId())
+                // Configure the instance.
+                turtle.word = lesson?.word
+                }
             }
             Log.v("EXAMPLE", "Fetched Max: $lesson")
 

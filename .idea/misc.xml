@@ -30,18 +30,14 @@
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/drawable/ic_record_fill.xml" value="0.1345" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/activity_patientscreen.xml" value="0.22418478260869565" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_home.xml" value="0.1580547112462006" />
-        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_lessons.xml" value="0.13428571428571429" />
+        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_lessons.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_lesssons_l.xml" value="0.1" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/fragment_shopping_screen.xml" value="0.1580547112462006" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/indie_lessons.xml" value="0.20244565217391305" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/las_frases.xml" value="0.1" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/las_silabas.xml" value="0.1" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/lesson_choice.xml" value="0.20018115942028986" />
-        <entry key="app/src/main/res/layout/activity_emailupload.xml" value="0.17654508611955422" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16394927536231885" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/activity_patientscreen.xml" value="0.22135416666666666" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.41461150680763137" />
-        <entry key="app/src/main/res/layout/activity_welcomescreen.xml" value="0.17654508611955422" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.31768035888671875" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.3463541666666667" />
@@ -60,7 +56,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
