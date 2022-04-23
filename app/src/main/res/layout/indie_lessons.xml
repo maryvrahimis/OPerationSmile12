@@ -8,9 +8,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
-        android:layout_width="311dp"
+        android:layout_width="0dp"
         android:layout_height="234dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="38dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="38dp"
         app:cardCornerRadius="20dp"
@@ -37,7 +37,7 @@
 
     <TextView
         android:id="@+id/lessonID"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chango"
         android:text="Lessons"
@@ -51,7 +51,7 @@
 
     <TextView
         android:id="@+id/lessonInstruction"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/chango"
@@ -67,13 +67,12 @@
 
     <TextView
         android:id="@+id/lessonWord"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="163dp"
         android:fontFamily="@font/chango"
         android:text="Pan"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +83,7 @@
 
     <ImageButton
         android:id="@+id/recordButton"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="156dp"
         android:layout_marginTop="39dp"

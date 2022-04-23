@@ -162,5 +162,13 @@
             android:id="@+id/action_Registration_to_Login"
             app:destination="@id/loginfrag"/>
     </fragment>
+    <fragment
+        android:id="@+id/LesssonsFragmentL"
+        android:name="com.example.myapplication.LessonsFragmentL"
+        android:label="LesssonsFragmentL">
+        <action
+            android:id="@+id/action_lesssonsFragmentL_to_indieLessonsFragment"
+            app:destination="@id/indieLessonsFragment" />
+    </fragment>
 
 </navigation>
