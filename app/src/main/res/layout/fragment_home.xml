@@ -143,6 +143,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="336dp"
@@ -201,8 +202,21 @@
                     android:src="@drawable/bird"
                     android:translationX="180dp"
                     android:translationY="10dp" />
+
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/home_to_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="692dp"
+        android:text="Video"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

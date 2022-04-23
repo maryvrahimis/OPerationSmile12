@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_home_to_updated_patients_screen"
             app:destination="@id/patientscreen" />
+        <action
+            android:id="@+id/action_HomeFragment_to_videoTest"
+            app:destination="@id/videoTest" />
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -162,5 +165,10 @@
             android:id="@+id/action_Registration_to_Login"
             app:destination="@id/loginfrag"/>
     </fragment>
+    <activity
+        android:id="@+id/videoTest"
+        android:name="com.example.myapplication.VideoTest"
+        android:label="activity_video_test"
+        tools:layout="@layout/activity_video_test" />
 
 </navigation>

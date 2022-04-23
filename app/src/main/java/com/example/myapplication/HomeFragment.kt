@@ -78,7 +78,9 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.go_to_reports)
         }
 
-
+        binding.homeToVideo.setOnClickListener{
+            findNavController().navigate(R.id.action_HomeFragment_to_videoTest)
+        }
     }
 
     override fun onDestroyView() {
