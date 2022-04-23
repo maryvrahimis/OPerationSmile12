@@ -42,7 +42,7 @@ class LessonsFragmentL : Fragment() {
         }
 
         binding.luz.setOnClickListener {
-            val id = R.id.pato
+            val id = R.id.luz
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -52,7 +52,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.leche.setOnClickListener {
-            val id = R.id.pan
+            val id = R.id.leche
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -62,7 +62,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.libro.setOnClickListener {
-            val id = R.id.perro
+            val id = R.id.libro
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -72,7 +72,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lapiz.setOnClickListener {
-            val id = R.id.papaya
+            val id = R.id.lapiz
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -82,7 +82,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lata.setOnClickListener {
-            val id = R.id.parque
+            val id = R.id.lata
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -92,7 +92,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lobo.setOnClickListener {
-            val id = R.id.pera
+            val id = R.id.lobo
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -102,7 +102,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lago.setOnClickListener {
-            val id = R.id.pepino
+            val id = R.id.lago
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -112,7 +112,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lecho.setOnClickListener {
-            val id = R.id.pez
+            val id = R.id.lecho
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -122,7 +122,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.lechuga.setOnClickListener {
-            val id = R.id.pina
+            val id = R.id.lechuga
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -132,7 +132,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.pastel.setOnClickListener {
-            val id = R.id.pollo
+            val id = R.id.pastel
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -142,7 +142,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.arbol.setOnClickListener {
-            val id = R.id.pies
+            val id = R.id.arbol
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -161,18 +161,8 @@ class LessonsFragmentL : Fragment() {
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
-        binding.papel.setOnClickListener {
-            val id = R.id.pinata
-            val result = resources.getResourceEntryName(id)
-            println("THIS IS R.id.pan $result")
-            // Use the Kotlin extension in the fragment-ktx artifact
-
-            //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
-        }
         binding.lectura.setOnClickListener {
-            val id = R.id.pintura
+            val id = R.id.lectura
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -182,7 +172,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.sol.setOnClickListener {
-            val id = R.id.pelota
+            val id = R.id.sol
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -192,7 +182,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.azul.setOnClickListener {
-            val id = R.id.peine
+            val id = R.id.azul
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -202,7 +192,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.aguila.setOnClickListener {
-            val id = R.id.mapa
+            val id = R.id.aguila
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -212,7 +202,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.bailar.setOnClickListener {
-            val id = R.id.sopa
+            val id = R.id.bailar
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
@@ -222,7 +212,7 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
         }
         binding.regalo.setOnClickListener {
-            val id = R.id.capa
+            val id = R.id.regalo
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
