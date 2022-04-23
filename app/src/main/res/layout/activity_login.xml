@@ -7,26 +7,26 @@
 
     tools:context=".LoginFragment">
 
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="414dp"
+        android:layout_height="199dp"
+        android:src="@drawable/opsmilelogo"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/opsmilelogo" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Iniciar sesión"
-            android:textColor="@color/teal_200"
-            android:textSize="55sp" />
+        android:id="@+id/nestedScrollView"
+        android:layout_width="414dp"
+        android:layout_height="409dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,9 +91,23 @@
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-// hi davion
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="Iniciar sesión"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
