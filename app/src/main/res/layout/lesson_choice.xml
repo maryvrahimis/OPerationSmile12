@@ -13,7 +13,7 @@
     tools:context=".LessonsFragment">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/KsoundsButton"
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_marginStart="95dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView18" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/TsoundsButton"
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
@@ -55,7 +55,7 @@
         android:text="T Sound"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/LsoundsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView20" />
 
@@ -98,9 +98,9 @@
         app:layout_constraintTop_toBottomOf="@+id/lessonID" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/LsoundsButton"
         android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_height="101dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="99dp"
         android:backgroundTint="#FFC107"
@@ -109,8 +109,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        app:layout_constraintStart_toEndOf="@+id/button3" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -144,7 +143,7 @@
         android:layout_marginStart="91dp"
         android:layout_marginEnd="48dp"
         android:src="@drawable/l_lips"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/LsoundsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toBottomOf="@+id/button6" />

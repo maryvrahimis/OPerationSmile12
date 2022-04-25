@@ -26,9 +26,6 @@
         <action
             android:id="@+id/action_home_to_updated_patients_screen"
             app:destination="@id/patientscreen" />
-        <action
-            android:id="@+id/action_HomeFragment_to_videoTest"
-            app:destination="@id/videoTest" />
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -119,6 +116,15 @@
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabasFragment"
             app:destination="@id/lasSilabasFragment" />
+        <action
+            android:id="@+id/action_lessonChoiceFragment_to_lasSilabaKFragment"
+            app:destination="@id/lasSilabaKFragment" />
+        <action
+            android:id="@+id/action_lessonChoiceFragment_to_lasSilabas_l"
+            app:destination="@id/lasSilabas_l" />
+        <action
+            android:id="@+id/action_lessonChoiceFragment_to_lasSilabaT"
+            app:destination="@id/lasSilabaT" />
     </fragment>
     <fragment
         android:id="@+id/lasSilabasFragment"
@@ -165,10 +171,25 @@
             android:id="@+id/action_Registration_to_Login"
             app:destination="@id/loginfrag"/>
     </fragment>
-    <activity
-        android:id="@+id/videoTest"
-        android:name="com.example.myapplication.VideoTest"
-        android:label="activity_video_test"
-        tools:layout="@layout/activity_video_test" />
+    <fragment
+        android:id="@+id/lasSilabaKFragment"
+        android:name="com.example.myapplication.LasSilabaKFragment"
+        android:label="LasSilabaKFragment" />
+    <fragment
+        android:id="@+id/lasSilabaT"
+        android:name="com.example.myapplication.LasSilabaT"
+        android:label="LasSilabaT" />
+    <fragment
+        android:id="@+id/lasSilabas_l"
+        android:name="com.example.myapplication.LasSilabas_l"
+        android:label="LasSilabas_l" >
+        <action
+            android:id="@+id/action_lasSilabas_l_to_lessonsFragmentL"
+            app:destination="@id/lessonsFragmentL" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonsFragmentL"
+        android:name="com.example.myapplication.LessonsFragmentL"
+        android:label="LessonsFragmentL" />
 
 </navigation>

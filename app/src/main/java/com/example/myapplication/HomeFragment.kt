@@ -79,7 +79,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.homeToVideo.setOnClickListener{
-            findNavController().navigate(R.id.action_HomeFragment_to_videoTest)
+            //findNavController().navigate(R.id.action_HomeFragment_to_videoTest)
         }
     }
 
