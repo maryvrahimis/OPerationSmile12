@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.view.children
+import androidx.core.view.iterator
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentClosetBinding
 import com.example.myapplication.databinding.FragmentLessonsBinding
@@ -43,6 +46,21 @@ class ClosetFragment : Fragment() {
             findNavController().navigate(R.id.actoinClosetToHome)
         }
        // binding.imageView20.setImageDrawable(opa2)
+      //  binding.scrollView3.
+        var temp = 0
+        var closetIt = binding.lin.iterator()
+        while (temp != closet.size){
+           val bam = closetIt.next()
+            bam.setBackgroundResource(closet[temp].stickerBirdId)
+
+            temp++
+        }
+
+        //for()
+
+
+
+
 
     }
 

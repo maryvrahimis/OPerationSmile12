@@ -15,7 +15,7 @@
             android:id="@+id/action_Home_to_Lessons"
             app:destination="@id/lessonChoiceFragment" />
         <action
-            android:id="@+id/to_Third_fragment"
+            android:id="@+id/action_home_to_store_frag"
             app:destination="@id/StoreFragment" />
         <action
             android:id="@+id/go_to_reports"
@@ -26,6 +26,7 @@
         <action
             android:id="@+id/action_home_to_updated_patients_screen"
             app:destination="@id/patientscreen" />
+
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -91,6 +92,9 @@
         <action
             android:id="@+id/shoppintToCloset"
             app:destination="@id/closetFragment2" />
+        <action
+            android:id="@+id/action_to_detail_screen"
+            app:destination="@id/detialFragment" />
 
     </fragment>
     <fragment
@@ -191,5 +195,14 @@
         android:id="@+id/lessonsFragmentL"
         android:name="com.example.myapplication.LessonsFragmentL"
         android:label="LessonsFragmentL" />
+    <fragment
+        android:id="@+id/detialFragment"
+        android:name="com.example.myapplication.DetialFragment"
+        android:label="fragment_detial"
+        tools:layout="@layout/fragment_detial" >
+        <action
+            android:id="@+id/action_detialFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+    </fragment>
 
 </navigation>
