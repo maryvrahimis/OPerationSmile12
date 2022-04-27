@@ -174,7 +174,11 @@
     <fragment
         android:id="@+id/lasSilabaKFragment"
         android:name="com.example.myapplication.LasSilabaKFragment"
-        android:label="LasSilabaKFragment" />
+        android:label="LasSilabaKFragment" >
+        <action
+            android:id="@+id/action_lasSilabaKFragment_to_lessons_k_page"
+            app:destination="@id/lessons_k_page" />
+    </fragment>
     <fragment
         android:id="@+id/lasSilabaT"
         android:name="com.example.myapplication.LasSilabaT"
@@ -191,5 +195,9 @@
         android:id="@+id/lessonsFragmentL"
         android:name="com.example.myapplication.LessonsFragmentL"
         android:label="LessonsFragmentL" />
+    <fragment
+        android:id="@+id/lessons_k_page"
+        android:name="com.example.myapplication.Lessons_k_page"
+        android:label="Lessons_k_page" />
 
 </navigation>
