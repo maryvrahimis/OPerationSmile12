@@ -68,13 +68,13 @@
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:padding="10dp"
-            app:srcCompat="@drawable/hatbird" />
+            app:srcCompat="@drawable/bird" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="266dp"
-        android:layout_height="100dp"
+        android:layout_height="86dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="55dp"
@@ -91,6 +91,16 @@
             android:translationX="40dp"
             android:translationY="15dp"
             app:srcCompat="@drawable/star" />
+
+        <TextView
+            android:id="@+id/pointsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:translationX="100dp"
+            android:translationY="22dp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

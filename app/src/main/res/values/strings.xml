@@ -35,4 +35,6 @@
     <string name="email_edittext">Enter email here</string>
     <string name="email_subject">Subject</string>
     <string name="email_body">Body</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
