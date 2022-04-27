@@ -85,7 +85,7 @@ class HomeFragment : Fragment() {
             val poop: Int = points
             // Use the Kotlin extension in the fragment-ktx artifact
             setFragmentResult("requestKey", bundleOf("bundleKey" to poop))
-            findNavController().navigate(R.id.action_home_to_store_frag)
+            findNavController().navigate(R.id.action_HomeFragment_to_StoreFragment)
         }
         binding.homeToPatients.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_updated_patients_screen)

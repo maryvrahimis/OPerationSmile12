@@ -75,7 +75,7 @@ class ShoppingFragment : Fragment() {
                 binding.shopLayout[i].setOnClickListener{
                 val res = arr[i].stickerBirdId
                     setFragmentResult("requestKey", bundleOf("bundleKey" to res))
-                    findNavController().navigate(R.id.action_to_detail_screen)
+                    findNavController().navigate(R.id.action_shoppingFragment_to_detialFragment)
 
                 }
             }

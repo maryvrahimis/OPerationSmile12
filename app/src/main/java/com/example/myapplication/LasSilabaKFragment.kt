@@ -30,7 +30,7 @@ class LasSilabaKFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //binding.PsoundsButton.setOnClickListener { findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabasFragment) }
         //binding.TsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaT)}
-        binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaKFragment_to_lessons_k_page) }
+        binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaKFragment_to_lessons_k_page2) }
 
     }
 
