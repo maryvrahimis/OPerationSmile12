@@ -1,16 +1,23 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.app.Activity.RESULT_OK
+import android.content.ActivityNotFoundException
 import android.content.ContentValues
-import android.net.Uri
+import android.content.Context
+import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.speech.RecognizerIntent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
-import android.widget.VideoView
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import com.example.myapplication.databinding.IndieLessonsBinding
@@ -30,13 +37,19 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       _binding = IndieLessonsBinding.inflate(inflater, container, false)
-       return binding.root
+
+        _binding = IndieLessonsBinding.inflate(inflater, container, false)
+        return binding.root
+
     }
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        lateinit var activityResultLauncher: ActivityResultLauncher<Intent>
+        var wordGlobal: String = "text1"
+        var userWordGlobal: String = "text2"
+
         /*
         UNUSED BUT MAYBE STILL IMPORTANT
 
@@ -68,10 +81,10 @@ class IndieLessonsFragment : Fragment() {
             }else
             {
                 realm.executeTransaction { r: Realm ->
-                // Instantiate the class using the factory function.
-                val turtle = r.createObject(Lessons::class.java, ObjectId())
-                // Configure the instance.
-                turtle.word = lesson?.word
+                    // Instantiate the class using the factory function.
+                    val turtle = r.createObject(Lessons::class.java, ObjectId())
+                    // Configure the instance.
+                    turtle.word = lesson?.word
                 }
             }
             Log.v("EXAMPLE", "Fetched Max: $lesson")
@@ -79,30 +92,71 @@ class IndieLessonsFragment : Fragment() {
             //FRAGMENT LISTEN
             //FRAGMENT LISTEN
             //TAKES THE RESOURCE ID FROM LESSONS FRAGMENT AND FINDS THE IMAGE IN THE DATABASE
+
+
+
+
+
             setFragmentResultListener("requestKey")
             { requestKey, bundle ->
                 // We use a String here, but any type that can be put in a Bundle is supported
                 val result = bundle.getString("bundleKey")
-               // val lessonName = context?.let { getDrawableByFileName(it, result) }
+                val lessonName = context?.let { getDrawableByFileName(it, result) }
                 realm.close()
 
                 //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
                 binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
+                wordGlobal = binding.lessonWord.text.toString()
+                //binding.lessonImage.setImageDrawable(lessonName)
+
+
+
+
+
+
+
+
+
             }
+
+
         }
         catch (ex: RealmFileException)
-            {
-                Log.v("EXAMPLE", "Error opening the realm.")
-                Log.v("EXAMPLE", ex.toString())
+        {
+            Log.v("EXAMPLE", "Error opening the realm.")
+            Log.v("EXAMPLE", ex.toString())
+        }
+        binding.recordButton.setOnClickListener{
+            val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "es"); intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, "es"); intent.putExtra(RecognizerIntent.EXTRA_ONLY_RETURN_LANGUAGE_PREFERENCE,"es");
+            intent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Say Something...")
+
+            try {
+                activityResultLauncher.launch(intent)
+            }catch(exp:ActivityNotFoundException) {
+                Toast.makeText(getActivity(),"Device is not supported",Toast.LENGTH_SHORT).show()
             }
+
+        }
+        activityResultLauncher= registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result2: ActivityResult? ->
+            if(result2!!.resultCode==RESULT_OK && result2!!.data!=null){
+                val speechtext=result2!!.data!!.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS) as ArrayList<*>
+                userWordGlobal = speechtext.toString()
+            }
+        }
+        if(userWordGlobal.equals(wordGlobal)) {
+
+        }
+
 
 //        binding.buttonSecond.setOnClickListener {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
-       // binding.backButton.setOnClickListener {
-         //   findNavController().navigate(R.id.action_indieLessonsFragment_to_LessonsFragment)
+        // binding.backButton.setOnClickListener {
+        //   findNavController().navigate(R.id.action_indieLessonsFragment_to_LessonsFragment)
         //}
     }
 
@@ -112,18 +166,10 @@ class IndieLessonsFragment : Fragment() {
     }
 }
 
-class Help : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.indie_lessons)
 
-        val VideoView: VideoView = findViewById(R.id.videoView2)
-        val videoPath: String = "android.resource://" + packageName + "/" + R.raw.p_sound_instructions
-        val Uri: Uri = Uri.parse(videoPath)
-        VideoView.setVideoURI(Uri)
-
-        val MediaController: MediaController = MediaController(this)
-        VideoView.setMediaController(MediaController)
-        MediaController.setAnchorView(VideoView)
-    }
+fun getDrawableByFileName(context: Context, fileName: String?): Drawable? {
+    return ContextCompat.getDrawable(
+        context,
+        context.resources.getIdentifier(fileName, "drawable", context.packageName)
+    )
 }
