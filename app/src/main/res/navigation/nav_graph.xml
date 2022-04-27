@@ -64,6 +64,9 @@
             android:id="@+id/actoinStoreToShopping"
             app:destination="@id/shoppingFragment"
             app:popUpTo="@id/shoppingFragment" />
+        <action
+            android:id="@+id/action_StoreFragment_to_lessons_l_page_TEST"
+            app:destination="@id/lessons_l_page" />
     </fragment>
     <fragment
         android:id="@+id/reportsFragment"
@@ -211,5 +214,9 @@
         <action
             android:id="@+id/p_lessons_video2_to_lasSilabasFragment"
             app:destination="@id/lasSilabasFragment" />
+    <fragment
+        android:id="@+id/lessons_l_page"
+        android:name="com.example.myapplication.Lessons_l_page"
+        android:label="Lessons_l_page" />
 
 </navigation>
