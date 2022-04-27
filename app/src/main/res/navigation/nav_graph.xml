@@ -185,11 +185,15 @@
         android:label="LasSilabas_l" >
         <action
             android:id="@+id/action_lasSilabas_l_to_lessonsFragmentL"
-            app:destination="@id/lessonsFragmentL" />
+            app:destination="@id/LessonsFragmentL" />
     </fragment>
     <fragment
-        android:id="@+id/lessonsFragmentL"
+        android:id="@+id/LessonsFragmentL"
         android:name="com.example.myapplication.LessonsFragmentL"
-        android:label="LessonsFragmentL" />
+        android:label="LessonsFragmentL" >
+        <action
+            android:id="@+id/action_lessonsFragmentL_to_indieLessonsFragment"
+            app:destination="@id/indieLessonsFragment" />
+    </fragment>
 
 </navigation>
