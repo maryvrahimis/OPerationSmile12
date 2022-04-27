@@ -12,7 +12,7 @@ class p_lessons_video : AppCompatActivity() {
         setContentView(R.layout.activity_plessons_video)
 
         val VideoView: VideoView = findViewById(R.id.videoView)
-        val videoPath: String = "android.resource://" + packageName + "/" + R.raw.p_sound_instructions
+        val videoPath: String = "android.resource://" + packageName + "/" + R.raw.p_sound_front
         val Uri: Uri = Uri.parse(videoPath)
         VideoView.setVideoURI(Uri)
 

@@ -15,7 +15,7 @@
             android:id="@+id/action_Home_to_Lessons"
             app:destination="@id/lessonChoiceFragment" />
         <action
-            android:id="@+id/to_Third_fragment"
+            android:id="@+id/action_home_to_store_frag"
             app:destination="@id/StoreFragment" />
         <action
             android:id="@+id/go_to_reports"
@@ -26,6 +26,7 @@
         <action
             android:id="@+id/action_home_to_updated_patients_screen"
             app:destination="@id/patientscreen" />
+
     </fragment>
     <fragment
         android:id="@+id/LessonsFragment"
@@ -63,6 +64,9 @@
             android:id="@+id/actoinStoreToShopping"
             app:destination="@id/shoppingFragment"
             app:popUpTo="@id/shoppingFragment" />
+        <action
+            android:id="@+id/action_StoreFragment_to_lessons_l_page_TEST"
+            app:destination="@id/lessons_l_page" />
     </fragment>
     <fragment
         android:id="@+id/reportsFragment"
@@ -91,6 +95,9 @@
         <action
             android:id="@+id/shoppintToCloset"
             app:destination="@id/closetFragment2" />
+        <action
+            android:id="@+id/action_to_detail_screen"
+            app:destination="@id/detialFragment" />
 
     </fragment>
     <fragment
@@ -115,7 +122,7 @@
         android:label="LessonChoiceFragment" >
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabasFragment"
-            app:destination="@id/lasSilabasFragment" />
+            app:destination="@id/p_lessons_video2" />
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabaKFragment"
             app:destination="@id/lasSilabaKFragment" />
@@ -191,5 +198,25 @@
         android:id="@+id/lessonsFragmentL"
         android:name="com.example.myapplication.LessonsFragmentL"
         android:label="LessonsFragmentL" />
+    <fragment
+        android:id="@+id/detialFragment"
+        android:name="com.example.myapplication.DetialFragment"
+        android:label="fragment_detial"
+        tools:layout="@layout/fragment_detial" >
+        <action
+            android:id="@+id/action_detialFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/p_lessons_video2"
+        android:name="com.example.myapplication.p_lessons_video"
+        android:label="p_lessons_video" />
+        <action
+            android:id="@+id/p_lessons_video2_to_lasSilabasFragment"
+            app:destination="@id/lasSilabasFragment" />
+    <fragment
+        android:id="@+id/lessons_l_page"
+        android:name="com.example.myapplication.Lessons_l_page"
+        android:label="Lessons_l_page" />
 
 </navigation>
