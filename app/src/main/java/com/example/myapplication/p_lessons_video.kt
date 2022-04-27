@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
@@ -21,5 +23,13 @@ class p_lessons_video : AppCompatActivity() {
         MediaController.setAnchorView(VideoView)
 
 
+        val skip: Button = findViewById(R.id.skip_to_lessons)
+        skip.setOnClickListener(){
+            val intent = Intent(this, LasSilabasFragment::class.java)
+            startActivity(intent)
+        }
+
+
     }
+
 }
