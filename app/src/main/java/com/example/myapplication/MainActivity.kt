@@ -27,7 +27,11 @@ import java.util.concurrent.Executors
 import java.util.concurrent.FutureTask
 
 
-class MainActivity : AppCompatActivity() {
+val closet = ArrayList<StickerBundle>()
+var points = 100
+var currentSticker = R.drawable.bird
+
+open class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -37,6 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Init Realm
         Realm.init(this)
         val appID : String = "opsmiletracker-awmho";
@@ -90,23 +95,16 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, it.error.toString())
             }
         }
-
-
-
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+     //   setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+   //     appBarConfiguration = AppBarConfiguration(navController.graph)
+       // setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+
     }//oncreate end
 
     // second part of realm
@@ -147,6 +145,11 @@ class MainActivity : AppCompatActivity() {
 
 }//main act end
 
+
+
+
+
+
 open class Lessons(
     @PrimaryKey    var _id: ObjectId? = null,
 
@@ -179,7 +182,7 @@ open class stickerList(
 }
 
 open class Purchase(
-    var Points: Int? = null,
+    var points: Int? = null,
 
 ): RealmObject() {
 

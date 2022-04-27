@@ -21,7 +21,7 @@ class emailupload : AppCompatActivity() {
         sendto = findViewById(R.id.editText1);
         subject = findViewById(R.id.editText2);
         body = findViewById(R.id.editText3);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.LsoundsButton);
 
         button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {

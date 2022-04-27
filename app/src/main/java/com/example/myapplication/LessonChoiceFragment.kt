@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+//import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.LessonChoiceBinding
 
@@ -29,8 +30,9 @@ class LessonChoiceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.PsoundsButton.setOnClickListener { findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabasFragment) }
-
-
+        binding.TsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaT)}
+        binding.KsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaKFragment)}
+        binding.LsoundsButton.setOnClickListener { findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabas_l) }
     }
 
     override fun onDestroyView() {

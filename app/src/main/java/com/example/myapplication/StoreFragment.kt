@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
+import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentReportsBinding
 import com.example.myapplication.databinding.FragmentStoreBinding
@@ -41,7 +43,14 @@ class StoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setFragmentResultListener("requestKey") { requestKey, bundle ->
+            // We use a String here, but any type that can be put in a Bundle is supported
+            val result = bundle.getInt("bundleKey")
 
+
+        }
+        binding.imageView11.setImageResource(currentSticker)
+        binding.pointsView.text = "${points.toString()} Points"
         binding.toHomeButton.setOnClickListener {
             findNavController().navigate(R.id.store_to_home)
         }

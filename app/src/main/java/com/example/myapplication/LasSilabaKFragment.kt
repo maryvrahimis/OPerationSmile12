@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.FragmentSilabalBinding
+import com.example.myapplication.databinding.FragmentSilabakBinding
 
-class LasSilabas_l : Fragment() {
+class LasSilabaKFragment : Fragment() {
 
-    private var _binding: FragmentSilabalBinding? = null
+    private var _binding: FragmentSilabakBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -21,15 +21,15 @@ class LasSilabas_l : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSilabalBinding.inflate(inflater, container, false)
+        _binding = FragmentSilabakBinding.inflate(inflater, container, false)
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabas_l_to_lessonsFragmentL) }
-
+        //binding.PsoundsButton.setOnClickListener { findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabasFragment) }
+        //binding.TsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaT)}
 
 
     }
