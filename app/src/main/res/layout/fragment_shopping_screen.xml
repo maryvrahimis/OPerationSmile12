@@ -7,16 +7,6 @@
     android:background="#0072DE"
     android:elevation="30dp">
 
-    <ImageView
-        android:id="@+id/testSticky"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
         android:layout_width="wrap_content"
@@ -74,6 +64,89 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:layout_width="144dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/shopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
         android:id="@+id/shopScroll"
         android:layout_width="333dp"
         android:layout_height="409dp"
@@ -84,19 +157,21 @@
         android:background="@color/white"
         android:padding="10dp"
         android:paddingBottom="0dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clickable="false"
             android:columnCount="2"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +256,7 @@
                         android:scaleType="fitStart"
                         android:translationX="10dp"
                         android:translationY="10dp"
-                        app:srcCompat="@drawable/santhat" />
+                        app:srcCompat="@drawable/santahat" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -578,8 +653,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -659,9 +734,9 @@
         android:layout_height="734dp"
         android:background="#F1E9E9"
         android:visibility="invisible"
-        app:contentPaddingTop="100dp"
         app:cardBackgroundColor="#B4052039"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -743,8 +818,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -825,8 +900,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -908,8 +983,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -991,8 +1066,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -1075,8 +1150,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -1157,8 +1232,8 @@
         android:background="#F1E9E9"
         android:visibility="invisible"
         app:cardBackgroundColor="#B4052039"
-        app:contentPaddingTop="100dp"
         app:cardCornerRadius="20dp"
+        app:contentPaddingTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

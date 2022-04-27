@@ -27,12 +27,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
 
         android:background="@color/SpecialBlue"
         app:cardBackgroundColor="@color/SpecialBlue"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first">
@@ -60,7 +58,7 @@
             android:id="@+id/currentMascotHome"
             android:layout_width="137dp"
             android:layout_height="141dp"
-            android:src="@drawable/hatbird"
+            android:src="@drawable/bird"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -144,79 +142,63 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="336dp"
-        android:layout_height="371dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="25dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="330dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="47dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="330dp"
+            android:layout_height="162dp"
+            android:textAlignment="center"
+            app:cardBackgroundColor="@color/SpecialBlue"
+            app:cardCornerRadius="20dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView4"
-                android:layout_width="match_parent"
-                android:layout_height="447dp"
-                app:cardBackgroundColor="@color/SpecialBlue"
-                app:cardCornerRadius="20dp">
+            <ImageButton
+                android:id="@+id/lessonsButton"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="@color/BgColor"
+                android:cropToPadding="false"
+                android:elevation="80dp"
+                android:padding="11dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lessionsicon"
+                android:translationX="20dp"
+                android:translationY="10dp" />
 
-                <ImageButton
-                    android:id="@+id/lessonsButton"
-                    android:layout_width="127dp"
-                    android:layout_height="127dp"
-                    android:background="@color/BgColor"
-                    android:cropToPadding="false"
-                    android:elevation="80dp"
-                    android:padding="11dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/lessionsicon"
-                    android:translationX="30dp"
-                    android:translationY="10dp" />
+            <ImageButton
+                android:id="@+id/storeButton"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="#0072DE"
+                android:elevation="80dp"
+                android:padding="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bird"
+                android:translationX="170dp"
+                android:translationY="10dp" />
 
-                <ImageButton
-                    android:id="@+id/reportsButton"
-                    android:layout_width="127dp"
-                    android:layout_height="127dp"
-                    android:background="#0072DE"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/labledreporticon"
-                    android:translationX="30dp"
-                    android:translationY="155dp" />
-
-                <ImageButton
-                    android:id="@+id/storeButton"
-                    android:layout_width="127dp"
-                    android:layout_height="127dp"
-                    android:background="#0072DE"
-                    android:elevation="80dp"
-                    android:padding="9dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/bird"
-                    android:translationX="180dp"
-                    android:translationY="10dp" />
-
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/home_to_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="692dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="113dp"
         android:text="Video"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
