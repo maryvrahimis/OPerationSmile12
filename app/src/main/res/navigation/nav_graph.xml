@@ -119,7 +119,7 @@
         android:label="LessonChoiceFragment" >
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabasFragment"
-            app:destination="@id/lasSilabasFragment" />
+            app:destination="@id/p_lessons_video2" />
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabaKFragment"
             app:destination="@id/lasSilabaKFragment" />
@@ -204,5 +204,12 @@
             android:id="@+id/action_detialFragment_to_shoppingFragment"
             app:destination="@id/shoppingFragment" />
     </fragment>
+    <activity
+        android:id="@+id/p_lessons_video2"
+        android:name="com.example.myapplication.p_lessons_video"
+        android:label="p_lessons_video" />
+        <action
+            android:id="@+id/p_lessons_video2_to_lasSilabasFragment"
+            app:destination="@id/lasSilabasFragment" />
 
 </navigation>
