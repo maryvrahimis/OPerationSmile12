@@ -19,5 +19,7 @@ class p_lessons_video : AppCompatActivity() {
         val MediaController: MediaController = MediaController(this)
         VideoView.setMediaController(MediaController)
         MediaController.setAnchorView(VideoView)
+
+
     }
 }
