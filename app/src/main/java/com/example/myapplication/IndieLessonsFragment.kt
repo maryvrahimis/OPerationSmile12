@@ -2,17 +2,15 @@ package com.example.myapplication
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
-import android.content.Context
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
+import android.widget.MediaController
+import android.widget.VideoView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import com.example.myapplication.databinding.IndieLessonsBinding
@@ -32,16 +30,13 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = IndieLessonsBinding.inflate(inflater, container, false)
-        return binding.root
-
+       _binding = IndieLessonsBinding.inflate(inflater, container, false)
+       return binding.root
     }
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         /*
         UNUSED BUT MAYBE STILL IMPORTANT
 
@@ -88,14 +83,13 @@ class IndieLessonsFragment : Fragment() {
             { requestKey, bundle ->
                 // We use a String here, but any type that can be put in a Bundle is supported
                 val result = bundle.getString("bundleKey")
-                val lessonName = context?.let { getDrawableByFileName(it, result) }
+               // val lessonName = context?.let { getDrawableByFileName(it, result) }
                 realm.close()
 
                 //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
                 binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
-                binding.lessonImage.setImageDrawable(lessonName)
             }
         }
         catch (ex: RealmFileException)
@@ -118,10 +112,18 @@ class IndieLessonsFragment : Fragment() {
     }
 }
 
+class Help : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.indie_lessons)
 
-fun getDrawableByFileName(context: Context, fileName: String?): Drawable? {
-    return ContextCompat.getDrawable(
-        context,
-        context.resources.getIdentifier(fileName, "drawable", context.packageName)
-    )
+        val VideoView: VideoView = findViewById(R.id.videoView2)
+        val videoPath: String = "android.resource://" + packageName + "/" + R.raw.p_sound_instructions
+        val Uri: Uri = Uri.parse(videoPath)
+        VideoView.setVideoURI(Uri)
+
+        val MediaController: MediaController = MediaController(this)
+        VideoView.setMediaController(MediaController)
+        MediaController.setAnchorView(VideoView)
+    }
 }

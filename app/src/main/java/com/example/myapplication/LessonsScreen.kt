@@ -1,40 +1,24 @@
 package com.example.myapplication
 
-import android.content.Context
-import android.view.View
-import android.media.MediaPlayer
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.net.toUri
 import com.example.operationsmile.ui.theme.*
 
-/*
-import com.example.operationsmile.ui.theme.*
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.ui.PlayerView
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
-import com.google.android.exoplayer2.upstream.RawResourceDataSource
-import com.google.android.exoplayer2.util.Util
-import java.io.File
-*/
 
 /*
 * Lessons Page
@@ -299,45 +283,47 @@ fun VideoHelpPreview() {
 
 
 
-/*
 
+/*
 @Composable
 fun mediaplay(){
-    val context = LocalContext.current
-    /*
-    SimpleExoPlayer.Builder(context).build().apply {
-        val uri = RawResourceDataSource.buildRawResourceUri(R.raw.thetroll)
-        setMediaItem(MediaItem.fromUri(uri))
-        prepare()
-        playWhenReady = true
-    }*/
-    //val sampleVideo = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    val uri = RawResourceDataSource.buildRawResourceUri(R.raw.ocean2)
-    val player = SimpleExoPlayer.Builder(context).build()
-    val playerView = PlayerView(context)
-    val mediaItem = MediaItem.fromUri(uri)
-    val playWhenReady by rememberSaveable {
-        mutableStateOf(true)
-    }
-    player.setMediaItem(mediaItem)
-    playerView.player = player
-    LaunchedEffect(player) {
-        player.prepare()
-        player.playWhenReady = playWhenReady
+   val context = LocalContext.current
+   /*
+   SimpleExoPlayer.Builder(context).build().apply {
+       val uri = RawResourceDataSource.buildRawResourceUri(R.raw.thetroll)
+       setMediaItem(MediaItem.fromUri(uri))
+       prepare()
+       playWhenReady = true
+   }*/
+   //val sampleVideo = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+   val uri = RawResourceDataSource.buildRawResourceUri(R.raw.p_sound_instructions)
+   val player = SimpleExoPlayer.Builder(context).build()
+   val playerView = PlayerView(context)
+   val mediaItem = MediaBrowser.MediaItem.fromUri(Uri)
+   val playWhenReady by rememberSaveable {
+       mutableStateOf(true)
+   }
+   player.setMediaItem(mediaItem)
+   playerView.player = player
+   LaunchedEffect(player) {
+       player.prepare()
+       player.playWhenReady = playWhenReady
 
-    }
-    AndroidView(
-        modifier = Modifier
-            .fillMaxWidth(),
-        factory = {
-        playerView
-    })
+   }
+   AndroidView(
+       modifier = Modifier
+           .fillMaxWidth(),
+       factory = {
+       playerView
+   })
 }
-*/
 
-/*
+
+
 @Preview(showBackground = true)
 @Composable
 fun mediaplayview() {
-    mediaplay()
-}*/
+   mediaplay()
+}
+
+ */
