@@ -31,7 +31,7 @@ val closet = ArrayList<StickerBundle>()
 var points = 100
 var currentSticker = R.drawable.bird
 
-open class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -41,7 +41,6 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         // Init Realm
         Realm.init(this)
         val appID : String = "opsmiletracker-awmho";
@@ -95,14 +94,18 @@ open class MainActivity : AppCompatActivity() {
                 Log.e(TAG, it.error.toString())
             }
         }
+
+
+
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-     //   setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-   //     appBarConfiguration = AppBarConfiguration(navController.graph)
-       // setupActionBarWithNavController(navController, appBarConfiguration)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
 
     }//oncreate end
@@ -145,11 +148,6 @@ open class MainActivity : AppCompatActivity() {
 
 }//main act end
 
-
-
-
-
-
 open class Lessons(
     @PrimaryKey    var _id: ObjectId? = null,
 
@@ -182,16 +180,16 @@ open class stickerList(
 }
 
 open class Purchase(
-    var points: Int? = null,
+    var Points: Int? = null,
 
-): RealmObject() {
+    ): RealmObject() {
 
 }
 
 open class Login(
     @PrimaryKey var _id: ObjectId? = null,
 
-   var email: String? = null,
+    var email: String? = null,
 
     var name: String? = null,
 
