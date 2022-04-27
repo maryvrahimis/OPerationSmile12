@@ -121,7 +121,6 @@ class IndieLessonsFragment : Fragment() {
 
             }
 
-
         }
         catch (ex: RealmFileException)
         {
