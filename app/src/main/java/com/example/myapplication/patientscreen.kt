@@ -165,7 +165,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             l_sounds_completed.text = "no"
         }
     }
-
+    // This is a test
     override fun onNothingSelected(parent: AdapterView<*>) {
         // Another interface callback
     }
@@ -190,7 +190,6 @@ open class Patients(
     var stickerIDCloset: String? = null): RealmObject()
 
 class Timecheck{
-
 
 }
 

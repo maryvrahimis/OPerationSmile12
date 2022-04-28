@@ -40,10 +40,8 @@ class IndieLessonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = IndieLessonsBinding.inflate(inflater, container, false)
-        return binding.root
-
+       _binding = IndieLessonsBinding.inflate(inflater, container, false)
+       return binding.root
     }
 
     @SuppressLint("SetTextI18n")
@@ -84,10 +82,10 @@ class IndieLessonsFragment : Fragment() {
             }else
             {
                 realm.executeTransaction { r: Realm ->
-                    // Instantiate the class using the factory function.
-                    val turtle = r.createObject(Lessons::class.java, ObjectId())
-                    // Configure the instance.
-                    turtle.word = lesson?.word
+                // Instantiate the class using the factory function.
+                val turtle = r.createObject(Lessons::class.java, ObjectId())
+                // Configure the instance.
+                turtle.word = lesson?.word
                 }
             }
             Log.v("EXAMPLE", "Fetched Max: $lesson")
@@ -124,7 +122,7 @@ class IndieLessonsFragment : Fragment() {
 
             try {
                 activityResultLauncher.launch(intent)
-            }catch(exp:ActivityNotFoundException) {
+            }catch(exp: ActivityNotFoundException) {
                 Toast.makeText(getActivity(),"Device is not supported",Toast.LENGTH_SHORT).show()
             }
 
@@ -161,4 +159,3 @@ fun getDrawableByFileName(context: Context, fileName: String?): Drawable? {
         context.resources.getIdentifier(fileName, "drawable", context.packageName)
     )
 }
-       //Hello
