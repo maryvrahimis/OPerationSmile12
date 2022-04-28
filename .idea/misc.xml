@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/compose-model-1649747358370.xml" value="0.19130067567567569" />
+        <entry key="../../../../layout/compose-model-1650939860026.xml" value="0.1" />
         <entry key="..\:/Users/Migil/StudioProjects/OPerationSmile12/app/src/main/res/layout/activity_emailupload.xml" value="0.33" />
         <entry key="..\:/Users/Migil/StudioProjects/OPerationSmile12/app/src/main/res/layout/activity_patientscreen.xml" value="0.33" />
         <entry key="..\:/Users/Migil/StudioProjects/OPerationSmile12/app/src/main/res/layout/activity_plessons_video.xml" value="0.27717391304347827" />
@@ -43,17 +44,19 @@
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/las_silabas.xml" value="0.1" />
         <entry key="..\:/Users/davio/StudioProjects/OPerationSmile12/app/src/main/res/layout/lesson_choice.xml" value="0.20018115942028986" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.31768035888671875" />
+        <entry key="app/src/main/res/layout/fragment_closet.xml" value="0.16285714285714287" />
+        <entry key="app/src/main/res/layout/fragment_detial.xml" value="0.25708770751953125" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.3463541666666667" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19023996988932293" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.31108398437500007" />
         <entry key="app/src/main/res/layout/fragment_lessons.xml" value="0.1022883097330729" />
         <entry key="app/src/main/res/layout/fragment_patients_screen.xml" value="0.34" />
         <entry key="app/src/main/res/layout/fragment_reports.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_shop_detail.xml" value="0.453125" />
-        <entry key="app/src/main/res/layout/fragment_shopping_screen.xml" value="0.14983443334035854" />
-        <entry key="app/src/main/res/layout/fragment_store.xml" value="0.10219879150390623" />
+        <entry key="app/src/main/res/layout/fragment_shopping_screen.xml" value="0.3858447488584475" />
+        <entry key="app/src/main/res/layout/fragment_store.xml" value="0.4057662963867188" />
         <entry key="app/src/main/res/layout/fragment_third.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/indie_lessons.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/las_frases.xml" value="0.11145833333333334" />

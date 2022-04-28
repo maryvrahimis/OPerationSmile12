@@ -8,33 +8,34 @@
 
     <Button
         android:id="@+id/storeToCloset"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="125dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="164dp"
         android:backgroundTint="@color/WarmYellow"
         android:text="closet"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/toShoppingScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="125dp"
+        android:layout_height="68dp"
         android:layout_marginStart="79dp"
-        android:layout_marginTop="70dp"
         android:layout_marginEnd="52dp"
+        android:layout_marginBottom="164dp"
         android:backgroundTint="@color/WarmYellow"
         android:text="SHOP"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/storeToCloset"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/toHomeButton"
@@ -52,22 +53,26 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="210dp"
-        android:layout_height="166dp"
+        android:layout_width="236dp"
+        android:layout_height="198dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="101dp"
-        app:cardBackgroundColor="#6BB7FC"
-        app:cardCornerRadius="20dp"
+        android:clickable="false"
+        android:clipChildren="false"
+        app:cardBackgroundColor="@color/WarmYellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
+            android:layout_width="195dp"
+            android:layout_height="180dp"
+            android:background="@color/SpecialBlue"
             android:padding="10dp"
+            android:translationX="22dp"
+            android:translationY="8dp"
             app:srcCompat="@drawable/bird" />
     </androidx.cardview.widget.CardView>
 
@@ -76,20 +81,21 @@
         android:layout_width="266dp"
         android:layout_height="86dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="55dp"
         app:cardBackgroundColor="#6BB7FC"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="53dp"
-            android:layout_height="43dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:translationX="40dp"
-            android:translationY="15dp"
+            android:translationY="30dp"
             app:srcCompat="@drawable/star" />
 
         <TextView
@@ -100,7 +106,19 @@
             android:textColor="#FFFFFF"
             android:textSize="30dp"
             android:translationX="100dp"
-            android:translationY="22dp" />
+            android:translationY="33dp" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Puntos:"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:translationX="100dp"
+            android:translationY="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

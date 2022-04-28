@@ -51,7 +51,7 @@ class RegistrationFragment: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       // lateinit var imageView: ImageView
+        // lateinit var imageView: ImageView
 
 
         _binding = ActivityRegisterBinding.inflate(inflater, container, false)
@@ -179,7 +179,7 @@ class RegistrationFragment: Fragment() {
 
         return Hex.encodeHexString(sha256Hmac.doFinal(data.toByteArray()))
     }
-//    fun checkHash(userP: String,salt: String): String{
+    //    fun checkHash(userP: String,salt: String): String{
 //        val passwordData = createSignature(userP,salt)
 //        return passwordData
 //    }
@@ -203,5 +203,4 @@ class RegistrationFragment: Fragment() {
 //        _binding = null
 //    }
 }
-
 
