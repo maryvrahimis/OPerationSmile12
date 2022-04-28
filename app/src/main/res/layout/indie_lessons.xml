@@ -5,6 +5,19 @@
     android:layout_height="match_parent"
     android:background="#0072D7">
 
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/chango"
+        android:text="Siguente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView5"
         android:layout_width="0dp"
@@ -52,14 +65,13 @@
         android:id="@+id/lessonInstruction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
         android:fontFamily="@font/chango"
         android:text="Slowly and as best that you can, say the given word."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lessonWord"
         tools:text="Slowly and as best that you can, say the given word." />
@@ -68,7 +80,7 @@
         android:id="@+id/lessonWord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/chango"
         android:text="Pan"
         android:textAlignment="center"
@@ -84,12 +96,11 @@
         android:id="@+id/recordButton"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginTop="14dp"
         android:background="#00FFFFFF"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lessonInstruction"
         app:srcCompat="@drawable/ic_record_fill" />

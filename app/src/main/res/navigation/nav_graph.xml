@@ -147,6 +147,9 @@
         <action
             android:id="@+id/action_indieLessonsFragment_to_LessonsFragment"
             app:destination="@id/LessonsFragment" />
+        <action
+            android:id="@+id/action_indieLessonsFragment_to_lasFrasesFragment"
+            app:destination="@id/lasFrasesFragment" />
     </fragment>
     <activity
         android:id="@+id/patientscreen"
@@ -190,8 +193,8 @@
         android:name="com.example.myapplication.LasSilabaT"
         android:label="LasSilabaT" >
         <action
-            android:id="@+id/action_lasSilabaT_to_lessons_t_page"
-            app:destination="@id/lessons_t_page" />
+            android:id="@+id/action_lasSilabaT_to_lessonsFragmentT"
+            app:destination="@id/lessonsFragmentT" />
     </fragment>
     <fragment
         android:id="@+id/lasSilabas_l"
@@ -204,7 +207,11 @@
     <fragment
         android:id="@+id/lessonsFragmentL"
         android:name="com.example.myapplication.LessonsFragmentL"
-        android:label="LessonsFragmentL" />
+        android:label="LessonsFragmentL" >
+        <action
+            android:id="@+id/action_lessonsFragmentL_to_indieLessonsFragment"
+            app:destination="@id/indieLessonsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/lessons_k_page"
         android:name="com.example.myapplication.Lessons_k_page"
@@ -221,8 +228,12 @@
             app:destination="@id/shoppingFragment" />
     </fragment>
     <fragment
-        android:id="@+id/lessons_t_page"
-        android:name="com.example.myapplication.Lessons_t_page"
-        android:label="Lessons_t_page" />
+        android:id="@+id/lessonsFragmentT"
+        android:name="com.example.myapplication.LessonsFragmentT"
+        android:label="lessonsFragmentT" >
+        <action
+            android:id="@+id/action_lessonsFragmentT_to_indieLessonsFragment"
+            app:destination="@id/indieLessonsFragment" />
+    </fragment>
 
 </navigation>

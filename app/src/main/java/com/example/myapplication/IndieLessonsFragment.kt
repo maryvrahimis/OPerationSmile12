@@ -18,8 +18,11 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
+import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.IndieLessonsBinding
 import io.realm.Realm
 import io.realm.exceptions.RealmFileException
@@ -92,11 +95,6 @@ class IndieLessonsFragment : Fragment() {
             //FRAGMENT LISTEN
             //FRAGMENT LISTEN
             //TAKES THE RESOURCE ID FROM LESSONS FRAGMENT AND FINDS THE IMAGE IN THE DATABASE
-
-
-
-
-
             setFragmentResultListener("requestKey")
             { requestKey, bundle ->
                 // We use a String here, but any type that can be put in a Bundle is supported
@@ -105,22 +103,13 @@ class IndieLessonsFragment : Fragment() {
                 realm.close()
 
                 //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
+                
                 binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
                 binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
                 wordGlobal = binding.lessonWord.text.toString()
-                //binding.lessonImage.setImageDrawable(lessonName)
-
-
-
-
-
-
-
-
-
+                binding.lessonImage.setImageDrawable(lessonName)
             }
-
         }
         catch (ex: RealmFileException)
         {

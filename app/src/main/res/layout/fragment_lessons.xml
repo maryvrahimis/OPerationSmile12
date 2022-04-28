@@ -450,6 +450,7 @@
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
                 android:src="@drawable/pies"
+                android:visibility="visible"
                 app:layout_constraintEnd_toStartOf="@+id/papel"
                 app:layout_constraintStart_toEndOf="@+id/pollo"
                 app:layout_constraintTop_toBottomOf="@+id/pezText" />

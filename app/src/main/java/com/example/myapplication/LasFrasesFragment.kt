@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.LasFrasesBinding
 import java.text.SimpleDateFormat
@@ -56,6 +57,21 @@ class LasFrasesFragment : Fragment() {
 //        button_pause_recording.setOnClickListener {
 //            pauseRecording()
 //        }
+        setFragmentResultListener("requestKey")
+        { requestKey, bundle ->
+            // We use a String here, but any type that can be put in a Bundle is supported
+            val result = bundle.getString("bundleKey")
+            val lessonName = context?.let { getDrawableByFileName(it, result) }
+            println(result)
+
+            //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
+            // binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
+            //binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
+            //binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
+            //wordGlobal = binding.lessonWord.text.toString()
+            binding.textView10.text = result.toString().replaceFirstChar { it.titlecase() }
+            binding.imageView7.setImageDrawable(lessonName)
+        }
 
         binding.next.setOnClickListener {
             val result = true
@@ -64,6 +80,7 @@ class LasFrasesFragment : Fragment() {
             findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
             val currentDateAndTime: String = simpleDateFormat.format(Date())
         }
+
 
     }
 

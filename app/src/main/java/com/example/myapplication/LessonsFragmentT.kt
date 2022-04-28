@@ -8,14 +8,10 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.FragmentLesssonsLBinding
+import com.example.myapplication.databinding.FragmentLessonsTBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class LessonsFragmentL : Fragment() {
-
-    private var _binding: FragmentLesssonsLBinding? = null
+class LessonsFragmentT : Fragment(){
+    private var _binding: FragmentLessonsTBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,7 +22,7 @@ class LessonsFragmentL : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentLesssonsLBinding.inflate(inflater, container, false)
+        _binding = FragmentLessonsTBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -41,190 +37,155 @@ class LessonsFragmentL : Fragment() {
             findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
         }
 
-        binding.luz.setOnClickListener {
-            val id = R.id.luz
+        binding.tu.setOnClickListener {
+            val id = R.id.tu
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.leche.setOnClickListener {
-            val id = R.id.leche
+        binding.tasa.setOnClickListener {
+            val id = R.id.tasa
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.libro.setOnClickListener {
-            val id = R.id.libro
+        binding.tigre.setOnClickListener {
+            val id = R.id.tigre
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lapiz.setOnClickListener {
-            val id = R.id.lapiz
+        binding.tallo.setOnClickListener {
+            val id = R.id.tallo
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lata.setOnClickListener {
-            val id = R.id.lata
+        binding.techo.setOnClickListener {
+            val id = R.id.techo
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lobo.setOnClickListener {
-            val id = R.id.lobo
+        binding.tiza.setOnClickListener {
+            val id = R.id.tiza
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lago.setOnClickListener {
-            val id = R.id.lago
+        binding.toalla.setOnClickListener {
+            val id = R.id.toalla
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lecho.setOnClickListener {
-            val id = R.id.lecho
+        binding.tobillo.setOnClickListener {
+            val id = R.id.tobillo
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lechuga.setOnClickListener {
-            val id = R.id.lechuga
+        binding.tortuga.setOnClickListener {
+            val id = R.id.tortuga
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.pastel.setOnClickListener {
-            val id = R.id.pastel
+        binding.teatro.setOnClickListener {
+            val id = R.id.teatro
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.arbol.setOnClickListener {
-            val id = R.id.arbol
+        binding.tesoro.setOnClickListener {
+            val id = R.id.tesoro
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.papel.setOnClickListener {
-            val id = R.id.papel
+        binding.telescopio.setOnClickListener {
+            val id = R.id.telescopio
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.lectura.setOnClickListener {
-            val id = R.id.lectura
+        binding.gato.setOnClickListener {
+            val id = R.id.gato
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.sol.setOnClickListener {
-            val id = R.id.sol
+        binding.bate.setOnClickListener {
+            val id = R.id.bate
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.azul.setOnClickListener {
-            val id = R.id.azul
+        binding.yate.setOnClickListener {
+            val id = R.id.yate
             val result = resources.getResourceEntryName(id)
             println("THIS IS R.id.pan $result")
             // Use the Kotlin extension in the fragment-ktx artifact
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentT_to_indieLessonsFragment)
         }
-        binding.aguila.setOnClickListener {
-            val id = R.id.aguila
-            val result = resources.getResourceEntryName(id)
-            println("THIS IS R.id.pan $result")
-            // Use the Kotlin extension in the fragment-ktx artifact
-
-            //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
-        }
-        binding.bailar.setOnClickListener {
-            val id = R.id.bailar
-            val result = resources.getResourceEntryName(id)
-            println("THIS IS R.id.pan $result")
-            // Use the Kotlin extension in the fragment-ktx artifact
-
-            //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
-        }
-        binding.regalo.setOnClickListener {
-            val id = R.id.regalo
-            val result = resources.getResourceEntryName(id)
-            println("THIS IS R.id.pan $result")
-            // Use the Kotlin extension in the fragment-ktx artifact
-
-            //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
