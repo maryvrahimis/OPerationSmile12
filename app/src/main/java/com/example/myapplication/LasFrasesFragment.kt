@@ -57,30 +57,31 @@ class LasFrasesFragment : Fragment() {
 //        button_pause_recording.setOnClickListener {
 //            pauseRecording()
 //        }
-        setFragmentResultListener("requestKey")
+        //binding.textView10.text = "hello"
+        setFragmentResultListener("requestKey2")
         { requestKey, bundle ->
+
             // We use a String here, but any type that can be put in a Bundle is supported
-            val result = bundle.getString("bundleKey")
-            val lessonName = context?.let { getDrawableByFileName(it, result) }
-            println(result)
+            val result2 = bundle.getString("bundleKey2")
+            println("ooga Booga$result2")
+            val lessonName = context?.let { getDrawableByFileName(it, result2) }
 
             //THIS PRINTS INFO FROM THE DATABASE TO SCREEN
             // binding.lessonID.text = result.toString().replaceFirstChar { it.titlecase() }
             //binding.lessonWord.text = result.toString().replaceFirstChar { it.titlecase() }
             //binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
             //wordGlobal = binding.lessonWord.text.toString()
-            binding.textView10.text = result.toString().replaceFirstChar { it.titlecase() }
+            binding.textView10.text = result2.toString().replaceFirstChar { it.titlecase() }
             binding.imageView7.setImageDrawable(lessonName)
         }
 
         binding.next.setOnClickListener {
-            val result = true
+            //val result = true
             // Use the Kotlin extension in the fragment-ktx artifact
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
+            //setFragmentResult("requestKey", bundleOf("bundleKey" to result))
             findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
             val currentDateAndTime: String = simpleDateFormat.format(Date())
         }
-
 
     }
 
