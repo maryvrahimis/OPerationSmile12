@@ -243,7 +243,7 @@
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/cuatro"
+                android:src="@drawable/quatro"
                 app:layout_constraintEnd_toStartOf="@+id/cafe"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/colaText" />
