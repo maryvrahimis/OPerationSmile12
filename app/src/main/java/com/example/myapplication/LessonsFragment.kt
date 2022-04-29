@@ -37,9 +37,7 @@ class LessonsFragment : Fragment() {
 //        binding.buttonSecond.setOnClickListener {
 //            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 //        }
-        binding.next.setOnClickListener {
-            findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
-        }
+
 
         binding.pato.setOnClickListener {
             val id = R.id.pato

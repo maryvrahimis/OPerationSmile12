@@ -93,10 +93,12 @@ class IndieLessonsFragment : Fragment() {
             //FRAGMENT LISTEN
             //FRAGMENT LISTEN
             //TAKES THE RESOURCE ID FROM LESSONS FRAGMENT AND FINDS THE IMAGE IN THE DATABASE
+
             setFragmentResultListener("requestKey")
             { requestKey, bundle ->
                 // We use a String here, but any type that can be put in a Bundle is supported
                 val result = bundle.getString("bundleKey")
+                println("vnkdjkjsdv: $result")
                 val lessonName = context?.let { getDrawableByFileName(it, result) }
                 realm.close()
 
@@ -107,7 +109,20 @@ class IndieLessonsFragment : Fragment() {
                 binding.lessonInstruction.text ="Slowly and as best that you can, say " + result.toString().uppercase()//replaceFirstChar { it.uppercase() }
                 wordGlobal = binding.lessonWord.text.toString()
                 binding.lessonImage.setImageDrawable(lessonName)
+
+                binding.next2.setOnClickListener {
+                    //val id = R.id.pato
+                    //val result = resources.getResourceEntryName(id)
+                    println("THIS IS R.id.pan $result")
+                    // Use the Kotlin extension in the fragment-ktx artifact
+
+                    //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
+                    setFragmentResult("requestKey2", bundleOf("bundleKey2" to result))
+                    findNavController().navigate(R.id.action_indieLessonsFragment_to_lasFrasesFragment)
+                }
             }
+
+
         }
         catch (ex: RealmFileException)
         {

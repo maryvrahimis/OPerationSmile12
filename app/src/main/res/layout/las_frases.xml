@@ -121,7 +121,7 @@
 
     <TextView
         android:id="@+id/Yo_Veo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="4dp"
@@ -143,8 +143,8 @@
         android:layout_marginStart="39dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="86dp"
-        android:layout_marginBottom="33dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        android:layout_marginBottom="77dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Veo"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -159,33 +159,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lessionsicon" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="255dp"
-        android:layout_height="199dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="95dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Yo_Veo"
-        app:srcCompat="@drawable/pan" />
-
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="11dp"
         android:layout_marginEnd="95dp"
         android:fontFamily="@font/chango"
         android:text="Pan "
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="0dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="38dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Yo_Veo">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/pan" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

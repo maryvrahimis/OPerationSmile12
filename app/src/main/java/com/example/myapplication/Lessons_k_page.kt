@@ -28,7 +28,6 @@ class Lessons_k_page : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // binding.Tsoundsbutton.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaT_to_lessonChoiceFragment) }
 
 
     }
