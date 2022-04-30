@@ -76,482 +76,443 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/capaText"
+            <ImageButton
+                android:id="@+id/queso"
                 android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Capa"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/capa" />
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/queso"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cachete"
+                app:layout_constraintTop_toBottomOf="@+id/vacaText" />
 
             <ImageButton
-                android:id="@+id/salpicon"
+                android:id="@+id/casa"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/casa"
+                app:layout_constraintEnd_toStartOf="@+id/cachete"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cucharaText" />
+
+            <ImageButton
+                android:id="@+id/caja"
                 android:layout_width="136dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/salpicon"
-                app:layout_constraintStart_toEndOf="@+id/capa"
-                app:layout_constraintTop_toBottomOf="@+id/mapaText" />
+                android:src="@drawable/caja"
+                app:layout_constraintEnd_toStartOf="@+id/coco"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/kiwi"
+                app:layout_constraintTop_toBottomOf="@+id/calabazaText" />
 
-            <ImageView
+            <TextView
+                android:id="@+id/cajaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Caja"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/cocoText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/kiwiText"
+                app:layout_constraintTop_toBottomOf="@+id/caja" />
+
+            <TextView
+                android:id="@+id/quesoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Queso"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cacheteText"
+                app:layout_constraintTop_toBottomOf="@+id/queso" />
+
+            <TextView
+                android:id="@+id/casaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Casa"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/cacheteText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/casa" />
+
+            <ImageButton
+                android:id="@+id/carro"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/carro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/calle"
+                app:layout_constraintTop_toBottomOf="@+id/curaText" />
+
+            <ImageButton
+                android:id="@+id/coche"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/coche"
+                app:layout_constraintEnd_toStartOf="@+id/calle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quatroText" />
+
+            <TextView
+                android:id="@+id/cocheText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Coche"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/calleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coche" />
+
+            <TextView
+                android:id="@+id/calleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Calle"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/carroText"
+                app:layout_constraintStart_toEndOf="@+id/cocheText"
+                app:layout_constraintTop_toBottomOf="@+id/calle" />
+
+            <TextView
+                android:id="@+id/carroText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Carro"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/calleText"
+                app:layout_constraintTop_toBottomOf="@+id/carro" />
+
+            <ImageButton
+                android:id="@+id/calle"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/calle"
+                app:layout_constraintEnd_toStartOf="@+id/carro"
+                app:layout_constraintStart_toEndOf="@+id/coche"
+                app:layout_constraintTop_toBottomOf="@+id/cafeText" />
+
+            <ImageButton
+                android:id="@+id/cafe"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/cafe"
+                app:layout_constraintEnd_toStartOf="@+id/cura"
+                app:layout_constraintStart_toEndOf="@+id/quatro"
+                app:layout_constraintTop_toBottomOf="@+id/cuboText" />
+
+            <ImageButton
+                android:id="@+id/quatro"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/quatro"
+                app:layout_constraintEnd_toStartOf="@+id/cafe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/colaText" />
+
+            <ImageButton
+                android:id="@+id/cura"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/cura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cafe"
+                app:layout_constraintTop_toBottomOf="@+id/capaText" />
+
+            <TextView
+                android:id="@+id/cafeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Cafe"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/curaText"
+                app:layout_constraintStart_toEndOf="@+id/quatroText"
+                app:layout_constraintTop_toBottomOf="@+id/cafe" />
+
+            <TextView
+                android:id="@+id/curaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Cura"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cafeText"
+                app:layout_constraintTop_toBottomOf="@+id/cura" />
+
+            <TextView
+                android:id="@+id/quatroText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chango"
+                android:text="Quatro"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/cafeText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quatro" />
+
+            <ImageButton
+                android:id="@+id/cola"
+                android:layout_width="136dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/cola"
+                app:layout_constraintEnd_toStartOf="@+id/cubo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
                 android:id="@+id/capa"
-                android:layout_width="137dp"
+                android:layout_width="0dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
                 android:src="@drawable/capa"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/peineText"
-                app:srcCompat="@drawable/pollo" />
-
-            <TextView
-                android:id="@+id/salpiconText"
-                android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Salpicon"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/capaText"
-                app:layout_constraintTop_toBottomOf="@+id/capa" />
-
-            <ImageView
-                android:id="@+id/sopa"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/sopa"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/pies"
-                app:layout_constraintTop_toBottomOf="@+id/pelotaText"
-                app:srcCompat="@drawable/papel" />
-
-            <ImageView
-                android:id="@+id/peine"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/peine"
-                app:layout_constraintEnd_toStartOf="@+id/pies"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pinataText"
-                app:srcCompat="@drawable/pollo" />
+                app:layout_constraintStart_toEndOf="@+id/cubo"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/mapa"
-                android:layout_width="136dp"
-                android:layout_height="110dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/mapa"
-                app:layout_constraintEnd_toStartOf="@+id/papel"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/pollo"
-                app:layout_constraintTop_toBottomOf="@+id/pinturaText" />
-
-            <TextView
-                android:id="@+id/mapaText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Mapa"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/papelText"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/polloText"
-                app:layout_constraintTop_toBottomOf="@+id/mapa" />
-
-            <TextView
-                android:id="@+id/sopaText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Sopa"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/piesText"
-                app:layout_constraintTop_toBottomOf="@+id/sopa" />
-
-            <TextView
-                android:id="@+id/peineText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Peine"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/piesText"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/peine" />
-
-            <ImageView
-                android:id="@+id/pina"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/pina"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pez"
-                app:layout_constraintTop_toBottomOf="@+id/peraText"
-                app:srcCompat="@drawable/pina" />
-
-            <ImageView
-                android:id="@+id/pepino"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/pepino"
-                app:layout_constraintEnd_toStartOf="@+id/pez"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/papayaText" />
-
-            <TextView
-                android:id="@+id/pepinoText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Pepino"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/pezText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pepino" />
-
-            <TextView
-                android:id="@+id/pezText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Pez"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/pinaText"
-                app:layout_constraintStart_toEndOf="@+id/pepinoText"
-                app:layout_constraintTop_toBottomOf="@+id/pez" />
-
-            <TextView
-                android:id="@+id/pinaText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Pina"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pezText"
-                app:layout_constraintTop_toBottomOf="@+id/pina" />
-
-            <ImageButton
-                android:id="@+id/pez"
-                android:layout_width="136dp"
-                android:layout_height="110dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/pez"
-                app:layout_constraintEnd_toStartOf="@+id/pina"
-                app:layout_constraintStart_toEndOf="@+id/pepino"
-                app:layout_constraintTop_toBottomOf="@+id/parqueText" />
-
-            <ImageButton
-                android:id="@+id/parque"
-                android:layout_width="136dp"
-                android:layout_height="110dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/parque"
-                app:layout_constraintEnd_toStartOf="@+id/pera"
-                app:layout_constraintStart_toEndOf="@+id/papaya"
-                app:layout_constraintTop_toBottomOf="@+id/panText" />
-
-            <ImageView
-                android:id="@+id/papaya"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/papaya"
-                app:layout_constraintEnd_toStartOf="@+id/parque"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/patoText"
-                app:srcCompat="@drawable/papaya" />
-
-            <ImageView
-                android:id="@+id/pera"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/pera"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/parque"
-                app:layout_constraintTop_toBottomOf="@+id/perroText"
-                app:srcCompat="@drawable/pera" />
-
-            <TextView
-                android:id="@+id/parqueText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Parque"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/peraText"
-                app:layout_constraintStart_toEndOf="@+id/papayaText"
-                app:layout_constraintTop_toBottomOf="@+id/parque" />
-
-            <TextView
-                android:id="@+id/peraText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Pera"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/parqueText"
-                app:layout_constraintTop_toBottomOf="@+id/pera" />
-
-            <TextView
-                android:id="@+id/papayaText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/chango"
-                android:text="Papaya"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/parqueText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/papaya" />
-
-            <ImageView
-                android:id="@+id/pato"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
-                android:src="@drawable/pato"
-                app:layout_constraintEnd_toStartOf="@+id/pan"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/pato" />
-
-            <ImageView
-                android:id="@+id/perro"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
-                android:src="@drawable/dog"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pan"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/perro" />
-
-            <ImageButton
-                android:id="@+id/pan"
+                android:id="@+id/cubo"
                 android:layout_width="0dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pan"
-                app:layout_constraintEnd_toStartOf="@+id/perro"
-                app:layout_constraintStart_toEndOf="@+id/pato"
+                android:src="@drawable/cubo"
+                app:layout_constraintEnd_toStartOf="@+id/capa"
+                app:layout_constraintStart_toEndOf="@+id/cola"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/patoText"
+                android:id="@+id/colaText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pato"
+                android:text="Cola"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/panText"
+                app:layout_constraintEnd_toStartOf="@+id/cuboText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pato" />
+                app:layout_constraintTop_toBottomOf="@+id/cola" />
 
             <TextView
-                android:id="@+id/panText"
+                android:id="@+id/cuboText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pan"
+                android:text="Cubo"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/perroText"
-                app:layout_constraintStart_toEndOf="@+id/patoText"
-                app:layout_constraintTop_toBottomOf="@+id/pan" />
+                app:layout_constraintEnd_toStartOf="@+id/capaText"
+                app:layout_constraintStart_toEndOf="@+id/colaText"
+                app:layout_constraintTop_toBottomOf="@+id/cubo" />
 
             <TextView
-                android:id="@+id/perroText"
+                android:id="@+id/capaText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Perro"
+                android:text="Capa"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/panText"
-                app:layout_constraintTop_toBottomOf="@+id/perro" />
-
-            <ImageView
-                android:id="@+id/papel"
-                android:layout_width="137dp"
-                android:layout_height="110dp"
-                android:src="@drawable/papel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pies"
-                app:layout_constraintTop_toBottomOf="@+id/pinaText"
-                app:srcCompat="@drawable/papel" />
-
-            <ImageView
-                android:id="@+id/pollo"
+                app:layout_constraintStart_toEndOf="@+id/cuboText"
+                app:layout_constraintTop_toBottomOf="@+id/capa" />
+            <!--REPLACE THIS ONE-->
+            <ImageButton
+                android:id="@+id/coco"
                 android:layout_width="137dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pollo"
-                app:layout_constraintEnd_toStartOf="@+id/pies"
+                android:src="@drawable/coco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cachete"
+                app:layout_constraintTop_toBottomOf="@+id/carroText" />
+
+            <ImageButton
+                android:id="@+id/kiwi"
+                android:layout_width="137dp"
+                android:layout_height="110dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/kiwi"
+                app:layout_constraintEnd_toStartOf="@+id/cachete"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pepinoText"
-                app:srcCompat="@drawable/pollo" />
+                app:layout_constraintTop_toBottomOf="@+id/cocheText" />
 
             <TextView
-                android:id="@+id/polloText"
+                android:id="@+id/kiwiText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pollo"
+                android:text="Kiwi"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/piesText"
+                app:layout_constraintEnd_toStartOf="@+id/cacheteText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pollo" />
+                app:layout_constraintTop_toBottomOf="@+id/kiwi" />
 
             <ImageButton
-                android:id="@+id/pies"
+                android:id="@+id/cachete"
                 android:layout_width="136dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pies"
-                android:visibility="visible"
-                app:layout_constraintEnd_toStartOf="@+id/papel"
-                app:layout_constraintStart_toEndOf="@+id/pollo"
-                app:layout_constraintTop_toBottomOf="@+id/pezText" />
+                android:src="@drawable/cachete"
+                app:layout_constraintEnd_toStartOf="@+id/coco"
+                app:layout_constraintStart_toEndOf="@+id/kiwi"
+                app:layout_constraintTop_toBottomOf="@+id/calleText" />
 
             <TextView
-                android:id="@+id/piesText"
+                android:id="@+id/cacheteText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pies"
+                android:text="Cachete"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/papelText"
-                app:layout_constraintStart_toEndOf="@+id/polloText"
-                app:layout_constraintTop_toBottomOf="@+id/papel" />
+                app:layout_constraintEnd_toStartOf="@+id/cocoText"
+                app:layout_constraintStart_toEndOf="@+id/kiwiText"
+                app:layout_constraintTop_toBottomOf="@+id/coco" />
 
             <TextView
-                android:id="@+id/papelText"
+                android:id="@+id/cocoText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Papel"
+                android:text="Coco"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/piesText"
-                app:layout_constraintTop_toBottomOf="@+id/papel" />
+                app:layout_constraintStart_toEndOf="@+id/cacheteText"
+                app:layout_constraintTop_toBottomOf="@+id/coco" />
 
-            <ImageView
-                android:id="@+id/pinata"
+            <ImageButton
+                android:id="@+id/cuchara"
                 android:layout_width="137dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pinata"
-                app:layout_constraintEnd_toStartOf="@+id/pintura"
+                android:src="@drawable/cuchara"
+                app:layout_constraintEnd_toStartOf="@+id/calabaza"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/polloText"
-                app:srcCompat="@drawable/pollo" />
+                app:layout_constraintTop_toBottomOf="@+id/kiwiText" />
 
             <TextView
-                android:id="@+id/pinataText"
+                android:id="@+id/cucharaText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pinata"
+                android:text="Cuchara"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/pinturaText"
+                app:layout_constraintEnd_toStartOf="@+id/calabazaText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pinata" />
+                app:layout_constraintTop_toBottomOf="@+id/cuchara" />
 
             <ImageButton
-                android:id="@+id/pintura"
+                android:id="@+id/calabaza"
                 android:layout_width="136dp"
                 android:layout_height="110dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
-                android:src="@drawable/pintura"
-                app:layout_constraintEnd_toStartOf="@+id/pelota"
-                app:layout_constraintStart_toEndOf="@+id/pinata"
-                app:layout_constraintTop_toBottomOf="@+id/piesText" />
+                android:src="@drawable/calabaza"
+                app:layout_constraintEnd_toStartOf="@+id/vaca"
+                app:layout_constraintStart_toEndOf="@+id/cuchara"
+                app:layout_constraintTop_toBottomOf="@+id/cacheteText" />
 
-            <ImageView
-                android:id="@+id/pelota"
-                android:layout_width="137dp"
+            <ImageButton
+                android:id="@+id/vaca"
+                android:layout_width="136dp"
                 android:layout_height="110dp"
-                android:src="@drawable/pelota"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:src="@drawable/vaca"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pintura"
-                app:layout_constraintTop_toBottomOf="@+id/papelText"
-                app:srcCompat="@drawable/papel" />
+                app:layout_constraintStart_toEndOf="@+id/calabaza"
+                app:layout_constraintTop_toBottomOf="@+id/cocoText" />
 
             <TextView
-                android:id="@+id/pelotaText"
+                android:id="@+id/vacaText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pelota"
+                android:text="Vaca"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/pinturaText"
-                app:layout_constraintTop_toBottomOf="@+id/pintura" />
+                app:layout_constraintStart_toEndOf="@+id/calabazaText"
+                app:layout_constraintTop_toBottomOf="@+id/calabaza" />
 
             <TextView
-                android:id="@+id/pinturaText"
+                android:id="@+id/calabazaText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chango"
-                android:text="Pintura"
+                android:text="Calabaza"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/pelotaText"
-                app:layout_constraintStart_toEndOf="@+id/pinataText"
-                app:layout_constraintTop_toBottomOf="@+id/pinata" />
+                app:layout_constraintEnd_toStartOf="@+id/vacaText"
+                app:layout_constraintStart_toEndOf="@+id/cucharaText"
+                app:layout_constraintTop_toBottomOf="@+id/cuchara" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

@@ -49,7 +49,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.leche.setOnClickListener {
             val id = R.id.leche
@@ -59,7 +59,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.libro.setOnClickListener {
             val id = R.id.libro
@@ -69,7 +69,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lapiz.setOnClickListener {
             val id = R.id.lapiz
@@ -79,7 +79,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lata.setOnClickListener {
             val id = R.id.lata
@@ -89,7 +89,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lobo.setOnClickListener {
             val id = R.id.lobo
@@ -99,7 +99,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lago.setOnClickListener {
             val id = R.id.lago
@@ -109,7 +109,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lecho.setOnClickListener {
             val id = R.id.lecho
@@ -119,7 +119,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lechuga.setOnClickListener {
             val id = R.id.lechuga
@@ -129,7 +129,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.pastel.setOnClickListener {
             val id = R.id.pastel
@@ -139,7 +139,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.arbol.setOnClickListener {
             val id = R.id.arbol
@@ -149,7 +149,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.papel.setOnClickListener {
             val id = R.id.papel
@@ -159,7 +159,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.lectura.setOnClickListener {
             val id = R.id.lectura
@@ -169,7 +169,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.sol.setOnClickListener {
             val id = R.id.sol
@@ -179,7 +179,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.azul.setOnClickListener {
             val id = R.id.azul
@@ -189,7 +189,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.aguila.setOnClickListener {
             val id = R.id.aguila
@@ -199,7 +199,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.bailar.setOnClickListener {
             val id = R.id.bailar
@@ -209,7 +209,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
         binding.regalo.setOnClickListener {
             val id = R.id.regalo
@@ -219,7 +219,7 @@ class LessonsFragmentL : Fragment() {
 
             //SENDS THE RESOURCE ID OF THE BUTTON TO INDIE LESSONS
             setFragmentResult("requestKey", bundleOf("bundleKey" to result))
-            findNavController().navigate(R.id.action_LessonsFragment_to_indieLessonsFragment)
+            findNavController().navigate(R.id.action_lessonsFragmentL_to_indieLessonsFragment)
         }
     }
 

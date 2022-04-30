@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/shoppingScreenToHomeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/WarmYellow"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="Sticker Store"
+        android:text="Accesorios"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
         android:id="@+id/points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Points:"
+        android:text="Puntos:"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -51,8 +51,8 @@
 
     <Button
         android:id="@+id/shoppingtoClosetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/WarmYellow"
@@ -64,11 +64,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="144dp"
-        android:layout_height="550dp"
+        android:layout_width="212dp"
+        android:layout_height="555dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="82dp"
+        android:background="@color/SpecialBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -82,64 +83,67 @@
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
+                android:background="@color/BgColor"
                 android:cropToPadding="false"
-                android:scaleType="fitCenter"
+                android:scaleType="centerCrop"
+                android:textAlignment="center"
+                android:labelFor="@id/imageButton6"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 

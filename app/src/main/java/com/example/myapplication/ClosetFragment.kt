@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.view.children
+import androidx.core.view.get
 import androidx.core.view.iterator
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentClosetBinding
@@ -52,7 +53,10 @@ class ClosetFragment : Fragment() {
         while (temp != closet.size){
            val bam = closetIt.next()
             bam.setBackgroundResource(closet[temp].stickerBirdId)
-
+            binding.lin[temp].setOnClickListener {
+                currentSticker = closet[temp-1].stickerBirdId
+                findNavController().navigate(R.id.actoinClosetToHome)
+            }
             temp++
         }
 

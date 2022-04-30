@@ -12,10 +12,10 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="181dp"
-        android:layout_height="205dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="272dp"
+        android:layout_height="285dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="92dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
@@ -24,8 +24,8 @@
         android:id="@+id/detailText1"
         android:layout_width="128dp"
         android:layout_height="49dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="170dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="132dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
@@ -41,9 +41,26 @@
         android:layout_marginBottom="87dp"
         android:background="@color/WarmYellow"
         android:text="Buy"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailText1" />
+        app:layout_constraintTop_toBottomOf="@+id/detailText1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="52dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

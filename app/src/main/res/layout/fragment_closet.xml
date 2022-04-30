@@ -13,6 +13,8 @@
         android:layout_marginTop="16dp"
         android:background="@color/WarmYellow"
         android:text="Home"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="82dp"
         android:layout_marginBottom="30dp"
-        android:text="YOUR STICKERS"
+        android:text="Tus pegatinas"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -33,56 +35,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="155dp"
-        android:layout_height="537dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonWord">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        app:cardBackgroundColor="@color/SpecialBlue"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/lin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="356dp"
+            android:layout_height="509dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/SpecialBlue"
+            android:translationX="25dp">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:clickable="true"
-                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView23"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:clickable="true"
-                android:scaleType="centerCrop" />
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BgColor"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView24"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop" />
+                <ImageButton
+                    android:id="@+id/imageButton12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BgColor"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView25"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop" />
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BgColor"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop" />
-        </LinearLayout>
-    </ScrollView>
+                <ImageButton
+                    android:id="@+id/imageButton13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BgColor"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
