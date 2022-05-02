@@ -55,10 +55,10 @@ class StoreFragment : Fragment() {
             findNavController().navigate(R.id.store_to_home)
         }
         binding.toShoppingScreen.setOnClickListener {
-            findNavController().navigate(R.id.actionStoreToShopping)
+            findNavController().navigate(R.id.action_StoreFragment_to_shoppingFragment)
         }
         binding.storeToCloset.setOnClickListener {
-            findNavController().navigate(R.id.actionStoreToCloset)
+            findNavController().navigate(R.id.action_StoreFragment_to_closetFragment2)
         }
     }
 
