@@ -131,7 +131,7 @@
             app:destination="@id/lasSilabaT" />
         <action
             android:id="@+id/action_lessonChoiceFragment_to_lasSilabasFragment2"
-            app:destination="@id/p_videos" />
+            app:destination="@id/lasSilabasFragment" />
     </fragment>
     <fragment
         android:id="@+id/lasSilabasFragment"
@@ -207,17 +207,13 @@
             android:id="@+id/action_detialFragment_to_shoppingFragment"
             app:destination="@id/shoppingFragment" />
     </fragment>
+    <activity
+        android:id="@+id/p_lessons_video2"
+        android:name="com.example.myapplication.p_lessons_video"
+        android:label="p_lessons_video" />
     <fragment
         android:id="@+id/lessons_l_page"
         android:name="com.example.myapplication.Lessons_l_page"
         android:label="Lessons_l_page" />
-    <fragment
-        android:id="@+id/p_videos"
-        android:name="com.example.myapplication.p_videos"
-        android:label="p_videos" >
-        <action
-            android:id="@+id/action_p_videos_to_lasSilabasFragment"
-            app:destination="@id/lasSilabasFragment" />
-    </fragment>
 
 </navigation>
