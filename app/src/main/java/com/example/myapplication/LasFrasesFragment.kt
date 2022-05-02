@@ -83,7 +83,6 @@ class LasFrasesFragment : Fragment() {
                 val lessonCounter = lessonCounter + 5
             }
         }
-
     }
 
     override fun onDestroyView() {
