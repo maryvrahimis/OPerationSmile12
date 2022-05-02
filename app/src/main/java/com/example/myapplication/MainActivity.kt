@@ -3,33 +3,31 @@ package com.example.myapplication
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
-import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.example.myapplication.databinding.ActivityMainBinding
-import io.realm.*
+import io.realm.Realm
+import io.realm.RealmConfiguration
+import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.exceptions.RealmFileException
-import io.realm.kotlin.where
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
 import io.realm.mongodb.Credentials
 import io.realm.mongodb.User
-import io.realm.mongodb.sync.SyncConfiguration
 import org.bson.types.ObjectId
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
-import java.util.concurrent.FutureTask
 
 
 val closet = ArrayList<StickerBundle>()
 var points = 100
 var currentSticker = R.drawable.bird
+var timerCheck: Boolean = false
+val lessonCounter = 0
 
 class MainActivity : AppCompatActivity() {
 

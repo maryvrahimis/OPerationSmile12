@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".p_lessons_video"
-            android:exported="false" />
-        <activity
             android:name=".VideoTest"
             android:exported="false" />
         <activity
