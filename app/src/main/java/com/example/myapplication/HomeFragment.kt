@@ -1,13 +1,10 @@
 package com.example.myapplication
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.View.FIND_VIEWS_WITH_TEXT
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.os.bundleOf
@@ -17,12 +14,6 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
-import io.realm.Realm
-import io.realm.RealmConfiguration
-import io.realm.RealmQuery
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.newSingleThreadContext
-import org.bson.types.ObjectId
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -51,8 +42,8 @@ class HomeFragment : Fragment() {
        // var points: Int = 100
         var days: Int = 0
         super.onViewCreated(view, savedInstanceState)
-        binding.currentMascotHome.setImageResource(currentSticker)
-
+        binding.currentMascotHome.setImageResource(currentStickerI)
+        binding.nameView.text = "Hola ${nameOfPatient} !!"
        //val lesson = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
         setFragmentResultListener("requestKey") { requestKey, bundle ->
             // We use a String here, but any type that can be put in a Bundle is supported
@@ -60,7 +51,7 @@ class HomeFragment : Fragment() {
             if (result) {
                 binding.completedLesson.isVisible = true
                 binding.notCompletedLesson.isVisible = false
-                points++
+                points1++
 
 
                 //binding.totalPointsText.text = opa
@@ -72,7 +63,7 @@ class HomeFragment : Fragment() {
 
 
 
-        binding.totalPointsText.text = points.toString()
+        binding.totalPointsText.text = points1.toString()
        // binding.currentMascotHome.setImageDrawable()
 
         binding.lessonsButton.setOnClickListener {
@@ -82,10 +73,10 @@ class HomeFragment : Fragment() {
         }
 
         binding.storeButton.setOnClickListener {
-            val poop: Int = points
+            val poop: Int = points1
             // Use the Kotlin extension in the fragment-ktx artifact
             setFragmentResult("requestKey", bundleOf("bundleKey" to poop))
-            findNavController().navigate(R.id.action_HomeFragment_to_StoreFragment)
+            findNavController().navigate(R.id.action_home_to_store_frag)
         }
         binding.homeToPatients.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_updated_patients_screen)

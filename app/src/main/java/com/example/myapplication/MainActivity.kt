@@ -10,22 +10,29 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+
 import com.example.myapplication.databinding.ActivityMainBinding
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.exceptions.RealmFileException
+import io.realm.kotlin.where
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
 import io.realm.mongodb.Credentials
 import io.realm.mongodb.User
+import io.realm.mongodb.sync.SyncConfiguration
 import org.bson.types.ObjectId
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
+import java.util.concurrent.FutureTask
 
 
 val closet = ArrayList<StickerBundle>()
-var points = 100
-var currentSticker = R.drawable.bird
+var points1 = 0
+var currentStickerI = R.drawable.bird
+var nameOfPatient = " "
 var timerCheck: Boolean = false
 val lessonCounter = 0
 
@@ -71,18 +78,29 @@ class MainActivity : AppCompatActivity() {
                         // Instantiate the class using the factory function.
                         val turtle = r.createObject(Lessons::class.java, ObjectId())
                         // Configure the instance.
-                        turtle.word = "pan"
+                        turtle.word = "sing"
+                        /*
+                        turtle.name = "sid"
+                        turtle.currentStickerID = R.drawable.bird
+                        turtle.points = 70
+
+                         */
+
+
                     }
-                    val task = realm.where(Lessons::class.java).equalTo("word","SLICKBACK").findAll()
-                    val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
-                    if (task2 != null) {
-                        println("THIS IS A TEST ${task2.word}")
+                    val task = realm.where(Patients::class.java).equalTo("name", "sid").findFirst()
+                    if (task != null) {
+                        points1 = task.points!!
+                        nameOfPatient = task.name.toString()
+                        currentStickerI = task.currentStickerID!!
+
                     }
-                    task.forEach{ task -> println("Turtle: ${task.word}") }
+                    //val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
 
 
 
-                    Log.v("EXAMPLE", "Fetched Max: $task")
+
+                    Log.v("EXAMPLE", "Fetched Max: ${task.toString()}")
                     realm.close()
                 } catch(ex: RealmFileException) {
                     Log.v("EXAMPLE", "Error opening the realm.")
@@ -112,6 +130,19 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onDestroy() {
+        val realm = Realm.getDefaultInstance()
+        realm.executeTransaction { r: Realm ->
+            val save = realm.where(Patients::class.java).equalTo("name", "sid").findFirst()
+            if (save != null) {
+
+                save.points = points1
+                save.currentStickerID = currentStickerI
+            }
+            realm.insertOrUpdate(save)
+        }
+
+
+        realm.close()
         super.onDestroy()
 
 
@@ -156,6 +187,46 @@ open class Lessons(
     var word: String? = null
 ): RealmObject() {}
 
+open class Patients(
+    @PrimaryKey    var _id: ObjectId? = null,
+
+    var name: String? = null,
+
+    var age: Int? = null,
+
+    var username: String? = null,
+
+    var password: String? = null,
+
+    var points: Int? = null,
+
+    var k_sounds_completed: Boolean? = null,
+
+    var p_sounds_completed: Boolean? = null,
+
+    var l_sounds_completed: Boolean? = null,
+
+    var t_sounds_completed: Boolean? = null,
+
+    var k_sounds_completed_time: String? = null,
+
+    var p_sounds_completed_time: String? = null,
+
+    var l_sounds_completed_time: String? = null,
+
+    var t_sounds_completed_time: String? = null,
+
+    var accountType: String? = null,
+
+  //  var closet: List<String> = emptyList(),
+
+    var currentSticker: String? = null,
+
+
+    var currentStickerID: Int? = null
+
+): RealmObject() {}
+
 open class Stickers(
     @PrimaryKey    var _id: ObjectId? = null,
 
@@ -177,12 +248,7 @@ open class stickerList(
 
 }
 
-open class Purchase(
-    var Points: Int? = null,
 
-    ): RealmObject() {
-
-}
 
 open class Login(
     @PrimaryKey var _id: ObjectId? = null,

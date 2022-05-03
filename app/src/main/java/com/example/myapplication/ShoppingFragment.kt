@@ -1,15 +1,12 @@
 package com.example.myapplication
 
 
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
@@ -18,8 +15,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentShoppingScreenBinding
-import io.realm.Realm
-import org.bson.types.ObjectId
 
 
 class ShoppingFragment : Fragment() {
@@ -45,13 +40,13 @@ class ShoppingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.points.text = "Puntos: ${points}"
+        binding.points.text = "Puntos: ${points1}"
 
 
 
 
         var res: ArrayList<StickerBundle> = ArrayList<StickerBundle>()
-        var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt ),
+        var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt),
             StickerBundle("flag",  20,"flagbird", R.drawable.flag, R.drawable.flagbird, R.id.flagDetail),
             StickerBundle("hat",  30,"hatbird", R.drawable.hat, R.drawable.hatbird, R.id.hatDetail),
             StickerBundle("sunglasses",  15,"sunglasses", R.drawable.sunglasses, R.drawable.sunglassesbird, R.id.detailSunglasses),
@@ -70,7 +65,7 @@ class ShoppingFragment : Fragment() {
         val chichi = binding.shopLayout.children
         val track = 0
         for (i in 0..toli-1) {
-            if(arr[i].stickerPrice <= points){
+            if(arr[i].stickerPrice <= points1 && arr[i].available == true){
                 binding.shopLayout[i].setBackgroundResource(arr[i].stickerId)
                 binding.shopLayout[i].setOnClickListener{
                 val res = arr[i].stickerBirdId
@@ -78,6 +73,11 @@ class ShoppingFragment : Fragment() {
                     findNavController().navigate(R.id.action_shoppingFragment_to_detialFragment)
 
                 }
+            }
+            if(arr[i].available == false){
+                binding.shopLayout[i].setBackgroundResource(arr[i].stickerId)
+                
+
             }
         }
 

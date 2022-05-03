@@ -11,7 +11,8 @@ open class StickerBundle(
     val birdWeaaringSticker: String = "",
     val stickerId: Int = 0,
     val stickerBirdId: Int = 0,
-    val stickerDetailId: Int = 0){
+    val stickerDetailId: Int = 0,
+    val available: Boolean = true ){
 
 
 

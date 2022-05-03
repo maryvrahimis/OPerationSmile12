@@ -5,14 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
-import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentDetialBinding
-import com.example.myapplication.databinding.FragmentShoppingScreenBinding
-import com.example.myapplication.databinding.LasFrasesBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,7 +62,7 @@ class DetialFragment : Fragment() {
                     binding.detailBuyButton.setOnClickListener{
                         closet.add(i)
                         binding.detailBuyButton.isVisible = false
-                        points = points - i.stickerPrice
+                        points1 = points1 - i.stickerPrice
                         findNavController().navigate(R.id.action_detialFragment_to_shoppingFragment)
                     }
 

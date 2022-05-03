@@ -43,7 +43,7 @@
             app:cardBackgroundColor="#00FFFFFF">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/nameView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"

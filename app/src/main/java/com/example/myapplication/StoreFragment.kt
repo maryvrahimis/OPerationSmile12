@@ -1,22 +1,14 @@
 package com.example.myapplication
 
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.FragmentReportsBinding
 import com.example.myapplication.databinding.FragmentStoreBinding
-import com.example.myapplication.databinding.FragmentHomeBinding
-import com.example.myapplication.databinding.FragmentLessonsBinding
-import io.realm.Realm
-import org.bson.types.ObjectId
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -49,8 +41,8 @@ class StoreFragment : Fragment() {
 
 
         }
-        binding.imageView11.setImageResource(currentSticker)
-        binding.pointsView.text = "${points.toString()} Points"
+        binding.imageView11.setImageResource(currentStickerI)
+        binding.pointsView.text = "${points1.toString()} Points"
         binding.toHomeButton.setOnClickListener {
             findNavController().navigate(R.id.store_to_home)
         }

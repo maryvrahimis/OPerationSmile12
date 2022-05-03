@@ -54,7 +54,7 @@ class ClosetFragment : Fragment() {
            val bam = closetIt.next()
             bam.setBackgroundResource(closet[temp].stickerBirdId)
             binding.lin[temp].setOnClickListener {
-                currentSticker = closet[temp-1].stickerBirdId
+                currentStickerI = closet[temp-1].stickerBirdId
                 findNavController().navigate(R.id.actoinClosetToHome)
             }
             temp++
