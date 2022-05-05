@@ -37,6 +37,18 @@ var currentStickerI = R.drawable.bird
 var nameOfPatient = " "
 var timerCheck: Boolean = false
 val lessonCounter = 0
+var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt),
+    StickerBundle("flag",  20,"flagbird", R.drawable.flag, R.drawable.flagbird, R.id.flagDetail),
+    StickerBundle("hat",  30,"hatbird", R.drawable.hat, R.drawable.hatbird, R.id.hatDetail),
+    StickerBundle("sunglasses",  15,"sunglasses", R.drawable.sunglasses, R.drawable.sunglassesbird, R.id.detailSunglasses),
+    StickerBundle("sneakers", 30,"sneakersbird", R.drawable.sneakers, R.drawable.sneakersbird, R.id.detailSneaker),
+    StickerBundle("pinkboots",  20,"pinkbootsbird", R.drawable.pinkboots, R.drawable.pinkbootsbird, R.id.detailPinkBoots),
+    StickerBundle("bball",  50,"bballbird", R.drawable.bball, R.drawable.bballbird, R.id.bballdetail),
+    StickerBundle("easter",  50,"easterbird", R.drawable.easter, R.drawable.easterbird, R.id.easterDetail),
+    StickerBundle("halloween",  50,"halloweenbird", R.drawable.halloween, R.drawable.halloweenbird, R.id.halloweenDetail),
+    StickerBundle("santahat",  10,"santahatbird", R.drawable.santahat, R.drawable.santahatbird, R.id.detailSanta)
+)
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -136,7 +148,7 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         val realm = Realm.getDefaultInstance()
         realm.executeTransaction { r: Realm ->
-            val save = realm.where(Patients::class.java).equalTo("name", "ron").findFirst()
+            val save = realm.where(Patients::class.java).equalTo("name", "lee").findFirst()
             if (save != null) {
 
                 save.points = points1

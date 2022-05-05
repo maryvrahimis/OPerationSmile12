@@ -44,12 +44,12 @@
 
         <ScrollView
             android:id="@+id/scrollView3"
-            android:layout_width="204dp"
+            android:layout_width="190dp"
             android:layout_height="498dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="16dp"
             android:background="@color/SpecialBlue"
-            android:translationX="100dp">
+            android:translationX="110dp">
 
             <LinearLayout
                 android:id="@+id/lin"
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:background="@color/BgColor"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:background="@color/BgColor"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
@@ -78,7 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:background="@color/BgColor"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
@@ -86,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:background="@color/BgColor"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
         </ScrollView>
