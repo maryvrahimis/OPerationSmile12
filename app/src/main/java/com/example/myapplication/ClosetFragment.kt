@@ -52,6 +52,7 @@ class ClosetFragment : Fragment() {
         var closetIt = binding.lin.iterator()
         while (temp != closet.size){
            val bam = closetIt.next()
+            closetString = "${closetString} ${closet[temp].birdWeaaringSticker}"
             bam.setBackgroundResource(closet[temp].stickerBirdId)
             binding.lin[temp].setOnClickListener {
                 currentStickerI = closet[temp-1].stickerBirdId

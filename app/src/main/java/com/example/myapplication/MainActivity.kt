@@ -30,6 +30,8 @@ import java.util.concurrent.FutureTask
 
 
 val closet = ArrayList<StickerBundle>()
+var closetStringsArr = ArrayList<String>()
+var closetString = " "
 var points1 = 0
 var currentStickerI = R.drawable.bird
 var nameOfPatient = " "
@@ -76,9 +78,11 @@ class MainActivity : AppCompatActivity() {
 
                     realm.executeTransaction { r: Realm ->
                         // Instantiate the class using the factory function.
-                        val turtle = r.createObject(Lessons::class.java, ObjectId())
+                        val turtle = r.createObject(Patients::class.java, ObjectId())
                         // Configure the instance.
-                        turtle.word = "sing"
+                        turtle.name = "ron"
+                        turtle.currentStickerID = R.drawable.bird
+                        turtle.points = 100
                         /*
                         turtle.name = "sid"
                         turtle.currentStickerID = R.drawable.bird
@@ -88,12 +92,12 @@ class MainActivity : AppCompatActivity() {
 
 
                     }
-                    val task = realm.where(Patients::class.java).equalTo("name", "sid").findFirst()
+                    val task = realm.where(Patients::class.java).equalTo("name", "ron").findFirst()
                     if (task != null) {
                         points1 = task.points!!
                         nameOfPatient = task.name.toString()
                         currentStickerI = task.currentStickerID!!
-
+                       // closetString = task.closetAsAString!!
                     }
                     //val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
 
@@ -132,11 +136,12 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         val realm = Realm.getDefaultInstance()
         realm.executeTransaction { r: Realm ->
-            val save = realm.where(Patients::class.java).equalTo("name", "sid").findFirst()
+            val save = realm.where(Patients::class.java).equalTo("name", "ron").findFirst()
             if (save != null) {
 
                 save.points = points1
                 save.currentStickerID = currentStickerI
+               // save.closetAsAString = closetString
             }
             realm.insertOrUpdate(save)
         }
@@ -218,12 +223,14 @@ open class Patients(
 
     var accountType: String? = null,
 
-  //  var closet: List<String> = emptyList(),
+   // var closet: ArrayList<String> = emptyList(),
 
     var currentSticker: String? = null,
 
 
-    var currentStickerID: Int? = null
+    var currentStickerID: Int? = null,
+
+    var closetAsAString: String? = null
 
 ): RealmObject() {}
 

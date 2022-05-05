@@ -44,12 +44,12 @@
 
         <ScrollView
             android:id="@+id/scrollView3"
-            android:layout_width="356dp"
-            android:layout_height="509dp"
+            android:layout_width="204dp"
+            android:layout_height="498dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="16dp"
             android:background="@color/SpecialBlue"
-            android:translationX="25dp">
+            android:translationX="100dp">
 
             <LinearLayout
                 android:id="@+id/lin"
@@ -60,29 +60,33 @@
                 <ImageButton
                     android:id="@+id/imageButton10"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:background="@color/BgColor"
+                    android:scaleType="fitCenter"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton12"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:background="@color/BgColor"
+                    android:scaleType="fitCenter"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton11"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:background="@color/BgColor"
+                    android:scaleType="fitCenter"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <ImageButton
                     android:id="@+id/imageButton13"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:background="@color/BgColor"
+                    android:scaleType="fitCenter"
                     tools:srcCompat="@tools:sample/avatars" />
             </LinearLayout>
         </ScrollView>
