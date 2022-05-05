@@ -29,9 +29,9 @@ import java.util.concurrent.Executors
 import java.util.concurrent.FutureTask
 
 
-val closet = ArrayList<StickerBundle>()
-var closetStringsArr = ArrayList<String>()
-var closetString = " "
+var closetStringList: List<String> = listOf()
+var closetStringsArrList = ArrayList<StickerBundle>()
+var closet = listOf<String>(" ", " ", " ")
 var points1 = 0
 var currentStickerI = R.drawable.bird
 var nameOfPatient = " "
@@ -109,8 +109,14 @@ class MainActivity : AppCompatActivity() {
                         points1 = task.points!!
                         nameOfPatient = task.name.toString()
                         currentStickerI = task.currentStickerID!!
-                       // closetString = task.closetAsAString!!
+                        if (closet.isEmpty()){
+                            var temp = 0
+                            for (i in closet){
+                                closetStringList += i
+                            }
+                        }
                     }
+
                     //val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
 
 
@@ -235,7 +241,7 @@ open class Patients(
 
     var accountType: String? = null,
 
-   // var closet: ArrayList<String> = emptyList(),
+  // var closet: List<String> = emptyList(),
 
     var currentSticker: String? = null,
 

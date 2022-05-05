@@ -56,6 +56,19 @@ class ShoppingFragment : Fragment() {
         val toli = binding.shopLayout.childCount
         val chichi = binding.shopLayout.children
         val track = 0
+
+        for(i in arr){
+            for(r in closet){
+                if(i.birdWeaaringSticker == r){
+                   i.available = false
+                    closetStringsArrList.add(i)
+                }
+            }
+        }
+
+
+
+
         for (i in 0..toli-1) {
             if(arr[i].stickerPrice <= points1 && arr[i].available == true){
                 binding.shopLayout[i].setBackgroundResource(arr[i].stickerId)
