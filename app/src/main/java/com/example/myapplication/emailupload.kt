@@ -27,7 +27,7 @@ class emailupload : AppCompatActivity() {
             override fun onClick(view: View?) {
                 val emailsend = sendto.text.toString()
                 val emailsubject = subject.text.toString()
-                val emailbody = body.text.toString()
+                val emailbody = "The amount of lessons completed in P Sounds: " + lessonCounterP +"\n " +"The amount of lessons completed in T Sounds: " + lessonCounterT +"\n " +"The amount of lessons completed in L Sounds: " + lessonCounterL +"\n " +"The amount of lessons completed in K Sounds: " + lessonCounterK +"\n " + body.text.toString()
 
                 // define Intent object
                 // with action attribute as ACTION_SEND
