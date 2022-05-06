@@ -144,8 +144,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="330dp"
-        android:layout_height="163dp"
+        android:layout_width="332dp"
+        android:layout_height="403dp"
         android:layout_marginStart="47dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="47dp"
@@ -156,8 +156,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
-            android:layout_width="330dp"
-            android:layout_height="162dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textAlignment="center"
             app:cardBackgroundColor="@color/SpecialBlue">
 
@@ -185,6 +185,16 @@
                 android:src="@drawable/bird"
                 android:translationX="170dp"
                 android:translationY="10dp" />
+
+            <ImageButton
+                android:id="@+id/emailButton"
+                android:layout_width="292dp"
+                android:layout_height="140dp"
+                android:background="@color/BgColor"
+                android:scaleType="centerInside"
+                android:src="@drawable/aguila"
+                android:translationX="20dp"
+                android:translationY="160dp" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>

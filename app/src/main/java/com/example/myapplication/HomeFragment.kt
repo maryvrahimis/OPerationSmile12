@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         var isDailyLessonDone: Boolean = false
-       // var points: Int = 100
+        // var points: Int = 100
         var days: Int = 0
         super.onViewCreated(view, savedInstanceState)
         for(i in arr){
@@ -52,8 +52,8 @@ class HomeFragment : Fragment() {
             }
         }
         binding.currentMascotHome.setImageResource(currentStickerI)
-        binding.nameView.text = "Hola ${nameOfPatient} !!"
-       //val lesson = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
+
+        //val lesson = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
         setFragmentResultListener("requestKey") { requestKey, bundle ->
             // We use a String here, but any type that can be put in a Bundle is supported
             val result = bundle.getBoolean("bundleKey")
@@ -73,11 +73,17 @@ class HomeFragment : Fragment() {
 
 
         binding.totalPointsText.text = points1.toString()
-       // binding.currentMascotHome.setImageDrawable()
+        // binding.currentMascotHome.setImageDrawable()
 
         binding.lessonsButton.setOnClickListener {
 
             findNavController().navigate(R.id.action_Home_to_Lessons)
+
+        }
+
+        binding.emailButton.setOnClickListener {
+
+            findNavController().navigate(R.id.action_HomeFragment_to_emailupload)
 
         }
 

@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_home_to_updated_patients_screen"
             app:destination="@id/patientscreen" />
+        <action
+            android:id="@+id/action_HomeFragment_to_emailupload"
+            app:destination="@id/emailupload" />
 
     </fragment>
     <fragment
@@ -268,6 +271,11 @@
             android:id="@+id/action_lessonsFragmentT_to_indieLessonsFragment"
             app:destination="@id/indieLessonsFragment" />
     </fragment>
+    <activity
+        android:id="@+id/emailupload"
+        android:name="com.example.myapplication.emailupload"
+        android:label="activity_emailupload"
+        tools:layout="@layout/activity_emailupload" />
 
     <!--
     <activity
