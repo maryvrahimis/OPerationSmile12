@@ -36,7 +36,10 @@ var points1 = 0
 var currentStickerI = R.drawable.bird
 var nameOfPatient = " "
 var timerCheck: Boolean = false
-val lessonCounter = 0
+val lessonCounterP = 0
+val lessonCounterT = 0
+val lessonCounterL = 0
+val lessonCounterK = 0
 var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt),
     StickerBundle("flag",  20,"flagbird", R.drawable.flag, R.drawable.flagbird, R.id.flagDetail),
     StickerBundle("hat",  30,"hatbird", R.drawable.hat, R.drawable.hatbird, R.id.hatDetail),
@@ -163,12 +166,8 @@ class MainActivity : AppCompatActivity() {
             }
             realm.insertOrUpdate(save)
         }
-
-
         realm.close()
         super.onDestroy()
-
-
     }
 
 

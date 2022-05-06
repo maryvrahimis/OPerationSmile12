@@ -1,14 +1,16 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentLessonsTBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class LessonsFragmentT : Fragment(){
     private var _binding: FragmentLessonsTBinding? = null
@@ -35,6 +37,15 @@ class LessonsFragmentT : Fragment(){
 //        }
         binding.next.setOnClickListener {
             findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
+            if (timerCheck == true) {               // Button that takes you to lasSilibasFragment
+                val lessonCounter = lessonCounterT + 1
+                val check = SimpleDateFormat("MM/dd/yyyy")
+                val currentDate = check.format(Date())
+                /*
+                if (currentDateAndTime == currentDate){
+                }
+                 */
+            }
         }
 
         binding.tu.setOnClickListener {

@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class LasFrasesFragment : Fragment() {
-    val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy' at ' HH:mm:ss z")
+    val simpleDateFormat = SimpleDateFormat("MM/dd/yyyy")
 
     val currentDateAndTime: String?
         get() {
@@ -79,8 +79,17 @@ class LasFrasesFragment : Fragment() {
             //setFragmentResult("requestKey", bundleOf("bundleKey" to result))
             findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
             val currentDateAndTime: String = simpleDateFormat.format(Date())
-            if (timerCheck == true) {
-                val lessonCounter = lessonCounter + 5
+
+            if (timerCheck == true) {               // Button that takes you to the homepage
+                val lessonCounter = lessonCounterP + 1
+                val check = SimpleDateFormat("MM/dd/yyyy")
+                val currentDate = check.format(Date())
+                /*
+                if (currentDateAndTime == currentDate){
+
+                }
+
+                 */
             }
         }
     }

@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentSilabakBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class LasSilabaKFragment : Fragment() {
 
@@ -30,7 +32,16 @@ class LasSilabaKFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //binding.PsoundsButton.setOnClickListener { findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabasFragment) }
         //binding.TsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaT)}
-        binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaKFragment_to_lessons_k_page) }
+        binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaKFragment_to_lessons_k_page)
+            if (timerCheck == true) {               // Button that takes you to the homepage
+                val lessonCounter = lessonCounterK + 1
+                val check = SimpleDateFormat("MM/dd/yyyy")
+                val currentDate = check.format(Date())
+                /*
+                if (currentDateAndTime == currentDate){
+                }
+                 */
+            }}
 
     }
 
