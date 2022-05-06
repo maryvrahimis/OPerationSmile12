@@ -50,7 +50,7 @@ class DetialFragment : Fragment() {
                     binding.name.text = i.stickerName
                     binding.detailText1.text = i.stickerPrice.toString()
                     binding.detailBuyButton.setOnClickListener{
-                        closet.add(i)
+                        closetStringsArrList.add(i)
                         i.available = false
                         binding.detailBuyButton.isVisible = false
                         points1 = points1 - i.stickerPrice

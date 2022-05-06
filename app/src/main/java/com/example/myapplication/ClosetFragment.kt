@@ -50,12 +50,11 @@ class ClosetFragment : Fragment() {
       //  binding.scrollView3.
         var temp = 0
         var closetIt = binding.lin.iterator()
-        while (temp != closet.size){
+        while (temp != closetStringsArrList.size){
            val bam = closetIt.next()
-            closetString = "${closetString} ${closet[temp].birdWeaaringSticker}"
-            bam.setBackgroundResource(closet[temp].stickerBirdId)
+            bam.setBackgroundResource(closetStringsArrList[temp].stickerBirdId)
             binding.lin[temp].setOnClickListener {
-                currentStickerI = closet[temp-1].stickerBirdId
+                currentStickerI = closetStringsArrList[temp-1].stickerBirdId
                 findNavController().navigate(R.id.actoinClosetToHome)
             }
             temp++
