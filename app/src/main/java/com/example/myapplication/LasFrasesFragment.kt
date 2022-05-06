@@ -88,7 +88,7 @@ class LasFrasesFragment : Fragment() {
             val currentDateAndTime: String = simpleDateFormat.format(Date())
 
             if (timerCheck == true) {               // Button that takes you to the homepage
-                val lessonCounter = lessonCounterP + 1
+                lessonCounterP++
                 val check = SimpleDateFormat("MM/dd/yyyy")
                 val currentDate = check.format(Date())
                 /*

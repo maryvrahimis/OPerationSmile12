@@ -42,7 +42,7 @@ class LessonsFragmentL : Fragment() {
         binding.next.setOnClickListener {
             findNavController().navigate(R.id.action_LessonsFragment_to_lasFrasesFragment)
             if (timerCheck == true) {               // Button that takes you to lasSilibasFragment
-                val lessonCounter = lessonCounterL + 1
+                lessonCounterL++
                 val check = SimpleDateFormat("MM/dd/yyyy")
                 val currentDate = check.format(Date())
                 /*

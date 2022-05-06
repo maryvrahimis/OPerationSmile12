@@ -34,7 +34,7 @@ class LasSilabaKFragment : Fragment() {
         //binding.TsoundsButton.setOnClickListener{findNavController().navigate(R.id.action_lessonChoiceFragment_to_lasSilabaT)}
         binding.next.setOnClickListener { findNavController().navigate(R.id.action_lasSilabaKFragment_to_lessons_k_page)
             if (timerCheck == true) {               // Button that takes you to the homepage
-                val lessonCounter = lessonCounterK + 1
+                lessonCounterK++
                 val check = SimpleDateFormat("MM/dd/yyyy")
                 val currentDate = check.format(Date())
                 /*

@@ -1,30 +1,17 @@
 package com.example.myapplication
 
-import android.app.Activity
+//import com.example.myapplication.databinding.ActivityPatientscreenBinding
 import android.content.ContentValues
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.util.Log
+import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.Toast
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.operationsmile.ui.theme.BgColor
 import android.widget.TextView
-import java.text.SimpleDateFormat
+import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
 import org.bson.types.ObjectId
-//import com.example.myapplication.databinding.ActivityPatientscreenBinding
-import io.realm.RealmObject
-import io.realm.annotations.PrimaryKey
-import java.util.*
 
 
 class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {

@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
@@ -11,23 +10,17 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-
 import com.example.myapplication.databinding.ActivityMainBinding
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.exceptions.RealmFileException
-import io.realm.kotlin.where
 import io.realm.mongodb.App
 import io.realm.mongodb.AppConfiguration
 import io.realm.mongodb.Credentials
 import io.realm.mongodb.User
-import io.realm.mongodb.sync.SyncConfiguration
 import org.bson.types.ObjectId
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
-import java.util.concurrent.FutureTask
 
 
 //var closetStringList: List<String> = listOf()
@@ -41,10 +34,10 @@ var closeyString = ""
 var nameOfPatient = " "
 var res = R.drawable.bird
 var timerCheck: Boolean = false
-val lessonCounterP = 0
-val lessonCounterT = 0
-val lessonCounterL = 0
-val lessonCounterK = 0
+var lessonCounterP = 0
+var lessonCounterT = 0
+var lessonCounterL = 0
+var lessonCounterK = 0
 var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt),
     StickerBundle("flag",  20,"flagbird", R.drawable.flag, R.drawable.flagbird, R.id.flagDetail),
     StickerBundle("hat",  30,"hatbird", R.drawable.hat, R.drawable.hatbird, R.id.hatDetail),
