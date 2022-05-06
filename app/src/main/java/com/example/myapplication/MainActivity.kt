@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
@@ -29,12 +30,16 @@ import java.util.concurrent.Executors
 import java.util.concurrent.FutureTask
 
 
-var closetStringList: List<String> = listOf()
+//var closetStringList: List<String> = listOf()
 var closetStringsArrList = ArrayList<StickerBundle>()
-var closet = listOf<String>(" ", " ", " ")
+var childName = ""
+var closet = listOf<String>()
+var currentStickerAppVar = ""
 var points1 = 0
 var currentStickerI = R.drawable.bird
+var closeyString = ""
 var nameOfPatient = " "
+var res = R.drawable.bird
 var timerCheck: Boolean = false
 val lessonCounter = 0
 var arr: Array<StickerBundle> = arrayOf(StickerBundle("tshirt",  15,"tshirtbird", stickerId = R.drawable.tshirt, stickerBirdId = R.drawable.tshirtbird, R.id.detailTshirt),
@@ -90,11 +95,54 @@ class MainActivity : AppCompatActivity() {
 
                     realm.executeTransaction { r: Realm ->
                         // Instantiate the class using the factory function.
-                        val turtle = r.createObject(Patients::class.java, ObjectId())
-                        // Configure the instance.
-                        turtle.name = "ron"
-                        turtle.currentStickerID = R.drawable.bird
-                        turtle.points = 100
+                        val taskA = realm.where(Patients::class.java).findAll()
+                        if(taskA.isEmpty()){
+                            val turtle = r.createObject(Patients::class.java, ObjectId())
+                            // Configure the instance.
+                            turtle.name = "scott"
+                            turtle.currentStickerID = R.drawable.bird
+                            turtle.points = 100
+                            points1 = turtle.points!!
+                            nameOfPatient = turtle.name.toString()
+                            currentStickerI = turtle.currentStickerID!!
+                            closeyString = turtle.closetAsAString.toString()
+                            childName = turtle.name!!
+
+                        }
+                        else{
+                            val taskB = realm.where(Patients::class.java).findFirst()
+                            if (taskB != null) {
+                                points1 = taskB.points!!
+                                nameOfPatient = taskB.name.toString()
+                                currentStickerI = taskB.currentStickerID!!
+                                currentStickerAppVar = taskB.currentSticker.toString()
+                                if (closeyString.length>0){
+                                    closet = closeyString.split(" ")
+                                    for(d in closet){
+                                        for(e in arr){
+                                            if(d == e.birdWeaaringSticker){
+                                                e.inCloset = true
+                                                e.available = false
+                                            }
+                                        }
+
+                                    }
+
+                                }
+                                childName = nameOfPatient
+                            }
+
+                        }
+                        for(m in closet){
+                            for(z in arr){
+                                if(m == z.birdWeaaringSticker){
+                                    z.available = false
+                                    z.inCloset = true
+                                }
+                            }
+
+                        }
+
                         /*
                         turtle.name = "sid"
                         turtle.currentStickerID = R.drawable.bird
@@ -104,25 +152,14 @@ class MainActivity : AppCompatActivity() {
 
 
                     }
-                    val task = realm.where(Patients::class.java).equalTo("name", "ron").findFirst()
-                    if (task != null) {
-                        points1 = task.points!!
-                        nameOfPatient = task.name.toString()
-                        currentStickerI = task.currentStickerID!!
-                        if (closet.isEmpty()){
-                            var temp = 0
-                            for (i in closet){
-                                closetStringList += i
-                            }
-                        }
-                    }
+
 
                     //val task2 = realm.where(Lessons::class.java).equalTo("word","Max").findFirst()
 
 
 
 
-                    Log.v("EXAMPLE", "Fetched Max: ${task.toString()}")
+                    //Log.v("EXAMPLE", "Fetched Max: ${task.toString()}")
                     realm.close()
                 } catch(ex: RealmFileException) {
                     Log.v("EXAMPLE", "Error opening the realm.")
@@ -159,17 +196,26 @@ class MainActivity : AppCompatActivity() {
 
                 save.points = points1
                 save.currentStickerID = currentStickerI
-               // save.closetAsAString = closetString
+                save.currentSticker = currentStickerAppVar
+                for(i in arr){
+                    if(i.inCloset == true){
+                        closeyString = "${closeyString} ${i.birdWeaaringSticker}"
+
+                    }
+
+                }
+                save.closetAsAString = closeyString
+                realm.insertOrUpdate(save)
+                // save.closetAsAString = closetString
             }
-            realm.insertOrUpdate(save)
+
         }
 
 
         realm.close()
         super.onDestroy()
-
-
     }
+
 
 
 
@@ -179,6 +225,9 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
+
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
@@ -248,7 +297,9 @@ open class Patients(
 
     var currentStickerID: Int? = null,
 
-    var closetAsAString: String? = null
+    var closetAsAString: String? = null,
+
+
 
 ): RealmObject() {}
 
