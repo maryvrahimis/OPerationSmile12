@@ -60,7 +60,7 @@ class HomeFragment : Fragment() {
             if (result) {
                 binding.completedLesson.isVisible = true
                 binding.notCompletedLesson.isVisible = false
-               // points1++
+
 
 
                 //binding.totalPointsText.text = opa

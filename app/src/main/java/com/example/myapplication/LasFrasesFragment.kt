@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.LasFrasesBinding
@@ -77,7 +79,12 @@ class LasFrasesFragment : Fragment() {
             //val result = true
             // Use the Kotlin extension in the fragment-ktx artifact
             //setFragmentResult("requestKey", bundleOf("bundleKey" to result))
+            val result = true
+            // Use the Kotlin extension in the fragment-ktx artifact
+            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
+            points1++
             findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
+         //   findNavController().navigate(R.id.action_lasFrasesFragment_to_HomeFragment)
             val currentDateAndTime: String = simpleDateFormat.format(Date())
             if (timerCheck == true) {
                 val lessonCounter = lessonCounter + 5
