@@ -43,38 +43,13 @@ class ShoppingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.points.text = "Puntos: ${points1}"
-
-
-
-
-        var res: ArrayList<StickerBundle> = ArrayList<StickerBundle>()
-
-       val arrIt = arr.iterator()
-        println(res.toString())
-        // val help: Sequence<ImageView> = binding.shopLayout.
-
         val toli = binding.shopLayout.childCount
-        val chichi = binding.shopLayout.children
-        val track = 0
-
-        for(i in arr){
-            for(r in closet){
-                if(i.birdWeaaringSticker == r){
-                   i.available = false
-                    closetStringsArrList.add(i)
-                }
-            }
-        }
-
-
-
-
         for (i in 0..toli-1) {
-            if(arr[i].stickerPrice <= points1 && arr[i].available == true){
+            if(arr[i].stickerPrice <= points1 && arr[i].available == true && arr[i].inCloset == false){
                 binding.shopLayout[i].setBackgroundResource(arr[i].stickerId)
                 binding.shopLayout[i].setOnClickListener{
-                val res = arr[i].stickerBirdId
-                    setFragmentResult("requestKey", bundleOf("bundleKey" to res))
+                    res = arr[i].stickerBirdId
+                  //  setFragmentResult("requestKey", bundleOf("bundleKey" to res))
                     findNavController().navigate(R.id.action_shoppingFragment_to_detialFragment)
 
                 }
@@ -86,9 +61,6 @@ class ShoppingFragment : Fragment() {
             }
         }
 
-        var arrayIdk: ArrayList<StickerBundle> = arrayListOf()
-        //var views: Array<ImageButton?> = arrayOfNulls<ImageButton>(5)
-        val chilly = binding.shopLayout.childCount
 
 
 

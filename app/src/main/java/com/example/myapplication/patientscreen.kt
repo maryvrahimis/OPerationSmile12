@@ -83,7 +83,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val turtle = r.createObject(Patients::class.java, ObjectId())
             // Configure the instance.
             turtle.name = "SLICKBACK"
-            turtle.age = "69"
+            turtle.age = 69
             turtle.username = "aPimpNamedSlickback"
             turtle.password = "discordKitt3n"
             turtle.p_sounds_completed = true
@@ -170,24 +170,6 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         // Another interface callback
     }
 }
-
-open class Patients(
-    @PrimaryKey
-    var _id: ObjectId? = null,
-    var name: String? = null,
-    var age: String? = null,
-    var username: String? = null,
-    var password: String? = null,
-    var points: String? = null,
-    var k_sounds_completed: Boolean? = null,
-    var p_sounds_completed: Boolean? = null,
-    var l_sounds_completed: Boolean? = null,
-    var t_sounds_completed: Boolean? = null,
-    var k_sounds_completed_time: String? = null,
-    var p_sounds_completed_time: String? = null,
-    var l_sounds_completed_time: String? = null,
-    var t_sounds_completed_time: String? = null,
-    var stickerIDCloset: String? = null): RealmObject()
 
 class Timecheck{
 

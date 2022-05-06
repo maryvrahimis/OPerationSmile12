@@ -38,11 +38,6 @@ class DetialFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        setFragmentResultListener("requestKey") { requestKey, bundle ->
-            // We use a String here, but any type that can be put in a Bundle is supported
-
-            val res = bundle.getInt("bundleKey")
             binding.imageView3.setBackgroundResource(res)
            // val temp = 0
             for(i in arr){
@@ -50,9 +45,8 @@ class DetialFragment : Fragment() {
                     binding.name.text = i.stickerName
                     binding.detailText1.text = i.stickerPrice.toString()
                     binding.detailBuyButton.setOnClickListener{
-                        closetStringsArrList.add(i)
                         i.available = false
-                        binding.detailBuyButton.isVisible = false
+                        i.inCloset = true
                         points1 = points1 - i.stickerPrice
                         findNavController().navigate(R.id.action_detialFragment_to_shoppingFragment)
                     }
@@ -61,7 +55,7 @@ class DetialFragment : Fragment() {
             }
 
 
-        }
+
 
     }
 }

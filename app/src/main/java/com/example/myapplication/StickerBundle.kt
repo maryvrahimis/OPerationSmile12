@@ -12,7 +12,8 @@ open class StickerBundle(
     val stickerId: Int = 0,
     val stickerBirdId: Int = 0,
     val stickerDetailId: Int = 0,
-    var available: Boolean = true ){
+    var available: Boolean = true,
+    var inCloset: Boolean = false){
 
 
 

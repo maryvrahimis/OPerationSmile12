@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +16,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
+import io.realm.Realm
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -42,6 +45,12 @@ class HomeFragment : Fragment() {
        // var points: Int = 100
         var days: Int = 0
         super.onViewCreated(view, savedInstanceState)
+        for(i in arr){
+            if(i.stickerBirdId == currentStickerI) {
+                i.inCloset = true
+                i.available = false
+            }
+        }
         binding.currentMascotHome.setImageResource(currentStickerI)
         binding.nameView.text = "Hola ${nameOfPatient} !!"
        //val lesson = realm.where(Lessons::class.java).equalTo("word", "pan").findFirst()
@@ -51,7 +60,7 @@ class HomeFragment : Fragment() {
             if (result) {
                 binding.completedLesson.isVisible = true
                 binding.notCompletedLesson.isVisible = false
-                points1++
+
 
 
                 //binding.totalPointsText.text = opa
@@ -73,7 +82,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.storeButton.setOnClickListener {
-            val poop: Int = points1
+            val poop: Boolean = true
             // Use the Kotlin extension in the fragment-ktx artifact
             setFragmentResult("requestKey", bundleOf("bundleKey" to poop))
             findNavController().navigate(R.id.action_home_to_store_frag)
@@ -89,6 +98,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onDestroyView() {
+
         super.onDestroyView()
 
         _binding = null

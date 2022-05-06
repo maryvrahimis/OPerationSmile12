@@ -50,14 +50,25 @@ class ClosetFragment : Fragment() {
       //  binding.scrollView3.
         var temp = 0
         var closetIt = binding.lin.iterator()
-        while (temp != closetStringsArrList.size){
-           val bam = closetIt.next()
-            bam.setBackgroundResource(closetStringsArrList[temp].stickerBirdId)
-            binding.lin[temp].setOnClickListener {
-                currentStickerI = closetStringsArrList[temp-1].stickerBirdId
-                findNavController().navigate(R.id.actoinClosetToHome)
+        for (l in arr){
+            if(closetIt.hasNext()) {
+                if (l.inCloset == true || l.stickerBirdId == currentStickerI) {
+                    val bam = closetIt.next()
+                    bam.setBackgroundResource(l.stickerBirdId)
+                    bam.setOnClickListener {
+                        currentStickerI = l.stickerBirdId
+                        findNavController().navigate(R.id.actoinClosetToHome)
+                    }
+                }
+
+                temp++
             }
-            temp++
+        }
+
+
+
+
+
         }
 
         //for()
@@ -66,9 +77,33 @@ class ClosetFragment : Fragment() {
 
 
 
-    }
+
 
     override fun onDestroyView() {
+        val realm = Realm.getDefaultInstance()
+        realm.executeTransaction { r: Realm ->
+            val save = realm.where(Patients::class.java).equalTo("name", "lee").findFirst()
+            if (save != null) {
+
+                save.points = points1
+                save.currentStickerID = currentStickerI
+                save.currentSticker = currentStickerAppVar
+                for(i in arr){
+                    if(i.inCloset == true){
+                        closeyString = "${closeyString} ${i.birdWeaaringSticker}"
+
+                    }
+
+                }
+                save.closetAsAString = closeyString
+                realm.insertOrUpdate(save)
+                // save.closetAsAString = closetString
+            }
+
+        }
+
+
+        realm.close()
         super.onDestroyView()
         _binding = null
     }
