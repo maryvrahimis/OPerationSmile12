@@ -8,8 +8,10 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
+import org.bson.types.ObjectId
 
 
 class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -62,8 +64,24 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 theSearch = searching
                 lateinit var realm: Realm
                 realm = Realm.getDefaultInstance()
-                Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+
                 val patient = realm.where(Patients::class.java).equalTo("name", searching) .findFirst()
+                if (searching == patient!!.name) {
+                    val nameField: TextView = findViewById(R.id.test_name)
+                    nameField.text = patient!!.name.toString()
+                    val usernameField: TextView = findViewById(R.id.test_name3)
+                    val p_sounds_completed: TextView = findViewById(R.id.testname5)
+                    val k_sounds_completed: TextView = findViewById(R.id.testname6)
+                    val t_sounds_completed: TextView = findViewById(R.id.testname7)
+                    val l_sounds_completed: TextView = findViewById(R.id.testname8)
+                    usernameField.text = patient!!.username.toString()
+
+                    p_sounds_completed.text = patient.p_sounds_completed.toString()
+                    k_sounds_completed.text = patient.k_sounds_completed.toString()
+                    t_sounds_completed.text = patient.t_sounds_completed.toString()
+                    l_sounds_completed.text = patient.l_sounds_completed.toString()
+
+                }
 
             }
         })
