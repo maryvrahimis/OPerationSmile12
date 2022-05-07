@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
 
@@ -17,6 +16,7 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     //private var _binding: ActivityPatientscreenBinding? = null
     //private val binding get() = _binding!!
+    var theSearch: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,37 +56,37 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding.testName.text = opa */
 
         button.setOnClickListener(object : View.OnClickListener{
+
             override fun onClick(view: View?) {
                 val searching = body.text.toString()    //This is what we type into the search bar
-
+                theSearch = searching
                 lateinit var realm: Realm
                 realm = Realm.getDefaultInstance()
                 Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
                 val patient = realm.where(Patients::class.java).equalTo("name", searching) .findFirst()
 
-
-                if (searching == patient!!.name) {
-                    val nameField: TextView = findViewById(R.id.test_name)
-                    val usernameField: TextView = findViewById(R.id.test_name3)
-                    val p_sounds_completed: TextView = findViewById(R.id.testname5)
-                    val k_sounds_completed: TextView = findViewById(R.id.testname6)
-                    val t_sounds_completed: TextView = findViewById(R.id.testname7)
-                    val l_sounds_completed: TextView = findViewById(R.id.testname8)
-
-                    nameField.text = patient!!.name.toString()
-                    usernameField.text = patient!!.username.toString()
-
-                    p_sounds_completed.text = patient.p_sounds_completed.toString()
-                    k_sounds_completed.text = patient.k_sounds_completed.toString()
-                    t_sounds_completed.text = patient.t_sounds_completed.toString()
-                    l_sounds_completed.text = patient.l_sounds_completed.toString()
-                }
-
-
-
             }
         })
+/*
+        if (searching == patient!!.name) {
+            val nameField: TextView = findViewById(R.id.test_name)
+            val usernameField: TextView = findViewById(R.id.test_name3)
+            val p_sounds_completed: TextView = findViewById(R.id.testname5)
+            val k_sounds_completed: TextView = findViewById(R.id.testname6)
+            val t_sounds_completed: TextView = findViewById(R.id.testname7)
+            val l_sounds_completed: TextView = findViewById(R.id.testname8)
 
+            nameField.text = patient!!.name.toString()
+            usernameField.text = patient!!.username.toString()
+
+            p_sounds_completed.text = patient.p_sounds_completed.toString()
+            k_sounds_completed.text = patient.k_sounds_completed.toString()
+            t_sounds_completed.text = patient.t_sounds_completed.toString()
+            l_sounds_completed.text = patient.l_sounds_completed.toString()
+        }
+
+
+ */
     }
 
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
