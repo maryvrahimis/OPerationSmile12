@@ -51,6 +51,7 @@ class TherapistRegFragment: Fragment() {
 
     // This property is only valid between onCreateView and
     // onDestroyView.
+    //ello mate
     private val binding get() = _binding!!
     private val secTherapistC = "41aaac4482da41ed7b64"
 
