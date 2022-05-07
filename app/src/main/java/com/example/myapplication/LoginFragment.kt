@@ -18,6 +18,7 @@ import org.apache.commons.codec.binary.Hex
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 import kotlin.random.Random
+import kotlin.reflect.typeOf
 
 
 class LoginFragment: Fragment() {
@@ -85,13 +86,13 @@ class LoginFragment: Fragment() {
 //        }
         binding.LoginButton.setOnClickListener {
             //fun callfun(callbackfun: CallBackFun) {
-                var email0 = binding.emailaddress.text.toString()
-                var pass0 = binding.password.text.toString()
+            var email0 = binding.emailaddress.text.toString()
+            var pass0 = binding.password.text.toString()
 
-                // loginUser(email_addr.text.toString(), password_box.text.toString())
-                // while (email0.isEmpty() == true && pass0.isEmpty() == true) {
-                Log.v("THIS IS THE EMAIL", email0)
-                Log.v("THIS IS THE PASSWORD", pass0)
+            // loginUser(email_addr.text.toString(), password_box.text.toString())
+            // while (email0.isEmpty() == true && pass0.isEmpty() == true) {
+            Log.v("THIS IS THE EMAIL", email0)
+            Log.v("THIS IS THE PASSWORD", pass0)
             lateinit var realm: Realm
             //try {
             //FRAGMENT LISTEN
@@ -99,47 +100,59 @@ class LoginFragment: Fragment() {
 
             realm = Realm.getDefaultInstance()
             Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
-                if (email0.isEmpty() == false && pass0.isEmpty() == false) {
-                    val task2 = realm.where(Login::class.java).equalTo("email", email0).findFirst()
+            if (email0.isEmpty() == false && pass0.isEmpty() == false) {
+                val task2 = realm.where(Login::class.java).equalTo("email", email0).findFirst()
 //                    if (task2 != null) {
 ////                println("THIS IS A TEST ${task2.image}")
 //                        // binding.textView6.text = "${task2.word}"
 //                    }
-                    //val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
-                    //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
+                //val imgUri: Uri = Uri.parse("android.resource://com.example.myapplication/bballbird.png")
+                //uri = Uri.parse("android.resource://your.package.here/drawable/image_name")
 
-                    //val emailG = "${task2!!.email}"
-                    val saltG = "${task2!!.salt}"
-                    Log.v("this is the SALT", saltG)
-                    val passG = "${task2!!.password}"
-                    Log.v("this is the hashed data", passG)
+                //val emailG = "${task2!!.email}"
+                val saltG = "${task2!!.salt}"
+                Log.v("this is the SALT", saltG)
+                val passG = "${task2!!.password}"
+                Log.v("this is the hashed data", passG)
+                val typeOfUser = "${task2!!.Type}"
+                Log.v("This is the type ",typeOfUser)
 
-                    var hash_data = checkHash(pass0, saltG)
-                    Log.v("HASHED DATA", hash_data)
-                    Log.v("PASSWORD", passG)
-                    if (hash_data.equals(passG)) {
+                var hash_data = checkHash(pass0, saltG)
+                Log.v("HASHED DATA", hash_data)
+                Log.v("PASSWORD", passG)
+                if (hash_data.equals(passG)) {
 //                        Log.v("HASHED DATA",hash_data)
 //                        Log.v("PASSWORD",passG)
+
+
+
+                    if(typeOfUser.equals("Therapist")) {
+                        findNavController().navigate(R.id.action_TherapistRegistration_to_PatientScreen)
+                    } else if(typeOfUser.equals("User")) {
                         findNavController().navigate(R.id.action_Login_to_Home)
                     }
-                   // callbackfun.onSuccess()
-                    realm.close()
 
-                } else {
-                    if (email0.isEmpty() == true || pass0.isEmpty() == true) {
-                        if (email0.isEmpty() == true) {
-                            email0 = binding.emailaddress.text.toString()
-                            Log.v("please insert a passwor","PAS")
+
+
+                }
+                // callbackfun.onSuccess()
+                realm.close()
+
+            } else {
+                if (email0.isEmpty() == true || pass0.isEmpty() == true) {
+                    if (email0.isEmpty() == true) {
+                        email0 = binding.emailaddress.text.toString()
+                        Log.v("please insert a passwor","PAS")
                         //    callbackfun.onFailure("please insert an email address")
-                            // Toast.makeText(LoginFragment,"Please enter a email",Toast.LENGTH_SHORT).show()
-                        } else if (pass0.isEmpty() == true) {
-                            pass0 = binding.password.text.toString()
-                            Log.v("please insert a passwor","PASSSSSSS")
-                          //  callbackfun.onFailure("please insert a password")
-                        }
+                        // Toast.makeText(LoginFragment,"Please enter a email",Toast.LENGTH_SHORT).show()
+                    } else if (pass0.isEmpty() == true) {
+                        pass0 = binding.password.text.toString()
+                        Log.v("please insert a passwor","PASSSSSSS")
+                        //  callbackfun.onFailure("please insert a password")
                     }
                 }
-          //  }
+            }
+            //  }
 
 
         }

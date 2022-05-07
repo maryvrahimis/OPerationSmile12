@@ -11,17 +11,18 @@
         android:id="@+id/testname8"
         android:layout_width="157dp"
         android:layout_height="49dp"
-        android:autoSizeTextType="uniform"
         android:fontFamily="@font/chango"
+        android:text="test4"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintVertical_bias="0.945" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView5"
@@ -34,10 +35,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.944" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView3"
@@ -88,6 +89,18 @@
             app:layout_constraintVertical_bias="0.096" />
 
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="320dp"
+            android:layout_height="61dp"
+            android:contentDescription="@string/spinner_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21" />
+
     <CheckedTextView
         android:id="@+id/checkedTextView"
         android:layout_width="184dp"
@@ -117,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
         android:id="@+id/test_name"
@@ -125,16 +138,49 @@
         android:layout_height="39dp"
         android:layout_marginStart="17dp"
         android:layout_marginBottom="15dp"
-        android:autoSizeTextType="uniform"
         android:fontFamily="@font/chango"
+        android:text="Henry Jones"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.333"
+        tools:text="Henry Jones" />
+
+    <TextView
+        android:id="@+id/client_age2"
+        android:layout_width="184dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="@font/chango"
+        android:text="@string/password"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
+
+    <TextView
+        android:id="@+id/client_age"
+        android:layout_width="184dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/chango"
+        android:text="@string/age"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404" />
 
     <TextView
         android:id="@+id/client_name"
@@ -152,110 +198,127 @@
         app:layout_constraintVertical_bias="0.326" />
 
     <TextView
+        android:id="@+id/test_name2"
+        android:layout_width="184dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/chango"
+        android:text="19"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/client_age"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <TextView
+        android:id="@+id/test_name4"
+        android:layout_width="188dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/chango"
+        android:text="hj22opsmile"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <TextView
         android:id="@+id/test_name3"
         android:layout_width="184dp"
         android:layout_height="39dp"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="8dp"
-        android:autoSizeTextType="uniform"
         android:fontFamily="@font/chango"
+        android:text="HJones15"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/client_username"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+        app:layout_constraintVertical_bias="0.482" />
 
     <CheckedTextView
         android:id="@+id/checkedTextView4"
         android:layout_width="184dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/chango"
         android:text="P Sounds Completed"
         android:textColor="@color/white"
-
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/client_username" />
-
+        app:layout_constraintTop_toBottomOf="@+id/client_age2" />
 
     <TextView
         android:id="@+id/testname6"
         android:layout_width="157dp"
         android:layout_height="49dp"
-        android:autoSizeTextType="uniform"
         android:fontFamily="@font/chango"
+        android:text="test2"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.743" />
+
 
     <TextView
         android:id="@+id/testname7"
         android:layout_width="157dp"
         android:layout_height="49dp"
-        android:autoSizeTextType="uniform"
         android:fontFamily="@font/chango"
+        android:text="test3"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        app:layout_constraintVertical_bias="0.835" />
 
     <TextView
         android:id="@+id/testname5"
-        android:layout_width="155dp"
-        android:layout_height="53dp"
-        android:autoSizeTextType="uniform"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
         android:fontFamily="@font/chango"
+        android:text="test1"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_name3"
-        app:layout_constraintVertical_bias="0.089" />
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="219dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Search Here"
-        android:inputType="text"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/searchButton"
-        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211" />
-
-    <Button
-        android:id="@+id/searchButton"
-        android:layout_width="97dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="32dp"
-        android:text="Search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.642" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

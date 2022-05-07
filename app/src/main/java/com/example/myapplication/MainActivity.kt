@@ -258,6 +258,8 @@ open class Patients(
 
     var name: String? = null,
 
+    var Type: String? = null,
+
     var age: Int? = null,
 
     var username: String? = null,
@@ -329,7 +331,9 @@ open class Login(
 
     var salt: String? = null,
 
-    var password: String? = null
+    var password: String? = null,
+
+    var Type: String? = null
 ): RealmObject() {}
 
 //interface CallBackFun2 {

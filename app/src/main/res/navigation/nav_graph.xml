@@ -177,6 +177,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     <fragment
         android:id="@+id/loginfrag"
         android:name="com.example.myapplication.LoginFragment"
@@ -188,7 +200,23 @@
         <action
             android:id="@+id/action_Login_to_Registration"
             app:destination="@+id/RegistrationFragment"/>
+        <action
+            android:id="@+id/action_TherapistRegistration_to_PatientScreen"
+            app:destination="@+id/patientscreen"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/therfrag"
+        android:name="com.example.myapplication.TherapistRegFragment"
+        android:label="Therapist"
+        tools:layout="@layout/activity_therapistreg">
+        <action
+            android:id="@+id/action_Therapist_to_Login"
+            app:destination="@id/loginfrag" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/RegistrationFragment"
         android:name="com.example.myapplication.RegistrationFragment"
@@ -197,7 +225,22 @@
         <action
             android:id="@+id/action_Registration_to_Login"
             app:destination="@id/loginfrag"/>
+        <action
+            android:id="@+id/action_Register_to_Therapist"
+            app:destination="@id/therfrag"/>
     </fragment>
+
+
+
+
+
+
+
+
+
+
+
+
     <fragment
         android:id="@+id/lasSilabaKFragment"
         android:name="com.example.myapplication.LasSilabaKFragment"
