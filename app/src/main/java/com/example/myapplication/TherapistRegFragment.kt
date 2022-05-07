@@ -15,7 +15,12 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.ActivityRegisterBinding
+
+
+import com.example.myapplication.databinding.ActivityTherapistregBinding
+
+
+
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import javax.crypto.Mac
@@ -31,6 +36,7 @@ import org.bson.types.ObjectId
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.widget.Toast
 
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -39,17 +45,14 @@ import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.security.SecureRandom
 
-//hex key 41aaac4482da41ed7b640b2e471fbe4c403af28f40d8eafb82e351bcbbdb101e
-class RegistrationFragment: Fragment() {
-    private var _binding: ActivityRegisterBinding? = null
+//hex key 41aaac4482da41ed7b64
+class TherapistRegFragment: Fragment() {
+    private var _binding: ActivityTherapistregBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private var flagUserID = false
-    private var userIDStart = 0
-    private var tempUserID = -1;
-
+    private val secTherapistC = "41aaac4482da41ed7b64"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,53 +61,33 @@ class RegistrationFragment: Fragment() {
         // lateinit var imageView: ImageView
 
 
-        _binding = ActivityRegisterBinding.inflate(inflater, container, false)
+        _binding = ActivityTherapistregBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         lateinit var realm2: Realm
         realm2 = Realm.getDefaultInstance()
         Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm2.path}")
 
 
 
-//        setFragmentResultListener("requestKey") { requestKey, bundle ->
-//            // We use a String here, but any type that can be put in a Bundle is supported
-//            val result = bundle.getBoolean("bundleKey")
-//            if (result){
-//                binding.completedLesson.isVisible = true
-//                binding.notCompletedLesson.isVisible = false
-//                //binding.totalPointsText.text = opa
-//
-//            }
-//        }
-
-//        binding.streakText.setText((days.toString() + " dias"))
-//        binding.lessonsButton.setOnClickListener {
-//
-//            findNavController().navigate(R.id.action_Home_to_Lessons)
-//
-//        }
-//
-//        binding.storeButton.setOnClickListener {
-//            findNavController().navigate(R.id.to_Third_fragment)
-//        }
-//        binding.homeToPatients.setOnClickListener {
-//            findNavController().navigate(R.id.action_home_to_updated_patients_screen)
-//        }
-//        binding.reportsButton.setOnClickListener {
-//            findNavController().navigate(R.id.go_to_reports)
-//        }
 
 
         binding.buttonreg.setOnClickListener {
+
+            var therapist_code = binding.TherapistID.text.toString()
+            var tempbool = assignTherapist(therapist_code)
+
+
+
             var email1 = binding.emailreg.text.toString()
             var pass1 = binding.passwordreg.text.toString()
             var name1 = binding.namereg.text.toString()
             var pass2 = binding.passwordconf.text.toString()
-            var confirmation = false
+            // var confirmation = false
 
 
 
@@ -116,62 +99,33 @@ class RegistrationFragment: Fragment() {
 
 
 
+            if(tempbool == true) {
+                realm2.executeTransaction { r: Realm ->
+                    // Instantiate the class using the factory function.
+                    var task3 = r.createObject(Login::class.java, ObjectId())
+                    // Configure the instance.
 
-            realm2.executeTransaction { r: Realm ->
-                // Instantiate the class using the factory function.
-                var task3 = r.createObject(Login::class.java, ObjectId())
-                // Configure the instance.
-
-                task3.name = name1
-                task3.email = email1
-                task3.salt = saltP
-                task3.password = hashedP
-                task3.Type = "User"
-
-                val task4 = r.createObject(Patients::class.java, ObjectId())
-                // Configure the instance.
-                task4.name = name1
-               // USE THIS PLZ  task4.email = email1
-
-//                while(flagUserID == false) {
-//                    var task5 = realm2.where(Patients::class.java).equalTo("userID", userIDStart).findFirst()
-//                    if (task5 != null) {
-//                        if(task5.equals(userIDStart)) {
-//                            userIDStart++;
-//                        }
-//                        else if(!task5.equals(userIDStart)){
-//                            task4.userID = userIDStart
-//                            flagUserID = true
-//                        }
-//                    }
-//                    else {
-//                        task4.userID = userIDStart
-//                        flagUserID = true
-//                    }
-//                }
-//                flagUserID = false
-//                userIDStart = 0;
-                // val task4 = realm2.where(Patients::class.java).equalTo("email", email0).findFirst()
-
-            }
+                    task3.name = name1
+                    task3.email = email1
+                    task3.salt = saltP
+                    task3.password = hashedP
+                    task3.Type = "Therapist"
+                }
 
 
 //            val emailG = "${task3!!.email}"
 //            val saltG = "${task3!!.salt}"
 //            val passG = "${task2!!.password}"
-//
+//da
 //            var hash_data = checkHash(pass0,saltG)
 //            if(hash_data == passG) {
 //                findNavController().navigate(R.id.action_Login_to_Home)
 //            }
-            realm2.close()
-            findNavController().navigate(R.id.action_Registration_to_Login)
-
-
-
-        }
-        binding.TherButton.setOnClickListener{
-            findNavController().navigate(R.id.action_Register_to_Therapist)
+                realm2.close()
+                findNavController().navigate(R.id.action_Therapist_to_Login)
+            }
+            else if(tempbool == false) {
+            }
         }
 
 
@@ -179,7 +133,7 @@ class RegistrationFragment: Fragment() {
 
 
 //
-//        // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
+//        // THIS EXE41a41CUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
 //        realm.executeTransaction { r: Realm ->
 //            // Instantiate the class using the factory function.
 //            val turtle = r.createObject(Lessons::class.java, ObjectId())
@@ -191,6 +145,19 @@ class RegistrationFragment: Fragment() {
 
 
 
+
+    }
+
+    private fun assignTherapist(therapist_code: String) :Boolean {
+        var TherapistSuccess = false;
+        if(therapist_code.equals(secTherapistC)) {
+            TherapistSuccess = true;
+        }
+        else if(therapist_code != secTherapistC) {
+            Toast.makeText(getActivity(),"Therapist Code is not correct, please retype",Toast.LENGTH_SHORT).show()
+            TherapistSuccess = false;
+        }
+        return TherapistSuccess
 
     }
 
@@ -237,5 +204,7 @@ class RegistrationFragment: Fragment() {
 //        _binding = null
 //    }
 }
+
+
 
 
