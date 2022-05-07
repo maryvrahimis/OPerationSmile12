@@ -46,9 +46,9 @@
         android:layout_alignLeft="@+id/editText2"
         android:layout_marginTop="30dp"
         android:hint="@string/email_body"
+        android:inputType="text"
         android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:inputType="text"/>
+        android:minHeight="48dp" />
 
     <!--text Views for label-->
     <TextView

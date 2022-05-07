@@ -6,12 +6,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
-import org.bson.types.ObjectId
 
 
 class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -22,17 +21,19 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patientscreen)
+        var button: Button
+        var body: EditText
+        body = findViewById(R.id.search)
+        button = findViewById(R.id.searchButton)
+        /*
         val spinner: Spinner = findViewById(R.id.spinner)
         val adapter = ArrayAdapter.createFromResource(this, R.array.names_array, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
-
-
+         */
         //val textView: TextView = findViewById(R.id.textView5)
        //textView.text = LasFrasesFragment().currentDateAndTime
-
-
         /*
         val realm = Realm.getDefaultInstance()
         Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
@@ -53,18 +54,45 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val opa = "${task2!!.name}"
         realm.close()
         binding.testName.text = opa */
+
+        button.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(view: View?) {
+                val searching = body.text.toString()    //This is what we type into the search bar
+
+                lateinit var realm: Realm
+                realm = Realm.getDefaultInstance()
+                Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
+                val patient = realm.where(Patients::class.java).equalTo("name", searching) .findFirst()
+
+
+                if (searching == patient!!.name) {
+                    val nameField: TextView = findViewById(R.id.test_name)
+                    val usernameField: TextView = findViewById(R.id.test_name3)
+                    val p_sounds_completed: TextView = findViewById(R.id.testname5)
+                    val k_sounds_completed: TextView = findViewById(R.id.testname6)
+                    val t_sounds_completed: TextView = findViewById(R.id.testname7)
+                    val l_sounds_completed: TextView = findViewById(R.id.testname8)
+
+                    nameField.text = patient!!.name.toString()
+                    usernameField.text = patient!!.username.toString()
+
+                    p_sounds_completed.text = patient.p_sounds_completed.toString()
+                    k_sounds_completed.text = patient.k_sounds_completed.toString()
+                    t_sounds_completed.text = patient.t_sounds_completed.toString()
+                    l_sounds_completed.text = patient.l_sounds_completed.toString()
+                }
+
+
+
+            }
+        })
+
     }
-// This is a test
+
     override fun onItemSelected(parent: AdapterView<*>? , view: View?, position: Int, id: Long) {
-        lateinit var realm: Realm
-        //try {
-        //FRAGMENT LISTEN
-        //FRAGMENT LISTEN
-
-        realm = Realm.getDefaultInstance()
-        Log.v(ContentValues.TAG, "Successfully opened a realm at: ${realm.path}")
-
+        /*
         // THIS EXECUTES A WRITE TO THE DATABASE (LIKE IN MAIN ACTIVITY)
+
         realm.executeTransaction { r: Realm ->
             // Instantiate the class using the factory function.
             val turtle = r.createObject(Patients::class.java, ObjectId())
@@ -77,89 +105,15 @@ class patientscreen : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             turtle.k_sounds_completed = true
             turtle.t_sounds_completed = true
             turtle.l_sounds_completed = true
-
         }
-
-        // IT PULLS INFO FROM DATABASE AND PUTS IT INTO A VARIABLE
-        // THE VARIABLE IS THEN PRINTED TO SCREEN
-        val patient = realm.where(Patients::class.java).equalTo("name", "SLICKBACK").findFirst()
+         */
+        //val results = patient.sort("name", Sort.DESCENDING).findAll()
         //val age = realm.where(Patients::class.java).equalTo("age", "69").findFirst()
-        //val username = realm.where(Patients::class.java).equalTo("username", "aPimpNamedSlickback").findFirst()
-        //val password = realm.where(Patients::class.java).equalTo("password", "discordKitt3n").findFirst()
-        //val p_sounds_completed = realm.where(Patients::class.java).equalTo("p_sounds_completed", true).findFirst()
-        //val k_sounds_completed = realm.where(Patients::class.java).equalTo("k_sounds_completed", true).findFirst()
-        //val t_sounds_completed = realm.where(Patients::class.java).equalTo("t_sounds_completed", true).findFirst()
-        //val l_sounds_completed = realm.where(Patients::class.java).equalTo("l_sounds_completed", true).findFirst()
-        if (patient != null) {
-            println("THIS IS A TEST ${patient!!.p_sounds_completed.toString()}")
-            // binding.textView6.text = "${task2.word}"
-        }
-
-        val text = parent?.getItemIdAtPosition(position).toString()
-
-        if (parent?.getItemAtPosition(position).toString() == "Mike") {
-            val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.test_name2)
-            val usernameField: TextView = findViewById(R.id.test_name3)
-            val passwordField: TextView = findViewById(R.id.test_name4)
-            val p_sounds_completed: TextView = findViewById(R.id.testname5)
-            val k_sounds_completed: TextView = findViewById(R.id.testname6)
-            val t_sounds_completed: TextView = findViewById(R.id.testname7)
-            val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = patient!!.name.toString()
-            ageField.text = patient!!.age.toString()
-            usernameField.text = patient!!.username.toString()
-            passwordField.text = patient!!.password.toString()
-            p_sounds_completed.text = patient.p_sounds_completed.toString()
-            k_sounds_completed.text = patient.k_sounds_completed.toString()
-            t_sounds_completed.text = patient.t_sounds_completed.toString()
-            l_sounds_completed.text = patient.l_sounds_completed.toString()
-        }
-        if (parent?.getItemAtPosition(position).toString() == "Vinny"){
-            val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.test_name2)
-            val usernameField: TextView = findViewById(R.id.test_name3)
-            val passwordField: TextView = findViewById(R.id.test_name4)
-            val p_sounds_completed: TextView = findViewById(R.id.testname5)
-            val k_sounds_completed: TextView = findViewById(R.id.testname6)
-            val t_sounds_completed: TextView = findViewById(R.id.testname7)
-            val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = "Vinny Winny"
-            ageField.text = "18"
-            usernameField.text = "vwinny66"
-            passwordField.text = "vwopsmile"
-            p_sounds_completed.text = "no"
-            k_sounds_completed.text = "yes"
-            t_sounds_completed.text = "no"
-            l_sounds_completed.text = "yes"
-        }
-        if (parent?.getItemAtPosition(position).toString() == "Gia") {
-            val nameField: TextView = findViewById(R.id.test_name)
-            val ageField: TextView = findViewById(R.id.test_name2)
-            val usernameField: TextView = findViewById(R.id.test_name3)
-            val passwordField: TextView = findViewById(R.id.test_name4)
-            val p_sounds_completed: TextView = findViewById(R.id.testname5)
-            val k_sounds_completed: TextView = findViewById(R.id.testname6)
-            val t_sounds_completed: TextView = findViewById(R.id.testname7)
-            val l_sounds_completed: TextView = findViewById(R.id.testname8)
-            nameField.text = "Gia Hanes"
-            ageField.text = "19"
-            usernameField.text = "ghanes5"
-            passwordField.text = "ghopsmile"
-            p_sounds_completed.text = "no"
-            k_sounds_completed.text = "no"
-            t_sounds_completed.text = "no"
-            l_sounds_completed.text = "no"
-        }
+        //val text = parent?.getItemIdAtPosition(position).toString()       //We don't need this
     }
-    // This is a test
     override fun onNothingSelected(parent: AdapterView<*>) {
         // Another interface callback
     }
-}
-
-class Timecheck{
-
 }
 
 
